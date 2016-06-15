@@ -1,8 +1,6 @@
 # Code4
 
-Code for Romania theme forked form Sage WordPress starter theme.
-
-Read more about Sage [here](Sage.md).
+Code for Romania theme.
 
 ## Installation steps
 - Classic Apache, MySQL, php tools, use [MAMP](https://www.mamp.info/en/).
@@ -22,3 +20,4 @@ Read more about Sage [here](Sage.md).
 - `git clone https://github.com/code4romania/theme.git code4` in the themes folder.
 - `cd code 4 && npm install && bower install` given NPM and Bower are already part of your workflow, they should be.
 - Activate new theme & do the voodoo.
+- Read more about the Sage starter theme [here](Sage.md).

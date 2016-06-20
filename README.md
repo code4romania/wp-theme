@@ -18,6 +18,6 @@ Code for Romania theme.
 ```
 - Create new DB, assign user to it and install latest [Wordpress](https://wordpress.org/download/).
 - `git clone https://github.com/code4romania/theme.git code4` in the themes folder.
-- `cd code 4 && npm install && bower install` given NPM and Bower are already part of your workflow, they should be.
+- `cd code4 && npm install && bower install` given NPM and Bower are already part of your workflow, they should be.
 - Activate new theme & do the voodoo.
 - Read more about the Sage starter theme [here](Sage.md).

@@ -1,0 +1,29 @@
+.hero {
+  margin: 100px auto;
+  max-width: 50rem;
+  text-align: center;
+
+  h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 10px 0 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 32rem;
+  }
+
+  a {
+    @include underline;
+  }
+
+  .mono {
+    letter-spacing: 2px;
+  }
+}

@@ -49,8 +49,8 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
+  primary: #fe3400,
+  secondary: #3f3f3f,
   success: #3adb76,
   warning: #ffae00,
   alert: #ec5840,
@@ -59,7 +59,7 @@ $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
-$white: #fefefe;
+$white: #fff;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Lora', 'Garamond', 'Times New Roman', serif;
@@ -105,10 +105,10 @@ $block-grid-max: 8;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$font-family-monospace: 'Source Code Pro', 'Courier New', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 24,
+    'h1': 26,
     'h2': 20,
     'h3': 19,
     'h4': 18,
@@ -116,7 +116,7 @@ $header-sizes: (
     'h6': 16,
   ),
   medium: (
-    'h1': 48,
+    'h1': 42,
     'h2': 40,
     'h3': 31,
     'h4': 25,
@@ -170,7 +170,7 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
+$lead-font-size: $global-font-size * 1.35;
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
@@ -378,7 +378,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: 1rem;
 $menu-item-color-active: $white;
 $menu-item-background-active: map-get($foundation-palette, primary);
 $menu-icon-spacing: 0.25rem;
@@ -450,14 +450,14 @@ $progress-radius: $global-radius;
 // 28. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: transparent;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
-$reveal-border: 1px solid $medium-gray;
+$reveal-border: 0;
 $reveal-radius: $global-radius;
-$reveal-zindex: 1005;
-$reveal-overlay-background: rgba($black, 0.45);
+$reveal-zindex: 2017;
+$reveal-overlay-background: rgba($black, 0.65);
 
 // 29. Slider
 // ----------
@@ -534,9 +534,9 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $black;
-$titlebar-color: $white;
-$titlebar-padding: 0.5rem;
+$titlebar-background: $white;
+$titlebar-color: $black;
+$titlebar-padding: 0.5rem 0;
 $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;
 $titlebar-icon-color-hover: $medium-gray;

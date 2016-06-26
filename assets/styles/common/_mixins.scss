@@ -1,6 +1,7 @@
 @mixin underline {
   color: $black;
   position: relative;
+  text-decoration: none;
 
   &::after {
     position: absolute;
@@ -18,5 +19,18 @@
     &::after {
       background: $color-primary;
     }
+  }
+}
+
+@mixin underline-reset {
+  color: $color-primary;
+  text-decoration: underline;
+
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    color: $black;
   }
 }

@@ -5,4 +5,77 @@ body {
 
 .mono {
   font-family: $font-family-monospace;
+  letter-spacing: 2px;
+}
+
+.image-wrap {
+  display: block;
+  height: 0;
+  position: relative;
+
+  img {
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.image-wrap-landscape {
+  padding-top: 56.25%;
+}
+
+.block {
+  margin-bottom: 40px;
+}
+
+.block-title {
+  margin: 0 auto;
+  max-width: 50rem;
+  text-align: center;
+
+  h1 {
+    margin: 10px 0 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 40px auto;
+
+    &.actions {
+      margin: 0 auto;
+    }
+  }
+
+  a {
+    @include underline;
+  }
+}
+
+.actions {
+  a {
+    @include underline-reset;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 0;
+
+    @include breakpoint(medium) {
+      margin: 0 20px;
+    }
+  }
+
+  .button {
+    @include button-expand(true);
+    margin: 0;
+    text-decoration: none;
+
+    @include breakpoint(medium) {
+      @include button-expand(false);
+      margin: 0;
+    }
+  }
 }

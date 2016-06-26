@@ -1,0 +1,14 @@
+.button {
+  color: $black;
+  font-family: $font-family-monospace;
+
+  &.hollow {
+    border-color: $black;
+    color: $black;
+
+    &:hover {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+}

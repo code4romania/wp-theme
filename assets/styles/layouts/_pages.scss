@@ -1,29 +1,30 @@
 .hero {
-  margin: 100px auto;
-  max-width: 50rem;
-  text-align: center;
+  margin: 40px auto 0;
+  position: relative;
 
-  h1 {
-    font-size: 48px;
+  @include breakpoint(large) {
     margin: 0;
   }
+}
 
-  h2 {
-    font-size: 20px;
-    margin: 10px 0 20px;
-  }
+.hero-content {
+  margin: 0 auto 40px;
+  max-width: 50rem;
 
-  p {
-    font-size: 18px;
+  @include breakpoint(large) {
     margin: 0 auto;
-    max-width: 32rem;
   }
 
-  a {
-    @include underline;
+  .content {
+    background: $white;
+    padding: 40px 20px;
   }
+}
 
-  .mono {
-    letter-spacing: 2px;
+.hero-content-wrap {
+  @include breakpoint(large) {
+    @include vertical-center;
+    width: 100%;
+    z-index: 1;
   }
 }

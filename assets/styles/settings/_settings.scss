@@ -103,7 +103,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: 700;
 $header-font-style: normal;
 $font-family-monospace: 'Source Code Pro', 'Courier New', Courier, monospace;
 $header-sizes: (
@@ -117,7 +117,7 @@ $header-sizes: (
   ),
   medium: (
     'h1': 42,
-    'h2': 40,
+    'h2': 32,
     'h3': 31,
     'h4': 25,
     'h5': 20,

@@ -17,7 +17,10 @@
 
   .content {
     background: $white;
-    padding: 40px 20px;
+
+    @include breakpoint(large) {
+      padding: 40px 20px;
+    }
   }
 }
 
@@ -26,5 +29,48 @@
     @include vertical-center;
     width: 100%;
     z-index: 1;
+  }
+}
+
+.activity {
+  border: 1px solid $white;
+  padding: 16px 20px;
+
+  @include breakpoint(large) {
+    padding: 60px 20px;
+  }
+
+  &:hover {
+    border-color: $color-primary;
+
+    .material-icons,
+    h2,
+    p {
+      color: $color-primary;
+    }
+  }
+
+  .material-icons,
+  h2,
+  p {
+    color: $black;
+  }
+
+  .material-icons {
+    font-size: 36px;
+    margin: 0 0 20px;
+
+    @include breakpoint(large) {
+      font-size: 48px;
+    }
+  }
+
+  h2 {
+    line-height: 1.1;
+
+    span {
+      display: block;
+      font-weight: 400;
+    }
   }
 }

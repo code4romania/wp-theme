@@ -37,6 +37,39 @@
   </div>
 </div>
 
+<div class="block wrap container">
+  <div class="content row">
+    <div class="small-12 columns">
+      <div class="block-title">
+        <h1>Implică-te</h1>
+        <p>Ca să-ți placă mai mult România, vino alături de noi. Suntem o ce rezolvă probleme sociale. Pe termen lung, credem ca putem.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content row">
+    <a href="#" class="activity small-6 large-3 columns">
+      <i class="material-icons">&#xEB3F;</i>
+      <h2><span>Pentru</span> Companii</h2>
+      <p>Este diferită de un articol deoarece va rămâne în același loc</p>
+    </a>
+    <a href="#" class="activity small-6 large-3 columns">
+      <i class="material-icons">&#xE84F;</i>
+      <h2><span>Pentru</span> Instituții</h2>
+      <p>Este diferită de un articol deoarece va rămâne în același loc</p>
+    </a>
+    <a href="#" class="activity small-6 large-3 columns">
+      <i class="material-icons">&#xE7EF;</i>
+      <h2><span>Pentru</span> ONG-uri</h2>
+      <p>Este diferită de un articol deoarece va rămâne în același loc</p>
+    </a>
+    <a href="#" class="activity small-6 large-3 columns">
+      <i class="material-icons">&#xE54B;</i>
+      <h2><span>Pentru</span> Universități</h2>
+      <p>Este diferită de un articol deoarece va rămâne în același loc</p>
+    </a>
+  </div>
+</div>
+
 
 <div class="wrap container">
   <div class="content row">

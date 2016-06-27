@@ -29,6 +29,10 @@ body {
 
 .block {
   margin-bottom: 40px;
+
+  @include breakpoint(large) {
+    margin-bottom: 80px;
+  }
 }
 
 .block-title {
@@ -42,7 +46,7 @@ body {
 
   p {
     font-size: 18px;
-    margin: 40px auto;
+    margin: 20px auto 40px;
 
     &.actions {
       margin: 0 auto;

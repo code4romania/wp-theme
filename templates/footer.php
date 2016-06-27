@@ -7,6 +7,9 @@
           wp_nav_menu(['theme_location' => 'footer_navigation', 'items_wrap' => '<ul class="menu nav">%3$s</ul>']);
         endif;
       ?>
+
+      <p class="copy mono">Code for Romania este o organizație apolitică și nepartizană. EIN: 27-1067272.</p>
+
     </div>
   </div>
 

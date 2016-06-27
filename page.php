@@ -68,10 +68,10 @@
       <p>Este diferită de un articol deoarece va rămâne în același loc</p>
     </a>
   </div>
-</div>
+</section>
 
 
-<div class="wrap container">
+<section class="wrap container">
   <div class="content row">
     <div class="small-12 columns">
       <?php while (have_posts()) : the_post(); ?>

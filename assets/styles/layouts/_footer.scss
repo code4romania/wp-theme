@@ -1,9 +1,21 @@
 .footer {
+  border-top: 5px solid $color-primary;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+
   .menu {
     float: none;
 
     > li {
+      display: inline-block;
       font-size: 12px;
     }
+  }
+
+  .copy {
+    color: $dark-gray;
+    font-size: 12px;
+    margin-top: 50px;
   }
 }

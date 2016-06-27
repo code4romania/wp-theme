@@ -1,4 +1,4 @@
-<div class="block block-hero wrap container">
+<section class="block block-hero wrap container">
   <div class="hero">
     <div class="hero-content-wrap">
       <div class="hero-content">
@@ -21,9 +21,9 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="block wrap container">
+<section class="block wrap container">
   <div class="content row">
     <div class="small-12 columns">
       <div class="block-title">
@@ -35,9 +35,9 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="block wrap container">
+<section class="block wrap container">
   <div class="content row">
     <div class="small-12 columns">
       <div class="block-title">
@@ -80,4 +80,4 @@
       <?php endwhile; ?>
     </div>
   </div>
-</div>
+</section>

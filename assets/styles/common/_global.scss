@@ -54,6 +54,10 @@ body {
   }
 }
 
+.button {
+  transition: none;
+}
+
 .actions {
   a {
     @include underline-reset;

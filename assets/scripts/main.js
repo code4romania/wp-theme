@@ -19,7 +19,8 @@
     common: {
       init: function() {
 
-        $(document).foundation(); // Foundation JavaScript
+        //Commented for now, because it caused a crash.
+        //$(document).foundation(); // Foundation JavaScript
 
       },
       finalize: function() {
@@ -30,6 +31,32 @@
     home: {
       init: function() {},
       finalize: function() {}
+    },
+    proiecte: {
+      init: function() {
+        $('.filter-button').on('click', function() {
+          $(this).siblings('input').trigger('click');
+        });
+
+        $('.project-filter-cb').on('click', function() {
+          var $this     = $(this);
+          var category  = $this.data('category');
+          var projects  = $('.project-list .card').filter(function() {
+              return $(this).data('category') === category;
+          }); 
+          
+          if ($this.is(':checked') === true) {
+            projects.closest('li').show();
+          } else {
+              projects.closest('li').hide();
+          }
+          
+          
+        });
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+      }      
     }
   };
 

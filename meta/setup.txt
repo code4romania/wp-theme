@@ -1,0 +1,30 @@
+
+	
+	STEPS:
+	
+	1. Dezarhiveaza acf-repeater in "..\wp-content\plugins"
+	
+	2. Instaleaza si activeaza plugin-urile:
+
+		- Advanced Custom Fields
+		- Custom Post Type UI
+		- Radio Buttons for Taxonomies
+		- WP Migrate DB
+		
+	   Activeaza plugin-ul: 
+	   
+		- Advanced Custom Fields: Repeater Field
+		
+	 Instaleaza, dar nu activa inca:
+	 
+	    - Contact Form 7
+		- Configure SMTP
+		
+	3. Importa in unctie de mediu:
+		
+		- LOCAL_code4_db-migrate.sql
+		- DEV_code4_db-migrate.sql
+		
+	4. Alege tema:
+	
+	  - Code4

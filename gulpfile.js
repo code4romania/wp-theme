@@ -102,6 +102,8 @@ var cssTasks = function(filename) {
     .pipe(autoprefixer, {
       browsers: [
         'last 2 versions',
+        'iOS >= 7',
+        'ie_mob >= 10',
         'android 4',
         'opera 12'
       ]

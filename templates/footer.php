@@ -1,4 +1,3 @@
-
 <footer class="block footer">
   <div class="content row">
     <div class="small-12 columns">
@@ -10,21 +9,10 @@
 
       <p class="copy mono">Code for Romania este o organizație apolitică și nepartizană. EIN: 27-1067272.</p>
 
+      <a class="brand footer-logo" href="<?= esc_url(home_url('/')); ?>">
+        <img src="<?php echoFieldValueOrDefault('logo_image', '', getFooterId()); ?>">
+      </a>
+
     </div>
   </div>
-
 </footer>
-
-
-<nav id="nav-overlay" class="full reveal" data-reveal>
-  <div class="overlay-content overlay-nav">
-    <a href="#" class="close-button" title="Inchide" data-close>
-      <i class="material-icons">&#xE5CD;</i>
-    </a>
-    <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'items_wrap' => '<ul class="menu nav">%3$s</ul>']);
-      endif;
-    ?>
-  </div>
-</nav>

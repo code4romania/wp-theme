@@ -1,6 +1,18 @@
 <?php /* Template Name: Proiecte */ ?>
 
-<div class="row">
+<section class="block wrap container">
+  <div class="content row">
+    <div class="small-12 columns">
+      <?php get_template_part('templates/page', 'header'); ?>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- <div class="row">
     <div class="col s12">
         <div class = "frame-container">
           <span>
@@ -15,34 +27,34 @@
     <div class="col s12">
         <div class = "frame-container">
           <div class="row center proiecte-filtre-row">
-        <?php
+        <?php/*
           $filters    = getCategoryActiveFilters();
           $columnClass  = "s" . (12 / count($filters));
           foreach ($filters as $filter) {
             $class  = $filter->slug . '-class';
             $cbID   = $filter->slug . '-cb';
-          ?>
+          */?>
 
-            <div class="col <?php echo $columnClass;?>">
-               <a class="<?php echo $class;?> filter-button waves-effect waves-light btn" href="#!">
-                 <span><?php echo $filter->name;?></span>
+            <div class="col <?php/* echo $columnClass;*/?>">
+               <a class="<?php/* echo $class;*/?> filter-button waves-effect waves-light btn" href="#!">
+                 <span><?php/* echo $filter->name;*/?></span>
                </a>
 
-               <input type="checkbox" class="filled-in project-filter-cb" checked="checked" id="<?php echo $cbID;?>" data-category = "<?php echo $filter->slug; ?>" />
-               <label class = "project-filter-cb-label" for="<?php echo $cbID;?>"></label>
+               <input type="checkbox" class="filled-in project-filter-cb" checked="checked" id="<?php/* echo $cbID;*/?>" data-category = "<?php/* echo $filter->slug; */?>" />
+               <label class = "project-filter-cb-label" for="<?php/* echo $cbID;*/?>"></label>
             </div>
 
 
-          <?php
+          <?php/*
           }
-        ?>
+        */?>
       </div>
         </div>
     </div>
 </div>
 
 
-  <?php
+  <?php/*
         $args = array(
               'post_type'      => 'proiect',
               'post_status'    => 'publish',
@@ -53,11 +65,11 @@
       $query = new WP_Query($args);
 
       if($query->have_posts()) {
-              ?>
+              */?>
         <div class = "row">
           <div class="col s12">
             <ul class = "project-list">
-              <?php
+              <?php/*
               $index = 0;
 
               while($query->have_posts()) {
@@ -79,29 +91,29 @@
                       $thumb_url = wp_get_attachment_image_src($thumb_id, "full")[0];
                   }
 
-                  ?>
+                  */?>
                   <li class = "center">
-                     <div class="card project-card <?php echo $class; ?>" data-category = "<?php echo $category->slug; ?>">
-                        <a href="<?php the_permalink(); ?>">
+                     <div class="card project-card <?php/* echo $class; */?>" data-category = "<?php/* echo $category->slug; */?>">
+                        <a href="<?php/* the_permalink(); */?>">
                          <div class="card-image">
-                           <img src="<?php echo $thumb_url;?>">
+                           <img src="<?php/* echo $thumb_url;*/?>">
                            <span class="card-title"></span>
                          </div>
                          <div class="card-content">
-                           <p class = "center"><?php echo $content;?></p>
+                           <p class = "center"><?php/* echo $content;*/?></p>
                          </div>
                       </a>
                     </div>
                   </li>
-                  <?php
+                  <?php/*
 
                   $index++;
                 }
 
-                ?>
+                */?>
               </ul>
       </div>
-    </div>
-    <?php } ?>
+    <?php/* } */?>
+    </div> -->
 
 

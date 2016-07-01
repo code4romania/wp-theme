@@ -1,4 +1,4 @@
-<?php /* Template Name: Acasa */ ?>
+<?php /* Template Name: Acasa */?>
 
 <section class="block block-hero wrap container">
   <div class="hero">
@@ -37,6 +37,28 @@
       </div>
     </div>
   </div>
+  <div class="content row">
+    <div class="small-12 medium-3 columns">
+      <a href="#" title="Nume proiect">
+        <h2>Nume mic</h2>
+      </a>
+    </div>
+    <div class="small-12 medium-3 columns">
+      <a href="#" title="Nume proiect">
+        <h2>Nume proiect maricel</h2>
+      </a>
+    </div>
+    <div class="small-12 medium-3 columns">
+      <a href="#" title="Nume proiect">
+        <h2>Nume proiect foarte foarte ultra lung</h2>
+      </a>
+    </div>
+    <div class="small-12 medium-3 columns">
+      <a href="#" title="Nume proiect">
+        <h2>Nume proiect</h2>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section class="block wrap container">
@@ -73,27 +95,27 @@
 </section>
 
 
-  <div class = "row intro-row first-row">
+  <!-- <div class = "row intro-row first-row">
     <div class = "col s12">
         <div class = "row center">
           <div class = "col s12">
-            <h1><?php echoFieldValueOrDefault('intro_titlu'); ?></h1>
+            <h1><?php/* echoFieldValueOrDefault('intro_titlu'); */?></h1>
           </div>
         </div>
         <div class = "row center">
           <div class = "col s6 offset-s3">
-            <h2><?php echoFieldValueOrDefault('intro_subtitlu'); ?></h2>
+            <h2><?php/* echoFieldValueOrDefault('intro_subtitlu'); */?></h2>
           </div>
         </div>
         <div class = "row center">
           <div class = "col s6 offset-s3">
-            <?php echoFieldValueOrDefault('intro_continut'); ?>
+            <?php/* echoFieldValueOrDefault('intro_continut'); */?>
           </div>
         </div>
         <div class = "row center">
           <div class = "col s12">
-            <a id = "afla-cine-suntem-button" class="intro-action-button waves-effect waves-light btn" href="<?php echoFieldValueOrDefault('intro_button_link'); ?>">
-              <span><?php echoFieldValueOrDefault('intro_button_text'); ?></span>
+            <a id = "afla-cine-suntem-button" class="intro-action-button waves-effect waves-light btn" href="<?php/* echoFieldValueOrDefault('intro_button_link'); */?>">
+              <span><?php/* echoFieldValueOrDefault('intro_button_text'); */?></span>
             </a>
           </div>
         </div>
@@ -101,19 +123,19 @@
   </div>
     <div class = "row center">
       <div class = "col s12">
-        <h2><?php echoFieldValueOrDefault('proiecte_titlu'); ?></h2>
+        <h2><?php/* echoFieldValueOrDefault('proiecte_titlu'); */?></h2>
       </div>
     </div>
     <div class = "row center">
       <div class = "col s6 offset-s3">
-        <a id = "vezi-toate-proiectele-link" href = "<?php echoFieldValueOrDefault('proiecte_link'); ?>">
-          <?php echoFieldValueOrDefault('proiecte_link_text'); ?>
+        <a id = "vezi-toate-proiectele-link" href = "<?php/* echoFieldValueOrDefault('proiecte_link'); */?>">
+          <?php/* echoFieldValueOrDefault('proiecte_link_text'); */?>
         </a>
       </div>
     </div>
 
 
-  <?php
+  <?php/*
     $args = array(
         'post_type'       => 'proiect',
         'post_status'     => 'publish',
@@ -124,9 +146,9 @@
       $query = new WP_Query($args);
 
       if($query->have_posts()) {
-              ?>
+              */?>
         <div class = "row project-list-row">
-           <?php
+           <?php/*
               while($query->have_posts()) {
                   $query->the_post();
 
@@ -146,47 +168,47 @@
                     $thumb_url = wp_get_attachment_image_src($thumb_id, "full")[0];
                 }
 
-                  ?>
+                  */?>
                 <div class="col s12 m6 l3">
-                  <div class="card project-card <?php echo $class; ?>" data-category = "<?php echo $category->slug; ?>">
-                    <a href="<?php the_permalink(); ?>">
+                  <div class="card project-card <?php/* echo $class; */?>" data-category = "<?php/* echo $category->slug; */?>">
+                    <a href="<?php/* the_permalink(); */?>">
                   <div class="card-image">
-                      <img src="<?php echo $thumb_url;?>">
+                      <img src="<?php/* echo $thumb_url;*/?>">
                       <span class="card-title"></span>
                   </div>
                   <div class="card-content">
-                      <p class = "center"><?php echo $content;?></p>
+                      <p class = "center"><?php/* echo $content;*/?></p>
                   </div>
                 </a>
               </div>
             </div>
-            <?php } ?>
+            <?php/* } */?>
       </div>
-    <?php
+    <?php/*
 
     wp_reset_query();
 
-  } ?>
+  } */?>
 
 
 
     <div class = "row center">
       <div class = "col s12">
-        <h2><?php echoFieldValueOrDefault('implica-te_titlu'); ?></h2>
+        <h2><?php/* echoFieldValueOrDefault('implica-te_titlu'); */?></h2>
       </div>
     </div>
     <div class = "row center">
       <div class = "col s6 offset-s3">
-        <?php echoFieldValueOrDefault('implica-te_continut'); ?>
+        <?php/* echoFieldValueOrDefault('implica-te_continut'); */?>
       </div>
     </div>
 
-    <?php
-        if(get_field('implica-te_entitati')) { ?>
+    <?php/*
+        if(get_field('implica-te_entitati')) { */?>
           <div class = "row entitati-list-row">
             <div class = "col s12">
               <ul class="entitati-list">
-                <?php
+                <?php/*
                   $entities         = get_field('implica-te_entitati');
                   $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
 
@@ -201,15 +223,15 @@
                   $poza = $defaultEntityPic;
                 }
 
-                    ?>
+                    */?>
                     <li>
-                      <img src="<?php echo $poza;?>">
-                      <p class = "entitate-titlu"><?php echo $titlu;?></p>
-                      <p class = "entitate-descriere"><?php echo $descriere;?></p>
+                      <img src="<?php/* echo $poza;*/?>">
+                      <p class = "entitate-titlu"><?php/* echo $titlu;*/?></p>
+                      <p class = "entitate-descriere"><?php/* echo $descriere;*/?></p>
                     </li>
 
-                  <?php } ?>
+                  <?php/* } */?>
               </ul>
             </div>
           </div>
-          <?php }?>
+          <?php/* }*/?> -->

@@ -1,6 +1,5 @@
-<?php /* Template Name: Cine suntem */ ?>	
-  
-  
+<?php /* Template Name: Cine suntem */ ?>
+
     <div class = "row first-row center">
       <div class = "col s12">
         <h1><?php echoFieldValueOrDefault('cine_suntem_titlu'); ?></h1>
@@ -27,7 +26,7 @@
     $membri             = get_field('membri');
     $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
     $columnsNumber      = ceil(count($membri) / 4) * 4;
-    
+
     for($index = 0; $index < $columnsNumber; $index++) {
       if($index % 4 === 0) {
         ?>
@@ -35,7 +34,7 @@
         <?php
       }
 
-      if($index < count($membri)) {     
+      if($index < count($membri)) {
 
         $membru     = $membri[$index];
         $nume       = repeaterFieldValueOrDefault("nume", $membru);
@@ -65,4 +64,3 @@
     }
 
   ?>
-		

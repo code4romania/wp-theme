@@ -19,8 +19,7 @@
     common: {
       init: function() {
 
-        //Commented for now, because it caused a crash.
-        //$(document).foundation(); // Foundation JavaScript
+        $(document).foundation(); // Foundation JavaScript
 
       },
       finalize: function() {
@@ -43,20 +42,20 @@
           var category  = $this.data('category');
           var projects  = $('.project-list .card').filter(function() {
               return $(this).data('category') === category;
-          }); 
-          
+          });
+
           if ($this.is(':checked') === true) {
             projects.closest('li').show();
           } else {
               projects.closest('li').hide();
           }
-          
-          
+
+
         });
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-      }      
+      }
     }
   };
 

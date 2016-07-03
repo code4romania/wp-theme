@@ -37,25 +37,42 @@
       </div>
     </div>
   </div>
-  <div class="content row">
-    <div class="small-12 medium-3 columns">
-      <a href="#" title="Nume proiect">
+
+
+
+
+
+  <div class="content row project-list">
+    <div class="small-6 large-3 columns">
+      <a href="#" title="Nume proiect" class="project">
+        <div class="success badge">3</div>
+        <img src="http://www.fillmurray.com/800/800" alt="">
         <h2>Nume mic</h2>
+        <span class="mono">Ministerul de Externe</span>
       </a>
     </div>
-    <div class="small-12 medium-3 columns">
-      <a href="#" title="Nume proiect">
+    <div class="small-6 large-3 columns">
+      <a href="#" title="Nume proiect" class="project">
+        <div class="warning badge">3</div>
+        <img src="http://www.fillmurray.com/800/800" alt="">
         <h2>Nume proiect maricel</h2>
+        <span class="mono">Organizatia xyz</span>
       </a>
     </div>
-    <div class="small-12 medium-3 columns">
-      <a href="#" title="Nume proiect">
+    <div class="small-6 large-3 columns">
+      <a href="#" title="Nume proiect" class="project">
+        <div class="warning badge">3</div>
+        <img src="http://www.fillmurray.com/800/800" alt="">
         <h2>Nume proiect foarte foarte ultra lung</h2>
+        <span class="mono">Alta organizatie</span>
       </a>
     </div>
-    <div class="small-12 medium-3 columns">
-      <a href="#" title="Nume proiect">
+    <div class="small-6 large-3 columns">
+      <a href="#" title="Nume proiect" class="project">
+        <div class="secondary badge">2</div>
+        <img src="http://www.fillmurray.com/800/800" alt="">
         <h2>Nume proiect</h2>
+        <span class="mono">Ministerul Sanatatii</span>
       </a>
     </div>
   </div>

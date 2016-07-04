@@ -5,6 +5,14 @@
   @include breakpoint(large) {
     margin: 0;
   }
+
+  .block-title {
+    p {
+      &.actions {
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 .hero-content {
@@ -74,3 +82,46 @@
     }
   }
 }
+
+.project {
+  display: block;
+  margin: 0 0 40px;
+  position: relative;
+
+  @include breakpoint(large) {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 10px 0 0;
+
+    @include breakpoint(medium) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(large) {
+      font-size: 24px;
+    }
+  }
+
+  .badge {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .mono {
+    color: $dark-gray;
+    display: block;
+    font-size: 14px;
+  }
+}
+
+.badge {
+  height: 30px;
+  text-indent: -9999px;
+  width: 30px;
+}
+

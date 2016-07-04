@@ -32,10 +32,10 @@ add_filter('show_admin_bar', '__return_false');
 
 
 //Declare global properties and accessors
-$headerId       = 43;
-$homeId         = 56;
-$footerId       = 41;
-$filtreActiveId = 8;
+$headerId       = 55;
+$homeId         = 2;
+$footerId       = 57;
+$filtreActiveId = 4;
 
 
 function getFooterId() {
@@ -61,8 +61,7 @@ function getFiltreActiveId() {
 function getCategoryActiveFilters() {
     $filters = get_terms( 'category', array(
         'orderby'    => 'id',
-        'parent'   => getFiltreActiveId(),
-        //'fields'   => 'id=>slug'
+        'parent'   => getFiltreActiveId()
     ));
 
     return $filters;

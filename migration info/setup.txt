@@ -1,0 +1,28 @@
+
+1. Dezarhiveaza acf-repeater in "..\wp-content\plugins"
+	
+2. Instaleaza si activeaza plugin-urile:
+
+	- Advanced Custom Fields
+	- Custom Post Type UI
+ 	- Radio Buttons for Taxonomies
+	
+	Activeaza plugin-ul: 
+    
+	- Advanced Custom Fields: Repeater Field
+	
+3. 
+
+Versiunea mea de phpmyadmin 4.5.5.1 are problema la importarea unui script exportat din mysql, ceva legat de escape-ul apostrofelor. In cazul in care  ai o versiune  recenta poti sa incerci, altminteri foloseste consola mysqlpt import cum am  testat eu:
+
+
+phpMyAdmin seem to be having a few issues lately, so it might be simpler to use the mysql console to import your backups
+
+wampmanager->mysql->Mysql console
+
+
+To import a file do this at the mysql command prompt
+
+
+mysql> use code4_db;
+mysql>  source C:\Users\Andrei\Desktop\code4_db.sql

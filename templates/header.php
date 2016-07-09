@@ -3,7 +3,8 @@
     <div class="content row">
       <div class="small-12 columns">
         <a class="brancusi show-for-small-only" href="<?= esc_url(home_url('/')); ?>">
-          <img src="<?php echoFieldValueOrDefault('logo_image', '', getHeaderId()); ?>" alt="Brancusi">
+          <img src="<?php bloginfo('template_url'); ?>/dist/images/brand-logotype.png" alt="Brancusi">
+          <!-- <?php //echoFieldValueOrDefault('logo_image', '', getHeaderId()); ?> -->
         </a>
 
         <a class="brand hide-for-small-only" href="<?= esc_url(home_url('/')); ?>">

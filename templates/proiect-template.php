@@ -14,14 +14,20 @@
     $titluCF        = get_post_meta($post->ID, 'titlu',true);
     $organizatieCF  = get_post_meta($post->ID, 'organizatie',true);
     $durataCF       = get_post_meta($post->ID, 'durata',true);
-    $adresaSiteCF   = get_post_meta($post->ID, 'adresa_site',true);
-    $adresaGithubCF = get_post_meta($post->ID, 'adresa_github',true);
+    $actiunePrimaraTextCF   = get_post_meta($post->ID, 'actiune_primara_text',true);
+    $actiunePrimaraLinkCF   = get_post_meta($post->ID, 'actiune_primara_link',true);
+    $actiuneSecundaraTextCF = get_post_meta($post->ID, 'actiune_secundara_text',true);
+    $actiuneSecundaraLinkCF = get_post_meta($post->ID, 'actiune_secundara_link',true);
+    $substadiuCF            = get_post_meta($post->ID, 'substadiu',true);
 
-        $titlu        = $titluCF !== NULL && $titluCF !== ""  ? $titluCF : get_the_title();
-        $organizatie  = $organizatieCF !== NULL ? $organizatieCF : "";
-        $durata       = $durataCF !== NULL ? $durataCF : "";
-        $adresaSite   = $adresaSiteCF !== NULL ? $adresaSiteCF : "";
-        $adresaGithub = $adresaGithubCF !== NULL ? $adresaGithubCF : "";
+    $titlu        = $titluCF !== NULL && $titluCF !== ""  ? $titluCF : get_the_title();
+    $organizatie  = $organizatieCF !== NULL ? $organizatieCF : "";
+    $durata       = $durataCF !== NULL ? $durataCF : "";
+    $actiunePrimaraText   = $actiunePrimaraTextCF !== NULL ? $actiunePrimaraTextCF : "";
+    $actiunePrimaraLink   = $actiunePrimaraLinkCF !== NULL ? $actiunePrimaraLinkCF : "";
+    $actiuneSecundaraText = $actiuneSecundaraTextCF !== NULL ? $actiuneSecundaraTextCF : "";
+    $actiuneSecundaraLink = $actiuneSecundaraLinkCF !== NULL ? $actiuneSecundaraLinkCF : "";
+    $substadiu    = $substadiuCF !== NULL ? $substadiuCF : "";
 
     if (has_post_thumbnail()) {
           $thumb_id  = get_post_thumbnail_id();
@@ -29,30 +35,30 @@
     } else {
           $thumb_url = $defaultProjectPic;    
     }
-
+    
     ?>
 
-  <div class = "row first-row ">
-    <div class = "col s4">
+  <div class = "">
+    <div class = "">
       <img src="<?php echo $thumb_url; ?>">
     </div>
-    <div class = "col s8">
-      <div class = "row">
-        <div class = "col s12 right-align">
-          <a id = "go-to-site-button" class="project-action-button waves-effect waves-light btn" href="<?php echo $adresaSite; ?>">
-            <span>VEZI PROIECTUL LIVE</span>
+    <div class = "">
+      <div class = "">
+        <div class = "">
+          <a id = "" class="" href="<?php echo $actiunePrimaraLink; ?>">
+            <span><?php echo $actiunePrimaraText; ?></span>
           </a>
         </div>
       </div>
-      <div class = "row">
-        <div class = "col s12 right-align">
-          <a id = "go-to-github-button" class="project-action-button waves-effect waves-light btn" href="<?php echo $adresaGithub; ?>">
-            <span>GITHUB REPO</span>
+      <div class = "">
+        <div class = "">
+          <a id = "" class="" href="<?php echo $actiuneSecundaraLink; ?>">
+            <span><?php echo $actiuneSecundaraText; ?></span>
           </a>
         </div>
       </div>
-      <div class = "row">
-        <div class = "col s12">
+      <div class = "">
+        <div class = "">
           <?php the_content(); ?>
         </div>
       </div>
@@ -61,50 +67,62 @@
 
 
 
-  <div class = "row">
-    <div class="col s4">
-          <div class="card project-parameter-card <?php echo $class; ?>">
-            <div class="card-image">
-            </div>
-            <div class="card-content">
+  <div class = "">
+    <div class="">
+          <div class="<?php echo $class; ?>">
+            <div class="">
               <p><?php echo $titlu; ?></p>
             </div>
           </div>
     </div>
-    <div class="col s4">
-          <div class="card project-parameter-card <?php echo $class; ?>">
-            <div class="card-image">
+    <div class="">
+          <div class="<?php echo $class; ?>">
+            <div class="">
             </div>
-            <div class="card-content">
+            <div class="">
               <p><?php echo $organizatie; ?></p>
             </div>
           </div>
     </div>
-    <div class="col s4">
-          <div class="card project-parameter-card <?php echo $class; ?>">
-            <div class="card-image">
+    <div class="">
+          <div class="<?php echo $class; ?>">
+            <div class="">
             </div>
-            <div class="card-content">
+            <div class="">
               <p><?php echo $durata; ?></p>
             </div>
           </div>
     </div>
   </div>
 
-  <div class = "row project-section-header-row">
-    <div class = "col s12">
-      <span class = "center <?php echo $class; ?>">ECHIPA</span>
+  <?php
+
+    if($substadiu != "") { ?>
+      <p>BARA PROGRES:</p>
+      <p>
+        <?php echo $substadiu; ?>
+      </p>
+
+  <?php
+
+    }
+
+  ?>
+
+  <div class = "">
+    <div class = "">
+      <span class = "<?php echo $class; ?>">ECHIPA</span>
     </div>
   </div>
 
   <?php
-    $membri = get_field('membri_echipa', $post->ID);
-    $columnsNumber = ceil(count($membri) / 3) * 3;
+    $membri         = get_field('membri_echipa', $post->ID);
+    $columnsNumber  = ceil(count($membri) / 3) * 3;
 
     for($index = 0; $index < $columnsNumber; $index++) {
       if($index % 3 === 0) {
         ?>
-        <div class = "row">
+        <div>
         <?php
       }
 
@@ -120,10 +138,10 @@
 
         ?>
 
-            <div class = "col s4">
-              <div class = "project-member">
+            <div class = "">
+              <div class = "">
                 <img src="<?php echo $poza; ?>">
-                <div class="chip project-member-chip">
+                <div class="">
                 <span class = "<?php echo $class;?>"><?php echoRepeaterFieldValueOrDefault("initiala", $membru); ?></span>
                 <?php echoRepeaterFieldValueOrDefault("nume", $membru); ?>
             </div>
@@ -142,35 +160,85 @@
 
   ?>
 
-    <div class = "row project-section-header-row">
-      <div class = "col s12">
-        <span class = "center <?php echo $class; ?>">PARTENERI</span>
+
+    <?php
+    $voluntari      = get_field('voluntari', $post->ID);
+
+    if($voluntari !== NULL && $voluntari[0] != NULL && array_key_exists('descriere', $voluntari[0]))
+    {
+
+      $columnsNumber  = ceil(count($voluntari) / 3) * 3;
+
+      for($index = 0; $index < $columnsNumber; $index++) {
+        if($index % 3 === 0) {
+          ?>
+          <div>
+          <?php
+        }
+
+        if($index < count($voluntari)) {
+
+          $voluntar = $voluntari[$index];
+          $poza   = repeaterFieldValueOrDefault("poza", $voluntar);
+
+          if($poza === null || $poza === "") {
+            $poza   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
+          }
+
+
+          ?>
+
+              <div class = "">
+                <div class = "">
+                  <img src="<?php echo $poza; ?>">
+                  <div class="">
+                    <?php echoRepeaterFieldValueOrDefault("descriere", $voluntar); ?>
+                  </div>
+            </div>
+              </div>
+
+            <?php
+            }
+          if($index % 3 === 2) {
+          ?>
+          </div>
+          <?php
+        }
+
+      }
+    }
+
+  ?>
+
+    <div class = "">
+      <div class = "">
+        <span class = "<?php echo $class; ?>">PARTENERI</span>
       </div>
     </div>
 
   <?php
-    $parteneri    = get_field('parteneri', $post->ID);
+    $parteneri      = get_field('parteneri', $post->ID);
     $columnsNumber  = ceil(count($parteneri) / 2) * 2;
 
     for($index = 0; $index < $columnsNumber; $index++) {
       if($index % 2 === 0) {
         ?>
-        <div class = "row">
+        <div class = "">
         <?php
       }
 
       if($index < count($parteneri)) {
 
-        $partener   = $parteneri[$index];
+        $partener = $parteneri[$index];
         $poza     = repeaterFieldValueOrDefault("poza", $partener);
 
             ?>
-        <div class="col s6">
-              <div class="card project-partner-card <?php echo $class; ?>">
-                <div class="card-image">
+        <div class="">
+              <div class="<?php echo $class; ?>">
+                <div class="">
 
                 </div>
-                <div class="card-content">
+                <div class="">
                   <p><?php echoRepeaterFieldValueOrDefault("nume", $partener); ?></p>
                 </div>
               </div>

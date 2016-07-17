@@ -13,13 +13,15 @@
             <div class="block-content">
               <?php echoFieldValueOrDefault('intro_continut'); ?>
               <p class="actions">
-                <a href="<?php echoFieldValueOrDefault('intro_button_link'); ?>" class="button hollow">
-                  <?php echoFieldValueOrDefault('intro_button_text'); ?>
+                <a href="<?php echoFieldValueOrDefault('afla_cine_suntem_link'); ?>" class="button hollow">
+                  <?php echoFieldValueOrDefault('afla_cine_suntem_text'); ?>
                 </a>
                 <span>sau</span>
-                <a href="#" class="button hollow">Vezi proiectele</a>
+                <a href="<?php echoFieldValueOrDefault('vezi_proiectele_link'); ?>" class="button hollow">
+                  <?php echoFieldValueOrDefault('vezi_proiectele_text'); ?>                    
+                </a>
               </p>
-            </div>
+            </div>  
 
           </div>
         </div>

@@ -110,4 +110,14 @@ function echoRepeaterFieldValueOrDefault ($item, $field, $defaultValue = "") {
   echo repeaterFieldValueOrDefault($item, $field, $defaultValue);
 }
 
+
+//Hide content editor for pages; the content is constructed via advanced custom fields.
+add_action( 'admin_init', 'hide_editor' );
+
+function hide_editor() {
+        remove_post_type_support('page', 'editor');
+
+}
+
+
 ?>

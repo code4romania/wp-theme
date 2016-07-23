@@ -72,14 +72,28 @@ li.menu-item {
     }
 
     &::after {
-      bottom: 12px;
+      bottom: 8px;
       right: 16px;
       left: 16px;
       width: auto;
+
+      @include breakpoint(large) {
+        bottom: 12px;
+      }
     }
 
     @include breakpoint(large) {
       padding: 16px;
+    }
+  }
+
+  &.current-menu-item {
+    > a {
+      color: $color-primary;
+
+      &::after {
+        background: $color-primary;
+      }
     }
   }
 }

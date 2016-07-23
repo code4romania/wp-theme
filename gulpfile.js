@@ -104,6 +104,7 @@ var cssTasks = function(filename) {
         'last 2 versions',
         'iOS >= 7',
         'ie_mob >= 10',
+        'Safari 8',
         'android 4',
         'opera 12'
       ]

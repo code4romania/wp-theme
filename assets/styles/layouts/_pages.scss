@@ -208,3 +208,24 @@
   width: 30px;
 }
 
+.members {
+  margin-top: 60px;
+}
+
+.member {
+  margin-bottom: 30px;
+
+  h3 {
+    margin-top: 15px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $black;
+  }
+
+  .media-object-section {
+    display: block;
+  }
+}
+

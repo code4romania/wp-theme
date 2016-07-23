@@ -37,6 +37,10 @@ h1 {
   color: $color-primary;
 }
 
+p {
+  font-size: 16px;
+}
+
 .button {
   transition: none;
 }
@@ -143,6 +147,26 @@ h1 {
 
     @include breakpoint(xlarge) {
       top: 5%;
+    }
+  }
+}
+
+.block-content {
+  .hero-content {
+    @include breakpoint(large) {
+      h1 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  li {
+    font-size: 16px;
+    color: $color-primary;
+
+    @include breakpoint(medium) {
+      font-size: 20px;
     }
   }
 }

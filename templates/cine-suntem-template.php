@@ -1,80 +1,69 @@
 <?php /* Template Name: Cine suntem */ ?>
 
-    <div class = "row first-row center">
-      <div class = "col s12">
-        <h1><?php echoFieldValueOrDefault('cine_suntem_titlu'); ?></h1>
-      </div>
-    </div>
-    <div class = "row center">
-      <div class = "col s6 offset-s3">
+<section class="block block-hero block-content wrap container">
+  <div class="hero">
+    <div class="hero-content content row">
+      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
+        <?php echoFieldValueOrDefault('cine_suntem_titlu'); ?>
+        </h1>
+      <div class="small-offset-1 small-10 medium-6 columns">
         <?php echoFieldValueOrDefault('cine_suntem_continut'); ?>
       </div>
-    </div>
-    <div class = "row center">
-      <div class = "col s12">
-        <h2><?php echoFieldValueOrDefault('echipa_titlu'); ?></h2>
-      </div>
-    </div>
-    <div class = "row center">
-      <div class = "col s6 offset-s3">
-        <?php echoFieldValueOrDefault('echipa_continut'); ?>
-      </div>
-    </div>
-
-
- <?php 
-    $membri             = get_field('membri');
-    $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
-    $columnsNumber      = ceil(count($membri) / 4) * 4;
-
-    for($index = 0; $index < $columnsNumber; $index++) {
-      if($index % 4 === 0) {
-        ?>
-        <div class = "row cine-suntem-list-row">
-        <?php 
-      }
-
-      if($index < count($membri)) {
-
-        $membru     = $membri[$index];
-        $nume       = repeaterFieldValueOrDefault("nume", $membru);
-        $descriere  = repeaterFieldValueOrDefault("descriere", $membru);
-        $poza       = repeaterFieldValueOrDefault("poza", $membru);
-
-        if($poza === null || $poza === "") {
-          $poza = $defaultMemberPic;
-        } ?>
-
-            <div class = "col s12 m6 l3">
-              <div class = "cine-suntem-membru">
-                <img src="<?php echo $poza; ?>">
-                <p class = "membru-echipa-nume"><?php echo $nume; ?></p>
-                <p class = "membru-echipa-descriere"><?php echo $descriere; ?></p>
-              </div>
-            </div>
-
-          <?php
-          }
-      if($index % 4 === 3) { ?>
-
-        </div>
-      <?php 
-      }
-
-    }
-
-  ?>
-
-
-<!--
-<section class="block wrap container">
-  <div class="content row">
-    <div class="small-12 columns">
-      <?php //get_template_part('templates/page', 'header'); ?>
-
-
-
+      <div class="small-12 columns"></div>
     </div>
   </div>
 </section>
--->
+
+<section class="block block-hero block-content wrap container">
+  <div class="hero">
+    <div class="hero-content content row">
+      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
+        <?php echoFieldValueOrDefault('echipa_titlu'); ?>
+      </h1>
+      <div class="row">
+        <div class="small-offset-1 small-10 medium-7 large-4 columns">
+          <?php echoFieldValueOrDefault('echipa_continut'); ?>
+        </div>
+        <div class="small-offset-1 small-10 medium-8 columns">
+          <div class="members row" data-equalizer data-equalize-on="small" id="test-eq">
+            <?php
+              $membri             = get_field('membri');
+              $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
+              $columnsNumber      = ceil(count($membri) / 4) * 4;
+
+              for($index = 0; $index < $columnsNumber; $index++) {
+
+                if($index < count($membri)) {
+
+                  $membru     = $membri[$index];
+                  $nume       = repeaterFieldValueOrDefault("nume", $membru);
+                  $descriere  = repeaterFieldValueOrDefault("descriere", $membru);
+                  $poza       = repeaterFieldValueOrDefault("poza", $membru);
+
+                  if($poza === null || $poza === "") {
+                    $poza = $defaultMemberPic;
+                  } ?>
+
+                    <div class="small-6 columns" data-equalizer-watch>
+                      <div class="member media-object">
+                        <div class="media-object-section">
+                          <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">
+                        </div>
+                        <div class="media-object-section">
+                          <h3><?php echo $nume; ?></h3>
+                          <p><?php echo $descriere; ?></p>
+                        </div>
+                      </div>
+                    </div>
+
+            <?php
+                }
+              }
+            ?>
+          </div>
+        </div>
+        <div class="small-12 columns"></div>
+      </div>
+    </div>
+  </div>
+</section>

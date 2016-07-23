@@ -11,11 +11,11 @@
         <?php echoFieldValueOrDefault('intro_continut'); ?>
       </div>
       <div class="small-12 columns actions">
-        <a href="<?php echoFieldValueOrDefault('afla_cine_suntem_link'); ?>" class="button underline large">
+        <a href="<?php echoFieldValueOrDefault('afla_cine_suntem_link'); ?>" class="button large underline">
           <?php echoFieldValueOrDefault('afla_cine_suntem_text'); ?>
         </a>
         <span>sau</span>
-        <a href="<?php echoFieldValueOrDefault('vezi_proiectele_link'); ?>" class="button underline large">
+        <a href="<?php echoFieldValueOrDefault('vezi_proiectele_link'); ?>" class="button large underline">
           <?php echoFieldValueOrDefault('vezi_proiectele_text'); ?>
         </a>
       </div>
@@ -28,70 +28,74 @@
   </div>
 </section>
 
-<section class="block wrap container">
-  <div class="content row">
-    <div class="small-12 columns">
-      <div class="block-title">
-        <h1><?php echoFieldValueOrDefault('proiecte_titlu'); ?></h1>
+<section class="block block-hero block-inverted wrap container">
+  <div class="hero">
+    <div class="hero-content content row">
+      <h1 class="small-12 columns"><?php echoFieldValueOrDefault('proiecte_titlu'); ?></h1>
+      <div class="small-offset-1 small-10 medium-offset-6 medium-6 columns">
         <p>Ca să-ți placă mai mult România, vino alături de noi. Suntem o ce rezolvă probleme sociale. Pe termen lung, credem ca putem.</p>
-        <p class="actions">
-          <a href="<?php echoFieldValueOrDefault('proiecte_link'); ?>" class="button hollow">
-            <?php echoFieldValueOrDefault('proiecte_link_text'); ?>
-          </a>
-        </p>
+      </div>
+      <div class="small-12 medium-offset-6 medium-6 columns actions">
+        <a href="<?php echoFieldValueOrDefault('proiecte_link'); ?>" class="button large underline">
+          <?php echoFieldValueOrDefault('proiecte_link_text'); ?>
+        </a>
+      </div>
+      <?php
+        $args = array(
+          'post_type'       => 'proiect',
+          'post_status'     => 'publish',
+          'orderby'         => 'date',
+          'posts_per_page'  => 4
+        );
+
+        $query = new WP_Query($args);
+
+        if($query->have_posts()) { ?>
+
+          <div class="small-12 columns project-list">
+             <?php
+                while($query->have_posts()) {
+                  $query->the_post();
+
+                  $thumb_url      = "";
+                  $defaultProjectPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-project.png";
+                  $category       = get_the_category()[0];
+                  $titluCF        = get_post_meta($post->ID, 'titlu',true);
+                  $organizatieCF  = get_post_meta($post->ID, 'organizatie',true);
+
+                  $titlu     = $titluCF !== NULL && $titluCF !== ""  ? $titluCF : get_the_title();
+                  $organizatie = $organizatieCF !== NULL ? $organizatieCF : "";
+
+                  $content  = $titlu  . " // " . $organizatie;
+                  $class  = $category->slug . '-card' . ' ' . $category->slug . '-class';
+
+                if (has_post_thumbnail()) {
+                    $thumb_id  = get_post_thumbnail_id();
+                    $thumb_url = wp_get_attachment_image_src($thumb_id, "full")[0];
+                } else {
+                  $thumb_url = $defaultProjectPic;
+                } ?>
+
+                <div class="small-6 large-3 columns">
+                  <a href="<?php the_permalink(); ?>" title="Nume proiect" class="project" data-category="<?php echo $category->slug; ?>">
+                    <div class="<?php echo $class; ?> badge"></div>
+                    <img src="<?php echo $thumb_url;?>">
+                    <h2><?php echo $titlu;?></h2>
+                    <span class="project-org"><?php echo $organizatie;?></span>
+                  </a>
+                </div>
+
+            <?php } ?>
+
+          </div>
+      <?php wp_reset_query(); } ?>
+    </div>
+    <div class="hero-media">
+      <div class="image-wrap image-wrap-landscape">
+        <img src="<?php bloginfo('template_url'); ?>/dist/images/hero-proiecte.jpg">
       </div>
     </div>
   </div>
-
-  <?php
-    $args = array(
-      'post_type'       => 'proiect',
-      'post_status'     => 'publish',
-      'orderby'         => 'date',
-      'posts_per_page'  => 4
-    );
-
-    $query = new WP_Query($args);
-
-    if($query->have_posts()) { ?>
-
-      <div class="content row project-list">
-         <?php
-            while($query->have_posts()) {
-              $query->the_post();
-
-              $thumb_url      = "";
-              $defaultProjectPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-project.png";
-              $category       = get_the_category()[0];
-              $titluCF        = get_post_meta($post->ID, 'titlu',true);
-              $organizatieCF  = get_post_meta($post->ID, 'organizatie',true);
-
-              $titlu     = $titluCF !== NULL && $titluCF !== ""  ? $titluCF : get_the_title();
-              $organizatie = $organizatieCF !== NULL ? $organizatieCF : "";
-
-              $content  = $titlu  . " // " . $organizatie;
-              $class  = $category->slug . '-card' . ' ' . $category->slug . '-class';
-
-            if (has_post_thumbnail()) {
-                $thumb_id  = get_post_thumbnail_id();
-                $thumb_url = wp_get_attachment_image_src($thumb_id, "full")[0];
-            } else {
-              $thumb_url = $defaultProjectPic;
-            } ?>
-
-            <div class="small-6 large-3 columns">
-              <a href="<?php the_permalink(); ?>" title="Nume proiect" class="project" data-category="<?php echo $category->slug; ?>">
-                <div class="<?php echo $class; ?> badge"></div>
-                <img src="<?php echo $thumb_url;?>">
-                <h2><?php echo $titlu;?></h2>
-                <span class="mono"><?php echo $organizatie;?></span>
-              </a>
-            </div>
-
-        <?php } ?>
-
-      </div>
-  <?php wp_reset_query(); } ?>
 </section>
 
 <section class="block wrap container">

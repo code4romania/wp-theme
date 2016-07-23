@@ -1,6 +1,7 @@
 .hero {
   margin: 40px auto 0;
   position: relative;
+  overflow: hidden;
 
   @include breakpoint(large) {
     margin: 0;
@@ -9,12 +10,8 @@
 
 .hero-content {
   position: relative;
-  margin: 0 auto 60px;
+  margin: 0 auto;
   z-index: $index-hero;
-
-  @include breakpoint(medium) {
-    margin-bottom: 30px;
-  }
 
   h1 {
     @include breakpoint(medium) {
@@ -48,8 +45,10 @@
   right: 0;
   bottom: -60px;
   z-index: $index-media;
+  opacity: .7;
 
   @include breakpoint(medium) {
+    opacity: 1;
     top: 0;
     bottom: auto;
     left: 50%;
@@ -58,11 +57,46 @@
   }
 }
 
-.hero-content-wrap {
-  @include breakpoint(large) {
-    @include vertical-center;
-    width: 100%;
-    z-index: 1;
+
+.actions {
+  text-align: center;
+
+  @include breakpoint(medium) {
+    margin-top: 30px;
+  }
+
+  a {
+    @include underline-reset;
+  }
+
+  span {
+    color: $color-primary;
+    display: block;
+    font-size: 18px;
+    margin: 20px 0 0;
+
+    @include breakpoint(medium) {
+      display: inline-block;
+      margin: 0 20px;
+    }
+  }
+
+  .button {
+    margin: 0;
+    text-decoration: none;
+
+    @include breakpoint(medium) {
+      margin: 0 0 0 -26px;
+    }
+  }
+
+  .block-inverted & {
+    margin-top: 0;
+    margin-bottom: 60px;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
   }
 }
 
@@ -114,14 +148,24 @@
   margin: 0 0 40px;
   position: relative;
 
+  &:hover {
+    background: $white;
+
+    h2 {
+      color: $color-primary;
+    }
+  }
+
   @include breakpoint(large) {
     margin: 0;
   }
 
   h2 {
+    color: $color-primary;
     font-size: 22px;
-    font-weight: 400;
-    margin: 10px 0 0;
+    font-weight: 700;
+    padding: 10px 13px 0;
+    margin: 0;
 
     @include breakpoint(medium) {
       font-size: 18px;
@@ -138,12 +182,14 @@
     top: 10px;
   }
 
-  .mono {
-    color: $dark-gray;
-    display: block;
+  .project-org {
+    color: $color-primary;
     font-size: 14px;
+    display: block;
+    padding: 0 13px 20px;
   }
 }
+
 
 .badge {
   height: 30px;

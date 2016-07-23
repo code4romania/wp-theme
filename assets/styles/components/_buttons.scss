@@ -41,5 +41,21 @@
         background: $black;
       }
     }
+
+    .block-inverted & {
+      color: $white;
+
+      &::after {
+        background: $white;
+      }
+
+      &:hover {
+        color: $black;
+
+        &::after {
+          background: $black;
+        }
+      }
+    }
   }
 }

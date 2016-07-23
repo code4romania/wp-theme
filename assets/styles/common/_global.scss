@@ -41,39 +41,78 @@ body {
   }
 }
 
+.block-inverted {
+  background: $color-primary;
+  color: $white;
+  padding: 30px 0;
+
+  @include breakpoint(large) {
+    padding: 60px 0;
+  }
+
+  h1 {
+    color: $white;
+    text-align: center;
+  }
+
+  .content {
+    p {
+      font-size: 16px;
+      color: $white;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        text-align: left;
+      }
+    }
+  }
+
+  .project {
+    h2,
+    .project-org {
+      color: $white;
+    }
+
+    &:hover {
+      h2,
+      .project-org {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .hero-content {
+    h1 {
+      margin: 0;
+
+      @include breakpoint(medium) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .hero-media {
+    top: -5%;
+    left: 10%;
+    bottom: auto;
+    width: 90%;
+
+    @include breakpoint(medium) {
+      top: 5%;
+      left: 45%;
+      max-width: 1200px;
+    }
+
+    @include breakpoint(large) {
+      top: 15%;
+    }
+  }
+}
+
 h1 {
   color: $color-primary;
 }
 
 .button {
   transition: none;
-}
-
-.actions {
-  text-align: center;
-
-  @include breakpoint(medium) {
-    margin-top: 30px;
-  }
-
-  a {
-    @include underline-reset;
-  }
-
-  span {
-    color: $color-primary;
-    display: block;
-    font-size: 18px;
-    margin: 20px 0 0;
-
-    @include breakpoint(medium) {
-      display: inline-block;
-      margin: 0 20px;
-    }
-  }
-
-  .button {
-    margin: 0;
-    text-decoration: none;
-  }
 }

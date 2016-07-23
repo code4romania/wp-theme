@@ -100,46 +100,55 @@
   }
 }
 
-.activity {
-  border: 1px solid $white;
-  padding: 16px 20px;
+.activities {
+  margin-top: 30px;
+  padding: 0;
 
-  @include breakpoint(large) {
-    padding: 60px 20px;
+  @include breakpoint(medium) {
+    margin-top: 60px;
   }
 
-  &:hover {
-    border-color: $color-primary;
+  @include breakpoint(large) {
 
+  }
+}
+
+.activity {
+  display: block;
+  color: $color-primary;
+  margin-bottom: 30px;
+
+  &:hover {
     .material-icons,
     h2,
     p {
-      color: $color-primary;
+      color: $black;
     }
-  }
 
-  .material-icons,
-  h2,
-  p {
-    color: $black;
+    h2 {
+      border-bottom-color: $black;
+    }
   }
 
   .material-icons {
-    font-size: 36px;
-    margin: 0 0 20px;
-
-    @include breakpoint(large) {
-      font-size: 48px;
-    }
+    font-size: 32px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
   }
 
   h2 {
-    line-height: 1.1;
+    margin: 0;
+    padding: 0 0 8px;
+    border-bottom: 1px solid $color-primary;
 
-    span {
-      display: block;
-      font-weight: 400;
+    @include breakpoint(large) {
+      white-space: nowrap;
     }
+  }
+
+  p {
+    font-size: 18px;
   }
 }
 

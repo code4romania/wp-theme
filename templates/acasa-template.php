@@ -98,40 +98,51 @@
   </div>
 </section>
 
-<section class="block wrap container">
-  <div class="content row">
-    <div class="small-12 columns">
-      <div class="block-title">
-        <h1><?php echoFieldValueOrDefault('implica-te_titlu'); ?></h1>
+<section class="block block-hero block-activity wrap container">
+  <div class="hero">
+    <div class="hero-content content row">
+      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
+        <?php echoFieldValueOrDefault('implica-te_titlu'); ?>
+      </h1>
+      <div class="small-offset-1 small-10 medium-7 large-4 columns">
         <?php echoFieldValueOrDefault('implica-te_continut'); ?>
+      </div>
+      <div class="small-offset-1 small-10 columns activities">
+        <?php
+
+        if(get_field('implica-te_entitati')) {
+          $entities         = get_field('implica-te_entitati');
+          $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
+
+          foreach ($entities as $entity) {
+            $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
+            $descriere = repeaterFieldValueOrDefault("descriere", $entity);
+            $poza      = repeaterFieldValueOrDefault("poza", $entity);
+            if($poza === null || $poza === "") {
+              $poza = $defaultEntityPic;
+            }
+
+            ?>
+            <div class="small-12 medium-6 large-3 columns">
+              <a href="#" class="activity">
+                <h2>
+                  <i class="material-icons">&#xE54B;</i>
+                  <span><?php echo $titlu;?></span>
+                </h2>
+                <p><?php echo $descriere;?></p>
+              </a>
+            </div>
+
+          <?php  }
+        } ?>
+      </div>
+      <div class="small-12 columns"></div>
+    </div>
+    <div class="hero-media">
+      <div class="image-wrap image-wrap-landscape">
+        <img src="<?php bloginfo('template_url'); ?>/dist/images/hero-implica-te.jpg">
       </div>
     </div>
   </div>
-  <div class="content row">
-    <?php
-
-    if(get_field('implica-te_entitati')) {
-      $entities         = get_field('implica-te_entitati');
-      $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
-
-      foreach ($entities as $entity) {
-        $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
-        $descriere = repeaterFieldValueOrDefault("descriere", $entity);
-        $poza      = repeaterFieldValueOrDefault("poza", $entity);
-        if($poza === null || $poza === "") {
-          $poza = $defaultEntityPic;
-        }
-
-        ?>
-        <a href="#" class="activity small-6 large-3 columns">
-          <i class="material-icons">&#xE54B;</i>
-          <h2><span><?php echo $titlu;?></h2>
-          <p><?php echo $descriere;?></p>
-        </a>
-
-      <?php  }
-    } ?>
-  </div>
 </section>
-
 

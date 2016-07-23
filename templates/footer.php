@@ -7,10 +7,10 @@
         endif;
       ?>
 
-      <p class="copy mono">Code for Romania este o organizație apolitică și nepartizană. EIN: 27-1067272.</p>
+      <p class="copy mono">&copy; 2016 Code for Romania. Organizație apolitică și nepartizană. EIN: 27-1067272.</p>
 
       <a class="brand footer-logo" href="<?= esc_url(home_url('/')); ?>">
-        <img src="<?php echoFieldValueOrDefault('logo_image', '', getFooterId()); ?>">
+        <img src="<?php bloginfo('template_url'); ?>/dist/images/footer-logo.png">
       </a>
 
     </div>

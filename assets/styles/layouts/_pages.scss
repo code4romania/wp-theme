@@ -5,30 +5,56 @@
   @include breakpoint(large) {
     margin: 0;
   }
+}
 
-  .block-title {
-    p {
-      &.actions {
-        margin: 0 auto;
-      }
+.hero-content {
+  position: relative;
+  margin: 0 auto 60px;
+  z-index: $index-hero;
+
+  @include breakpoint(medium) {
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    @include breakpoint(medium) {
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 60px;
+    }
+
+    @include breakpoint(xlarge) {
+      margin-bottom: 90px;
+      margin-top: 120px;
+    }
+  }
+
+  p {
+    color: $color-primary;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 16px;
+
+    @include breakpoint(medium) {
+      font-size: 20px;
     }
   }
 }
 
-.hero-content {
-  margin: 0 auto 40px;
-  max-width: 50rem;
+.hero-media {
+  position: absolute;
+  width: auto;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: $index-media;
 
-  @include breakpoint(large) {
-    margin: 0 auto;
-  }
-
-  .content {
-    background: $white;
-
-    @include breakpoint(large) {
-      padding: 40px 20px;
-    }
+  @include breakpoint(medium) {
+    top: 0;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
   }
 }
 

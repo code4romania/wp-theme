@@ -1,5 +1,8 @@
 // Colors
-$color-primary: #fe3400;
-$color-primary-faded: #f8917d;
+$color-primary: #00f;
+$color-primary-faded: lighten(rgba($color-primary, .5), .3);
 
 $color-type: #3f3f3f;
+
+$index-hero: 100;
+$index-media: 90;

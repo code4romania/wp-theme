@@ -49,7 +49,7 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #fe3400,
+  primary: #00f,
   secondary: #3f3f3f,
   success: #3adb76,
   warning: #ffae00,
@@ -62,7 +62,7 @@ $black: #0a0a0a;
 $white: #fff;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Lora', 'Garamond', 'Times New Roman', serif;
+$body-font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -108,7 +108,7 @@ $header-font-style: normal;
 $font-family-monospace: 'Source Code Pro', 'Courier New', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 26,
+    'h1': 28,
     'h2': 20,
     'h3': 19,
     'h4': 18,
@@ -116,7 +116,15 @@ $header-sizes: (
     'h6': 16,
   ),
   medium: (
-    'h1': 42,
+    'h1': 65,
+    'h2': 32,
+    'h3': 31,
+    'h4': 25,
+    'h5': 20,
+    'h6': 16,
+  ),
+  large: (
+    'h1': 100,
     'h2': 32,
     'h3': 31,
     'h4': 25,
@@ -125,8 +133,8 @@ $header-sizes: (
   ),
 );
 $header-color: inherit;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-lineheight: 1.17;
+$header-margin-bottom: .5rem;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;

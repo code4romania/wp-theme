@@ -4,6 +4,7 @@ body {
 }
 
 body {
+  border-top: 10px solid $color-primary;
   font-size: 14px;
   line-height: 1.45;
 }
@@ -40,23 +41,8 @@ body {
   }
 }
 
-.block-title {
-  margin: 0 auto;
-  max-width: 50rem;
-  text-align: center;
-
-  h1 {
-    margin: 10px 0 20px;
-  }
-
-  p {
-    font-size: 18px;
-    margin: 20px auto 40px;
-  }
-
-  a {
-    @include underline;
-  }
+h1 {
+  color: $color-primary;
 }
 
 .button {
@@ -64,28 +50,30 @@ body {
 }
 
 .actions {
+  text-align: center;
+
+  @include breakpoint(medium) {
+    margin-top: 30px;
+  }
+
   a {
     @include underline-reset;
   }
 
   span {
-    display: inline-block;
-    font-size: 14px;
-    margin: 20px 0;
+    color: $color-primary;
+    display: block;
+    font-size: 18px;
+    margin: 20px 0 0;
 
     @include breakpoint(medium) {
+      display: inline-block;
       margin: 0 20px;
     }
   }
 
   .button {
-    @include button-expand(true);
     margin: 0;
     text-decoration: none;
-
-    @include breakpoint(medium) {
-      @include button-expand(false);
-      margin: 0;
-    }
   }
 }

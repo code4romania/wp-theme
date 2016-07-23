@@ -1,10 +1,9 @@
-<header class="top" data-sticky-container>
-  <div class="title-bar sticky clearfix" data-sticky data-margin-top="0">
+<header class="top">
+  <div class="title-bar clearfix">
     <div class="content row">
       <div class="small-12 columns">
         <a class="brancusi show-for-small-only" href="<?= esc_url(home_url('/')); ?>">
-          <img src="<?php bloginfo('template_url'); ?>/dist/images/brand-logotype.png" alt="Brancusi">
-          <!-- <?php //echoFieldValueOrDefault('logo_image', '', getHeaderId()); ?> -->
+          <img src="<?php bloginfo('template_url'); ?>/dist/images/brand-brancusi.png" alt="Brancusi">
         </a>
 
         <a class="brand hide-for-small-only" href="<?= esc_url(home_url('/')); ?>">

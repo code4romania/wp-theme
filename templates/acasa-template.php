@@ -2,34 +2,27 @@
 
 <section class="block block-hero wrap container">
   <div class="hero">
-    <div class="hero-content-wrap">
-      <div class="hero-content">
-        <div class="content row">
-          <div class="small-12 columns block-title">
-            <h1>
-              <?php echoFieldValueOrDefault('intro_titlu'); ?><br/>
-              <?php echoFieldValueOrDefault('intro_subtitlu'); ?>
-            </h1>
-            <div class="block-content">
-              <?php echoFieldValueOrDefault('intro_continut'); ?>
-              <p class="actions">
-                <a href="<?php echoFieldValueOrDefault('afla_cine_suntem_link'); ?>" class="button hollow">
-                  <?php echoFieldValueOrDefault('afla_cine_suntem_text'); ?>
-                </a>
-                <span>sau</span>
-                <a href="<?php echoFieldValueOrDefault('vezi_proiectele_link'); ?>" class="button hollow">
-                  <?php echoFieldValueOrDefault('vezi_proiectele_text'); ?>                    
-                </a>
-              </p>
-            </div>  
-
-          </div>
-        </div>
+    <div class="hero-content content row">
+      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
+        <?php echoFieldValueOrDefault('intro_titlu'); ?><br/>
+        <?php echoFieldValueOrDefault('intro_subtitlu'); ?>
+      </h1>
+      <div class="small-offset-1 small-10 medium-8 large-6 columns">
+        <?php echoFieldValueOrDefault('intro_continut'); ?>
+      </div>
+      <div class="small-12 columns actions">
+        <a href="<?php echoFieldValueOrDefault('afla_cine_suntem_link'); ?>" class="button underline large">
+          <?php echoFieldValueOrDefault('afla_cine_suntem_text'); ?>
+        </a>
+        <span>sau</span>
+        <a href="<?php echoFieldValueOrDefault('vezi_proiectele_link'); ?>" class="button underline large">
+          <?php echoFieldValueOrDefault('vezi_proiectele_text'); ?>
+        </a>
       </div>
     </div>
     <div class="hero-media">
       <div class="image-wrap image-wrap-landscape">
-        <img src="<?php bloginfo('template_url'); ?>/dist/images/hero.jpg">
+        <img src="<?php bloginfo('template_url'); ?>/dist/images/hero.png">
       </div>
     </div>
   </div>

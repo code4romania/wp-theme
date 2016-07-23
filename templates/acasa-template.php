@@ -1,6 +1,6 @@
 <?php /* Template Name: Acasa */?>
 
-<section class="block block-hero wrap container">
+<section class="block block-hero block-hello wrap container">
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">

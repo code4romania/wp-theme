@@ -141,8 +141,8 @@ h1 {
       top: 10%;
     }
 
-    @include breakpoint(large) {
-
+    @include breakpoint(xlarge) {
+      top: 5%;
     }
   }
 }

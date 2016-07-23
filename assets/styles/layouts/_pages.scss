@@ -84,10 +84,6 @@
   .button {
     margin: 0;
     text-decoration: none;
-
-    @include breakpoint(medium) {
-      margin: 0 0 0 -26px;
-    }
   }
 
   .block-inverted & {
@@ -96,6 +92,12 @@
 
     @include breakpoint(medium) {
       text-align: left;
+    }
+
+    .button {
+        @include breakpoint(medium) {
+        margin: 0 0 0 -26px;
+      }
     }
   }
 }
@@ -109,7 +111,7 @@
   }
 
   @include breakpoint(large) {
-
+    margin-top: 120px;
   }
 }
 

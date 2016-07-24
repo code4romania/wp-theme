@@ -1,12 +1,13 @@
-html,
 body {
-  height: 100%;
-}
-
-body {
-  border-top: 10px solid $color-primary;
+  border-top: $border-height solid $color-primary;
   font-size: 14px;
   line-height: 1.45;
+}
+
+[type='file'],
+[type='checkbox'],
+[type='radio'] {
+  margin: 0;
 }
 
 .mono {
@@ -75,20 +76,6 @@ p {
 
       @include breakpoint(medium) {
         text-align: left;
-      }
-    }
-  }
-
-  .project {
-    h2,
-    .project-org {
-      color: $white;
-    }
-
-    &:hover {
-      h2,
-      .project-org {
-        color: $color-primary;
       }
     }
   }
@@ -163,10 +150,15 @@ p {
 
   li {
     font-size: 16px;
-    color: $color-primary;
+    color: $black;
 
     @include breakpoint(medium) {
       font-size: 20px;
     }
   }
+}
+
+.column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+  float: left;
 }

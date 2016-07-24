@@ -33,21 +33,17 @@
     },
     proiecte: {
       init: function() {
-        $('.filter-button').on('click', function() {
-          $(this).siblings('input').trigger('click');
-        });
-
-        $('.project-filter-cb').on('click', function() {
-          var $this     = $(this);
-          var category  = $this.data('category');
-          var projects  = $('.project-list .card').filter(function() {
-              return $(this).data('category') === category;
+        $('.project-filter-cb').on('change', function() {
+          var $this = $(this);
+          var category = $this.data('category');
+          var projects = $('.project-list .card').filter(function() {
+            return $(this).data('category') === category;
           });
 
           if ($this.is(':checked') === true) {
-            projects.closest('li').show();
+            projects.closest('.columns').show();
           } else {
-              projects.closest('li').hide();
+            projects.closest('.columns').hide();
           }
 
 

@@ -14,7 +14,7 @@
         <a href="<?php echoFieldValueOrDefault('afla_cine_suntem_link'); ?>" class="button large underline">
           <?php echoFieldValueOrDefault('afla_cine_suntem_text'); ?>
         </a>
-        <span>sau</span>
+        <span class="spacer">sau</span>
         <a href="<?php echoFieldValueOrDefault('vezi_proiectele_link'); ?>" class="button large underline">
           <?php echoFieldValueOrDefault('vezi_proiectele_text'); ?>
         </a>

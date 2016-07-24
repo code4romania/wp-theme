@@ -27,7 +27,7 @@
   }
 
   p {
-    color: $color-primary;
+    color: $black;
     font-size: 16px;
     margin-top: 15px;
     margin-bottom: 16px;
@@ -69,7 +69,7 @@
     @include underline-reset;
   }
 
-  span {
+  .spacer {
     color: $color-primary;
     display: block;
     font-size: 18px;
@@ -99,6 +99,19 @@
         margin: 0 0 0 -26px;
       }
     }
+  }
+}
+
+.actions-project {
+  margin-top: 0;
+
+  .button {
+    white-space: nowrap;
+  }
+
+  .fieldset {
+    padding: 0;
+    border: 0;
   }
 }
 
@@ -150,11 +163,30 @@
   }
 
   p {
+    color: $color-primary;
     font-size: 18px;
   }
 }
 
+.project-list {
+  padding: 0;
+
+  .columns {
+    .page-template-proiecte-template & {
+      padding-left: 5px;
+      padding-right: 5px;
+
+      @include breakpoint(large) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+}
+
 .project {
+  background: $white;
   display: block;
   margin: 0 0 40px;
   position: relative;
@@ -162,17 +194,22 @@
   &:hover {
     background: $white;
 
-    h2 {
+    h2,
+    .project-org {
       color: $color-primary;
     }
   }
 
   @include breakpoint(large) {
     margin: 0;
+
+    .page-template-proiecte-template & {
+      margin-bottom: 40px;
+    }
   }
 
   h2 {
-    color: $color-primary;
+    color: $black;
     font-size: 22px;
     font-weight: 700;
     padding: 10px 13px 0;
@@ -189,23 +226,38 @@
 
   .badge {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    left: 0;
+    top: 0;
   }
 
   .project-org {
-    color: $color-primary;
+    color: $black;
     font-size: 14px;
     display: block;
     padding: 0 13px 20px;
+  }
+
+  .block-inverted & {
+    h2,
+    .project-org {
+      color: $black;
+    }
+
+    &:hover {
+      h2,
+      .project-org {
+        color: $color-primary;
+      }
+    }
   }
 }
 
 
 .badge {
-  height: 30px;
+  height: $border-height;
   text-indent: -9999px;
-  width: 30px;
+  width: 100%;
+  border-radius: 0;
 }
 
 .members {
@@ -217,6 +269,7 @@
 
   h3 {
     margin-top: 15px;
+    color: $color-primary;
   }
 
   p {

@@ -28,7 +28,7 @@
           $cbID   = $filter->slug . '-cb';
         ?>
 
-        <div class="form-item small-12 columns">
+        <div class="form-item small-12 medium-6 large-4 columns">
           <input type="checkbox" class="project-filter-cb checkbox" checked="checked" id="<?php echo $cbID; ?>" data-category = "<?php echo $filter->slug; ?>" style="display: none;">
           <label for="<?php echo $cbID; ?>" class="<?php echo $class; ?> filter-button filter-checkbox ">
             <span class="custom checkbox"></span> <?php  echo $filter->name; ?>

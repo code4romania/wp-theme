@@ -1,12 +1,37 @@
 .form-item  {
   text-align: left;
   display: inline-block;
+  padding: 0;
 
   .checkbox {
+    + label {
+      background: $black;
+      color: $white;
+      margin: 0;
+
+      @include breakpoint(large) {
+        white-space: nowrap;
+      }
+    }
+
     &:checked {
-      + label {
-        background: $black;
-        color: $white;
+      + .proiecte_finalizate-class {
+        background: $color-complete;
+      }
+
+      + .proiecte_in_desfasurare-class {
+        background: $color-wip;
+        color: $black;
+      }
+
+      + .proiect_cu_nevoie_de_voluntari-class {
+        background: $color-need;
+        color: $black;
+      }
+
+      + .proiect_propus-class {
+        background: $color-option;
+        color: $black;
       }
     }
   }
@@ -14,7 +39,7 @@
 
 .filter-checkbox {
   display: inline-block;
-  padding: 18px 22px;
+  padding: 14px 18px;
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;

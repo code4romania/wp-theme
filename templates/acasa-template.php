@@ -7,7 +7,7 @@
         <?php echoFieldValueOrDefault('intro_titlu'); ?><br/>
         <?php echoFieldValueOrDefault('intro_subtitlu'); ?>
       </h1>
-      <div class="small-offset-1 small-10 medium-8 large-6 columns">
+      <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <?php echoFieldValueOrDefault('intro_continut'); ?>
       </div>
       <div class="small-12 columns actions">
@@ -18,11 +18,6 @@
         <a href="<?php echoFieldValueOrDefault('vezi_proiectele_link'); ?>" class="button large underline">
           <?php echoFieldValueOrDefault('vezi_proiectele_text'); ?>
         </a>
-      </div>
-    </div>
-    <div class="hero-media">
-      <div class="image-wrap image-wrap-landscape">
-        <img src="<?php bloginfo('template_url'); ?>/dist/images/hero.png">
       </div>
     </div>
   </div>

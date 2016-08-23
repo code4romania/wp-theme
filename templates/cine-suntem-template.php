@@ -6,10 +6,9 @@
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
         <?php echoFieldValueOrDefault('cine_suntem_titlu'); ?>
       </h1>
-      <div class="small-offset-1 small-10 medium-6 columns">
+      <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <?php echoFieldValueOrDefault('cine_suntem_continut'); ?>
       </div>
-      <div class="small-12 columns"></div>
     </div>
   </div>
 </section>

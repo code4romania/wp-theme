@@ -3,11 +3,11 @@
 <section class="block block-hero block-hello wrap container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php echoFieldValueOrDefault('intro_titlu'); ?><br/>
-        <?php echoFieldValueOrDefault('intro_subtitlu'); ?>
-      </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
+        <h1>
+          <?php echoFieldValueOrDefault('intro_titlu'); ?><br/>
+          <?php echoFieldValueOrDefault('intro_subtitlu'); ?>
+        </h1>
         <?php echoFieldValueOrDefault('intro_continut'); ?>
       </div>
       <div class="small-12 columns actions">

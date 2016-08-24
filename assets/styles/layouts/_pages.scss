@@ -15,19 +15,35 @@
 
   h1 {
     @include breakpoint(medium) {
-      text-align: center;
-      margin-bottom: 40px;
-      margin-top: 60px;
+     text-align: center;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 30px;
+      margin-top: 40px;
+    }
+
+    .block-hello & {
+      text-align: left;
     }
   }
 
   p {
-    color: $black;
+    color: $color-primary;
+    font-weight: 400;
     font-size: 16px;
     margin-top: 15px;
     margin-bottom: 16px;
 
+    .block-activity & {
+      color: $black;
+    }
+
     @include breakpoint(medium) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(large) {
       font-size: 20px;
     }
   }
@@ -131,9 +147,14 @@
 
   &:hover {
     .material-icons,
-    h2,
-    p {
+    h2 {
       color: $black;
+    }
+
+    p {
+      .block-activity & {
+        color: $black;
+      }
     }
 
     h2 {
@@ -159,8 +180,10 @@
   }
 
   p {
-    color: $color-primary;
-    font-size: 18px;
+    .block-activity & {
+      color: $color-primary;
+      font-size: 18px;
+    }
   }
 }
 

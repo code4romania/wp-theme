@@ -1,0 +1,35 @@
+.proiecte_finalizate-class {
+  background-color: $color-complete;
+
+  &.project {
+    background-color: transparent;
+  }
+
+  &.filter-button {
+    color: $white;
+  }
+}
+
+.proiecte_in_desfasurare-class {
+  background-color: $color-wip;
+
+  &.project {
+    background-color: transparent;
+  }
+}
+
+.proiect_cu_nevoie_de_voluntari-class {
+  background-color: $color-need;
+
+  &.project {
+    background-color: transparent;
+  }
+}
+
+.proiect_propus-class {
+  background-color: $color-option;
+
+  &.project {
+    background-color: transparent;
+  }
+}

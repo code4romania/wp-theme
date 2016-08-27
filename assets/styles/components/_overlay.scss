@@ -1,0 +1,46 @@
+.overlay-nav {
+  .nav {
+    float: none;
+    height: 100vh;
+  }
+
+  .menu {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    > li {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+      font-size: 22px;
+      overflow: hidden;
+      text-align: center;
+      -webkit-flex: none;
+      flex: none;
+
+      > a {
+        color: $white;
+      }
+    }
+  }
+}
+
+.reveal {
+  padding: 0;
+  background: rgba($black, 0.65);
+}
+
+.close-button {
+  color: $white;
+  font-size: 0;
+  right: 20px;
+  top: 20px;
+
+  &:hover {
+    color: $white;
+  }
+}

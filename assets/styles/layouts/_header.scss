@@ -1,0 +1,106 @@
+header {
+  background: $white;
+
+  .is-stuck {
+    border-bottom: 1px solid $light-gray;
+  }
+
+  .nav {
+    margin: 6px 0 0;
+
+    @include breakpoint(large) {
+      margin: 0;
+    }
+  }
+}
+
+.title-bar {
+  width: 100%;
+}
+
+.brancusi {
+  display: inline-block;
+  height: 48px;
+  padding: 6px;
+  width: 48px;
+}
+
+.burger {
+  display: inline-block;
+  float: right;
+  font-size: 0;
+  padding: 12px;
+
+  .is-reveal-open & {
+    display: none;
+  }
+}
+
+.brand {
+  display: inline-block;
+  height: 40px;
+  margin: 4px 0 0;
+  width: auto;
+
+  img {
+    height: 100%;
+  }
+}
+
+.nav {
+  float: right;
+}
+
+li.menu-item {
+  font-size: 12px;
+  padding: 0 5px;
+
+  @include breakpoint(large) {
+    font-size: 16px;
+    padding: 0 40px;
+  }
+
+  > a {
+    @include underline;
+    color: $black;
+    letter-spacing: 1px;
+    padding: 12px 16px;
+    width: 100%;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &::after {
+      bottom: 8px;
+      right: 16px;
+      left: 16px;
+      width: auto;
+
+      @include breakpoint(large) {
+        bottom: 12px;
+      }
+    }
+
+    @include breakpoint(large) {
+      padding: 16px;
+    }
+  }
+
+  &.current-menu-item {
+    > a {
+      color: $color-primary;
+
+      &::after {
+        background: $color-primary;
+      }
+    }
+  }
+}
+
+.title-bar {
+  @include breakpoint(large) {
+    padding: 30px;
+  }
+}
+

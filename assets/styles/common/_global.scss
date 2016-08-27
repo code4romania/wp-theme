@@ -1,1 +1,173 @@
+body {
+  border-top: $border-height solid $color-primary;
+  font-size: 14px;
+  line-height: 1.45;
+}
 
+[type='file'],
+[type='checkbox'],
+[type='radio'] {
+  margin: 0;
+}
+
+.mono {
+  font-family: $font-family-monospace;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.image-wrap {
+  display: block;
+  height: 0;
+  position: relative;
+
+  img {
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.image-wrap-landscape {
+  padding-top: 56.25%;
+}
+
+h1 {
+  color: $color-primary;
+}
+
+h2 {
+  .block-text & {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+.button {
+  transition: none;
+}
+
+.block {
+  margin-bottom: 40px;
+
+  @include breakpoint(large) {
+    margin-bottom: 80px;
+  }
+}
+
+.block-inverted {
+  background: $color-primary;
+  color: $white;
+  padding: 30px 0;
+
+  @include breakpoint(large) {
+    padding: 60px 0;
+  }
+
+  h1 {
+    color: $white;
+    text-align: center;
+  }
+
+  .content {
+    p {
+      font-size: 16px;
+      color: $white;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        text-align: left;
+      }
+    }
+  }
+
+  .hero-content {
+    h1 {
+      margin: 0;
+
+      @include breakpoint(medium) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .hero-media {
+    top: -5%;
+    left: 10%;
+    bottom: auto;
+    width: 90%;
+
+    @include breakpoint(medium) {
+      top: 5%;
+      left: 45%;
+      max-width: 1200px;
+    }
+
+    @include breakpoint(large) {
+      top: 0;
+    }
+  }
+}
+
+.block-activity {
+  .hero-content {
+    h1 {
+      @include breakpoint(medium) {
+        margin-top: 0;
+      }
+
+      @include breakpoint(large) {
+        margin-top: 30px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  .hero-media {
+    @include breakpoint(medium) {
+      left: 70%;
+    }
+
+    @include breakpoint(large) {
+      left: 50%;
+      top: 10%;
+    }
+
+    @include breakpoint(xlarge) {
+      top: 5%;
+    }
+  }
+}
+
+.block-content {
+  .hero-content {
+    h1 {
+      color: $black;
+
+      @include breakpoint(large) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  li {
+    font-size: 16px;
+    color: $black;
+
+    @include breakpoint(medium) {
+      font-size: 20px;
+    }
+  }
+}
+
+.column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+  float: left;
+}

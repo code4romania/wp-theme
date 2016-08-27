@@ -92,7 +92,9 @@ var cssTasks = function(filename) {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
         precision: 10,
-        includePaths: ['.'],
+        includePaths: [
+          './bower_components/foundation-sites/scss'
+        ],
         errLogToConsole: !enabled.failStyleTask
       }));
     })
@@ -100,6 +102,9 @@ var cssTasks = function(filename) {
     .pipe(autoprefixer, {
       browsers: [
         'last 2 versions',
+        'iOS >= 7',
+        'ie_mob >= 10',
+        'Safari 8',
         'android 4',
         'opera 12'
       ]

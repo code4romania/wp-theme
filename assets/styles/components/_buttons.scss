@@ -1,0 +1,61 @@
+.button {
+  color: $black;
+
+  &.hollow {
+    border-color: $black;
+    color: $black;
+
+    &:hover {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+  }
+
+  &.underline {
+    @include underline;
+    background: transparent;
+    border: none;
+
+    &::after {
+      bottom: 12px;
+      right: 26px;
+      left: 26px;
+      width: auto;
+      height: 3px;
+    }
+  }
+
+  &.large {
+    color: $color-primary;
+    font-size: 26px;
+    font-weight: 700;
+
+    &::after {
+      background: $color-primary;
+    }
+
+    &:hover {
+      color: $black;
+
+      &::after {
+        background: $black;
+      }
+    }
+
+    .block-inverted & {
+      color: $white;
+
+      &::after {
+        background: $white;
+      }
+
+      &:hover {
+        color: $black;
+
+        &::after {
+          background: $black;
+        }
+      }
+    }
+  }
+}

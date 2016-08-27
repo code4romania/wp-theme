@@ -1,9 +1,15 @@
-// Glyphicons font path
-$icon-font-path:        "../fonts/";
-
-// Grid settings
-$main-sm-columns:       12;
-$sidebar-sm-columns:    4;
-
 // Colors
-$brand-primary:         #27ae60;
+$color-primary: #00f;
+$color-primary-faded: lighten(rgba($color-primary, .5), .3);
+
+$color-complete: $color-primary;
+$color-wip: #0f0;
+$color-need: #ff0;
+$color-option: #039be5; //change
+
+$color-type: #3f3f3f;
+
+$index-hero: 100;
+$index-media: 90;
+
+$border-height: 15px;

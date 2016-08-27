@@ -14,29 +14,43 @@
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
-  var Sage = {
+  var Code4 = {
     // All pages
-    'common': {
+    common: {
       init: function() {
-        // JavaScript to be fired on all pages
+
+        $(document).foundation(); // Foundation JavaScript
+
       },
       finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
+
       }
     },
     // Home page
-    'home': {
+    home: {
+      init: function() {},
+      finalize: function() {}
+    },
+    proiecte: {
       init: function() {
-        // JavaScript to be fired on the home page
+        $('.project-filter-cb').on('change', function() {
+          var $this = $(this);
+          var category = $this.data('category');
+          var projects = $('.project-list .card').filter(function() {
+            return $(this).data('category') === category;
+          });
+
+          if ($this.is(':checked') === true) {
+            projects.closest('.columns').show();
+          } else {
+            projects.closest('.columns').hide();
+          }
+
+
+        });
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-      }
-    },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
-      init: function() {
-        // JavaScript to be fired on the about us page
       }
     }
   };
@@ -46,7 +60,7 @@
   var UTIL = {
     fire: function(func, funcname, args) {
       var fire;
-      var namespace = Sage;
+      var namespace = Code4;
       funcname = (funcname === undefined) ? 'init' : funcname;
       fire = func !== '';
       fire = fire && namespace[func];

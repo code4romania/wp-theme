@@ -26,3 +26,98 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+add_filter('show_admin_bar', '__return_false');
+
+
+
+//Declare global properties and accessors
+$headerId       = 55;
+$homeId         = 2;
+$footerId       = 57;
+$filtreActiveId = 4;
+
+
+function getFooterId() {
+    global $footerId;
+    return $footerId;
+}
+
+function getHomeId() {
+    global $homeId;
+    return $homeId;
+}
+
+function getHeaderId() {
+    global $headerId;
+    return $headerId;
+}
+
+function getFiltreActiveId() {
+    global $filtreActiveId;
+    return $filtreActiveId;
+}
+
+function getCategoryActiveFilters() {
+    $filters = get_terms( 'category', array(
+        'orderby'    => 'id',
+        'parent'   => getFiltreActiveId()
+    ));
+
+    return $filters;
+}
+
+
+//add svg as allowed mime type
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+//Adds post featured image support
+add_theme_support('post-thumbnails');
+
+function custom_upload_mimes ( $existing_mimes=array() ) {
+
+  // add the file extension to the array
+
+  $existing_mimes['svg'] = 'mime/type';
+
+    // call the modified list of extensions
+
+  return $existing_mimes;
+
+}
+
+//Return the vaule of a ACF or the default value
+function fieldValueOrDefault ($field, $defaultValue = "", $pageId = "") {
+
+    return $pageId != "" ? (get_field($field, $pageId) ? get_field($field, $pageId) : $defaultValue) :
+                         (get_field($field)          ? get_field($field) : $defaultValue);
+
+}
+
+
+//Echo the vaule of a ACF or the default value
+function echoFieldValueOrDefault ($field, $defaultValue = "", $pageId = "") {
+  echo fieldValueOrDefault ($field, $defaultValue, $pageId);
+}
+
+//Return the vaule of a Repeater Field or the default value
+function repeaterFieldValueOrDefault($item, $field, $defaultValue = "") {
+    return array_key_exists($item, $field ) && $field[$item] ? $field[$item] : $defaultValue;
+}
+
+//Echo the vaule of a Repeater Field or the default value
+function echoRepeaterFieldValueOrDefault ($item, $field, $defaultValue = "") {
+  echo repeaterFieldValueOrDefault($item, $field, $defaultValue);
+}
+
+
+//Hide content editor for pages; the content is constructed via advanced custom fields.
+add_action( 'admin_init', 'hide_editor' );
+
+function hide_editor() {
+        remove_post_type_support('page', 'editor');
+
+}
+
+
+?>

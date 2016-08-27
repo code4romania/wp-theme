@@ -1,0 +1,408 @@
+.hero {
+  margin: 40px auto 0;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint(large) {
+    margin: 0;
+  }
+}
+
+.hero-content {
+  position: relative;
+  margin: 0 auto;
+  z-index: $index-hero;
+
+  h1 {
+    @include breakpoint(medium) {
+     text-align: center;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 30px;
+      margin-top: 40px;
+    }
+
+    .block-hello &,
+    .block-team & {
+      text-align: left;
+    }
+  }
+
+  p {
+    color: $color-primary;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 16px;
+
+    .block-activity &,
+    .block-content & {
+      color: $black;
+    }
+
+    .block-text & {
+      @include breakpoint(medium) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      @include breakpoint(large) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(large) {
+      font-size: 20px;
+    }
+  }
+}
+
+.hero-media {
+  position: absolute;
+  width: auto;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: $index-media;
+  opacity: .7;
+
+  @include breakpoint(medium) {
+    opacity: 1;
+    top: 0;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+  }
+}
+
+
+.actions {
+  text-align: center;
+
+  @include breakpoint(medium) {
+    margin-top: 30px;
+  }
+
+  a {
+    @include underline-reset;
+  }
+
+  .spacer {
+    color: $color-primary;
+    display: block;
+    font-size: 18px;
+    margin: 20px 0 0;
+
+    @include breakpoint(medium) {
+      display: inline-block;
+      margin: 0 20px;
+    }
+  }
+
+  .button {
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .block-inverted & {
+    margin-top: 0;
+    margin-bottom: 60px;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+
+    .button {
+        @include breakpoint(medium) {
+        margin: 0 0 0 -26px;
+      }
+    }
+  }
+}
+
+.actions-project {
+  .button {
+    white-space: nowrap;
+  }
+
+  .fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0 0 60px;
+  }
+}
+
+.activities {
+  margin-top: 30px;
+  padding: 0;
+
+  @include breakpoint(medium) {
+    margin-top: 60px;
+  }
+}
+
+.activity {
+  display: block;
+  color: $color-primary;
+  margin-bottom: 30px;
+
+  .block-content & {
+    color: $black;
+  }
+
+  .block-text & {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    .material-icons,
+    h2 {
+      color: $black;
+    }
+
+    p {
+      .block-activity & {
+        color: $black;
+      }
+    }
+
+    h2 {
+      border-bottom-color: $black;
+    }
+  }
+
+  .material-icons {
+    font-size: 32px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0 0 8px;
+
+    @include breakpoint(large) {
+      white-space: nowrap;
+    }
+  }
+
+  p {
+    .block-activity & {
+      color: $color-primary;
+      font-size: 18px;
+    }
+
+    .block-text & {
+      margin-top: 0;
+    }
+  }
+}
+
+.project-list {
+  padding: 0;
+  min-height: 600px;
+
+  .columns {
+    .page-template-proiecte-template & {
+      padding-left: 5px;
+      padding-right: 5px;
+
+      @include breakpoint(medium) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      @include breakpoint(large) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  .block-inverted & {
+    min-height: 0;
+  }
+
+}
+
+.project {
+  background: $white;
+  display: block;
+  margin: 0 0 40px;
+  position: relative;
+
+  &:hover {
+    background: $white;
+
+    h2,
+    .project-org {
+      color: $color-primary;
+    }
+  }
+
+  @include breakpoint(large) {
+    margin: 0;
+
+    .page-template-proiecte-template & {
+      margin-bottom: 40px;
+    }
+  }
+
+  h2 {
+    color: $black;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 13px 0;
+    margin: 0;
+
+    @include breakpoint(medium) {
+      font-size: 18px;
+    }
+
+    @include breakpoint(large) {
+      font-size: 24px;
+    }
+  }
+
+  .badge {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .project-org {
+    color: $black;
+    font-size: 14px;
+    display: block;
+    padding: 0 13px 20px;
+  }
+
+  .block-inverted & {
+    h2,
+    .project-org {
+      color: $black;
+    }
+
+    &:hover {
+      h2,
+      .project-org {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.badge {
+  height: $border-height;
+  text-indent: -9999px;
+  width: 100%;
+  border-radius: 0;
+}
+
+.members {
+  margin-top: 60px;
+}
+
+.member {
+  margin-bottom: 30px;
+
+  h3 {
+    margin-top: 15px;
+    color: $color-primary;
+  }
+
+  p {
+    font-size: 16px;
+    color: $black;
+  }
+
+  .media-object-section {
+    display: block;
+  }
+}
+
+.steps {
+  list-style: none inside;
+  margin: 0;
+  padding: 0;
+}
+
+.step {
+  position: relative;
+  margin: 0 0 30px;
+
+  h2 {
+    margin: 0;
+    color: $color-primary;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(2n) {
+
+  }
+
+  &:nth-child(2n + 1) {
+
+  }
+}
+
+.step-no {
+  font-weight: 700;
+  display: block;
+  height: 62px;
+  line-height: 62px;
+  width: 62px;
+  margin: 0 auto;
+  text-align: center;
+  color: $color-primary;
+  position: relative;
+
+  @include breakpoint(medium) {
+    margin: 0;
+    display: inline-block;
+    margin-left: -70px;
+  }
+
+  .material-icons {
+    font-size: 62px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.numbers {
+  li {
+    font-size: 18px;
+  }
+}
+
+

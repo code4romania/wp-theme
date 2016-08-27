@@ -8,7 +8,7 @@
         <?php echoFieldValueOrDefault('proiecte_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 columns actions actions-project">
-        <a href="#" class="button large underline">Adaugă un proiect</a>
+        <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Adaugă un proiect</a>
         <a href="/implica-te/" class="button large underline">Vrei să te implici?</a>
       </div>
       <div class="small-12"></div>

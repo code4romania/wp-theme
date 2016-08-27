@@ -131,8 +131,6 @@
 }
 
 .actions-project {
-  margin-top: 0;
-
   .button {
     white-space: nowrap;
   }
@@ -333,4 +331,78 @@
     display: block;
   }
 }
+
+.steps {
+  list-style: none inside;
+  margin: 0;
+  padding: 0;
+}
+
+.step {
+  position: relative;
+  margin: 0 0 30px;
+
+  h2 {
+    margin: 0;
+    color: $color-primary;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(2n) {
+
+  }
+
+  &:nth-child(2n + 1) {
+
+  }
+}
+
+.step-no {
+  font-weight: 700;
+  display: block;
+  height: 62px;
+  line-height: 62px;
+  width: 62px;
+  margin: 0 auto;
+  text-align: center;
+  color: $color-primary;
+  position: relative;
+
+  @include breakpoint(medium) {
+    margin: 0;
+    display: inline-block;
+    margin-left: -70px;
+  }
+
+  .material-icons {
+    font-size: 62px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.numbers {
+  li {
+    font-size: 18px;
+  }
+}
+
 

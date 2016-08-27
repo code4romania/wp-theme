@@ -23,7 +23,8 @@
       margin-top: 40px;
     }
 
-    .block-hello & {
+    .block-hello &,
+    .block-team & {
       text-align: left;
     }
   }
@@ -35,8 +36,24 @@
     margin-top: 15px;
     margin-bottom: 16px;
 
-    .block-activity & {
+    .block-activity &,
+    .block-content & {
       color: $black;
+    }
+
+    .block-text & {
+      @include breakpoint(medium) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      @include breakpoint(large) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
     @include breakpoint(medium) {
@@ -134,16 +151,20 @@
   @include breakpoint(medium) {
     margin-top: 60px;
   }
-
-  @include breakpoint(large) {
-    margin-top: 120px;
-  }
 }
 
 .activity {
   display: block;
   color: $color-primary;
   margin-bottom: 30px;
+
+  .block-content & {
+    color: $black;
+  }
+
+  .block-text & {
+    margin-bottom: 0;
+  }
 
   &:hover {
     .material-icons,
@@ -172,7 +193,6 @@
   h2 {
     margin: 0;
     padding: 0 0 8px;
-    border-bottom: 1px solid $color-primary;
 
     @include breakpoint(large) {
       white-space: nowrap;
@@ -183,6 +203,10 @@
     .block-activity & {
       color: $color-primary;
       font-size: 18px;
+    }
+
+    .block-text & {
+      margin-top: 0;
     }
   }
 }
@@ -281,7 +305,6 @@
   }
 }
 
-
 .badge {
   height: $border-height;
   text-indent: -9999px;
@@ -302,7 +325,7 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
     color: $black;
   }
 

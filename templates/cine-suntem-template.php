@@ -1,6 +1,6 @@
 <?php /* Template Name: Cine suntem */ ?>
 
-<section class="block block-hero block-content wrap container">
+<section class="block block-hero block-content block-text wrap container">
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
@@ -13,13 +13,11 @@
   </div>
 </section>
 
-<section class="block block-hero block-content wrap container">
+<section class="block block-hero block-content block-team wrap container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php echoFieldValueOrDefault('echipa_titlu'); ?>
-      </h1>
       <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
+        <h1><?php echoFieldValueOrDefault('echipa_titlu'); ?></h1>
         <?php echoFieldValueOrDefault('echipa_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 medium-8 columns">
@@ -42,7 +40,7 @@
                   $poza = $defaultMemberPic;
                 } ?>
 
-                  <div class="small-6 columns" data-equalizer-watch>
+                  <div class="small-12 medium-6 columns" data-equalizer-watch>
                     <div class="member media-object">
                       <div class="media-object-section">
                         <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">

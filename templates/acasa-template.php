@@ -101,35 +101,35 @@
       </h1>
       <div class="small-offset-1 small-10 medium-7 large-4 columns">
         <?php echoFieldValueOrDefault('implica-te_continut'); ?>
-      </div>
-      <div class="small-offset-1 small-10 columns activities">
-        <?php
+        <div class="activities">
+          <?php
 
-        if(get_field('implica-te_entitati')) {
-          $entities         = get_field('implica-te_entitati');
-          $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
+          if(get_field('implica-te_entitati')) {
+            $entities         = get_field('implica-te_entitati');
+            $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
 
-          foreach ($entities as $entity) {
-            $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
-            $descriere = repeaterFieldValueOrDefault("descriere", $entity);
-            $poza      = repeaterFieldValueOrDefault("poza", $entity);
-            if($poza === null || $poza === "") {
-              $poza = $defaultEntityPic;
-            }
+            foreach ($entities as $entity) {
+              $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
+              $descriere = repeaterFieldValueOrDefault("descriere", $entity);
+              $poza      = repeaterFieldValueOrDefault("poza", $entity);
+              if($poza === null || $poza === "") {
+                $poza = $defaultEntityPic;
+              }
 
-            ?>
-            <div class="small-12 medium-6 large-3 columns">
-              <a href="#" class="activity">
-                <h2>
-                  <i class="material-icons">&#xE54B;</i>
-                  <span><?php echo $titlu;?></span>
-                </h2>
-                <p><?php echo $descriere;?></p>
-              </a>
-            </div>
+              ?>
+              <div class="small-6 columns">
+                <a href="#" class="activity">
+                  <h2>
+                    <i class="material-icons">&#xE54B;</i>
+                    <span><?php echo $titlu;?></span>
+                  </h2>
+                  <p><?php echo $descriere;?></p>
+                </a>
+              </div>
 
-          <?php  }
-        } ?>
+            <?php  }
+          } ?>
+        </div>
       </div>
       <div class="small-12 columns"></div>
     </div>

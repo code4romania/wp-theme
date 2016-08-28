@@ -39,8 +39,11 @@ header {
 .brand {
   display: inline-block;
   height: 40px;
-  margin: 4px 0 0;
   width: auto;
+
+  @include breakpoint(large) {
+    margin: 4px 0 0;
+  }
 
   img {
     height: 100%;
@@ -52,11 +55,10 @@ header {
 }
 
 li.menu-item {
-  font-size: 12px;
+  font-size: 16px;
   padding: 0 5px;
 
   @include breakpoint(large) {
-    font-size: 16px;
     padding: 0 40px;
   }
 
@@ -64,7 +66,7 @@ li.menu-item {
     @include underline;
     color: $black;
     letter-spacing: 1px;
-    padding: 12px 16px;
+
     width: 100%;
 
     &:hover {
@@ -72,14 +74,18 @@ li.menu-item {
     }
 
     &::after {
-      bottom: 8px;
-      right: 16px;
-      left: 16px;
+      bottom: 4px;
+      right: 12px;
+      left: 12px;
       width: auto;
 
       @include breakpoint(large) {
         bottom: 12px;
       }
+    }
+
+    @include breakpoint(medium) {
+      padding: 8px 12px;
     }
 
     @include breakpoint(large) {

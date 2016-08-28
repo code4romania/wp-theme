@@ -1,10 +1,12 @@
 .hero {
-  margin: 40px auto 0;
+  margin: 0 auto;
+  padding: 40px 0 0;
   position: relative;
   overflow: hidden;
 
   @include breakpoint(large) {
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -26,6 +28,11 @@
     .block-hello &,
     .block-team & {
       text-align: left;
+    }
+
+    .block-project & {
+      color: $white;
+      margin-bottom: 0;
     }
   }
 
@@ -51,6 +58,20 @@
         margin-bottom: 40px;
       }
     }
+
+    .block-project & {
+      color: $white;
+
+      a {
+        color: $white;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
 
     &:last-child {
       margin-bottom: 0;
@@ -405,4 +426,81 @@
   }
 }
 
+.project-hero {
+  margin: 30px 0;
 
+  .media-object-section {
+    display: block;
+
+    &:first-child {
+      padding-right: 0;
+      margin-bottom: 20px;
+
+      @include breakpoint(large) {
+        padding-right: 40px;
+        margin-bottom: 0;
+        width: 200px;
+      }
+    }
+
+    p {
+      margin: 0;
+
+      @include breakpoint(large) {
+        font-size: 18px;
+      }
+    }
+
+    @include breakpoint(large) {
+      display: table-cell;
+    }
+  }
+
+  &.media-object {
+    img {
+      max-width: 100%;
+
+      @include breakpoint(medium) {
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+.project-title-wrap {
+  @include breakpoint(medium) {
+    text-align: center;
+  }
+}
+
+.project-title {
+  @include breakpoint(medium) {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.project-owner {
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1;
+  opacity: .8;
+
+  @include breakpoint(medium) {
+    display: block;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    left: 133px;
+  }
+
+  @include breakpoint(large) {
+    left: 138px;
+  }
+}

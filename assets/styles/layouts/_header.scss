@@ -66,6 +66,7 @@ li.menu-item {
     @include underline;
     color: $black;
     letter-spacing: 1px;
+    padding: 8px 10px;
 
     width: 100%;
 
@@ -79,13 +80,20 @@ li.menu-item {
       left: 12px;
       width: auto;
 
+      @include breakpoint(medium) {
+        right: 10px;
+        left: 10px;
+      }
+
       @include breakpoint(large) {
         bottom: 12px;
+        right: 16px;
+        left: 16px;
       }
     }
 
     @include breakpoint(medium) {
-      padding: 8px 12px;
+      padding: 8px 10px;
     }
 
     @include breakpoint(large) {

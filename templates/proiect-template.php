@@ -66,94 +66,17 @@
   </div>
 </section>
 
-  <div class = "">
-    <div class = "">
 
-    </div>
-    <div class = "">
-      <div class = "">
-        <div class = "">
-          <a id = "" class="" href="">
-            <span></span>
-          </a>
-        </div>
-      </div>
-      <div class = "">
-        <div class = "">
-          <a id = "" class="" href="">
-            <span></span>
-          </a>
-        </div>
-      </div>
-      <div class = "">
-        <div class = "">
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class = "">
-    <div class="">
-          <div class="<?php echo $class; ?>">
-            <div class="">
-              <p></p>
-            </div>
-          </div>
-    </div>
-    <div class="">
-          <div class="<?php echo $class; ?>">
-            <div class="">
-            </div>
-            <div class="">
-              <p></p>
-            </div>
-          </div>
-    </div>
-    <div class="">
-          <div class="<?php echo $class; ?>">
-            <div class="">
-            </div>
-            <div class="">
-              <p><?php echo $durata; ?></p>
-            </div>
-          </div>
-    </div>
-  </div>
-
-  <?php
-
-    if($substadiu != "") { ?>
-      <p>BARA PROGRES:</p>
-      <p>
-        <?php echo $substadiu; ?>
-      </p>
-
-  <?php
-
-    }
-
-  ?>
-
-  <div class = "">
-    <div class = "">
-      <span class = "<?php echo $class; ?>">ECHIPA</span>
-    </div>
-  </div>
+<?php echo $class; ?>
+<?php if($substadiu != "") { ?>
+  <?php echo $substadiu; ?>
+<?php } ?>
 
   <?php
     $membri         = get_field('membri_echipa', $post->ID);
     $columnsNumber  = ceil(count($membri) / 3) * 3;
 
     for($index = 0; $index < $columnsNumber; $index++) {
-      if($index % 3 === 0) {
-        ?>
-        <div>
-        <?php
-      }
-
       if($index < count($membri)) {
 
         $membru = $membri[$index];
@@ -162,30 +85,16 @@
         if($poza === null || $poza === "") {
           $poza   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
         }
+  ?>
 
+        <img src="<?php echo $poza; ?>">
+        <?php echoRepeaterFieldValueOrDefault("initiala", $membru); ?>
+        <?php echoRepeaterFieldValueOrDefault("nume", $membru); ?>
 
-        ?>
-
-            <div class = "">
-              <div class = "">
-                <img src="<?php echo $poza; ?>">
-                <div class="">
-                <span class = "<?php echo $class;?>"><?php echoRepeaterFieldValueOrDefault("initiala", $membru); ?></span>
-                <?php echoRepeaterFieldValueOrDefault("nume", $membru); ?>
-            </div>
-          </div>
-            </div>
-
-          <?php
-          }
-        if($index % 3 === 2) {
-        ?>
-        </div>
-        <?php
+  <?php
       }
 
     }
-
   ?>
 
 

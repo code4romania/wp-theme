@@ -1,7 +1,6 @@
 .form-item  {
   text-align: left;
   display: inline-block;
-  padding: 0;
 
   .checkbox {
     + label {
@@ -21,17 +20,17 @@
 
       + .proiecte_in_desfasurare-class {
         background: $color-wip;
-        color: $black;
+        color: $white;
       }
 
       + .proiect_cu_nevoie_de_voluntari-class {
         background: $color-need;
-        color: $black;
+        color: $white;
       }
 
       + .proiect_propus-class {
         background: $color-option;
-        color: $black;
+        color: $white;
       }
     }
   }

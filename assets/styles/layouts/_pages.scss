@@ -76,14 +76,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-
-    @include breakpoint(medium) {
-      font-size: 18px;
-    }
-
-    @include breakpoint(large) {
-      font-size: 20px;
-    }
   }
 }
 
@@ -109,6 +101,8 @@
 
 .actions {
   text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
 
   @include breakpoint(medium) {
     margin-top: 30px;
@@ -265,11 +259,6 @@
 
   &:hover {
     background: $white;
-
-    h2,
-    .project-org {
-      color: $color-primary;
-    }
   }
 
   @include breakpoint(large) {
@@ -331,25 +320,30 @@
   border-radius: 0;
 }
 
-.members {
-  margin-top: 60px;
-}
-
 .member {
   margin-bottom: 30px;
 
-  h3 {
-    margin-top: 15px;
-    color: $color-primary;
-  }
-
   p {
     font-size: 16px;
-    color: $black;
+
+    .hero-content & {
+      margin-top: 0;
+    }
   }
 
   .media-object-section {
-    display: block;
+    img {
+      width: 80px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.member-small {
+  .media-object-section {
+    img {
+      width: 40px;
+    }
   }
 }
 
@@ -421,9 +415,17 @@
 }
 
 .numbers {
+  margin-bottom: 30px;
+
   li {
     font-size: 18px;
   }
+}
+
+.title-team {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .project-hero {
@@ -503,5 +505,29 @@
 
   @include breakpoint(large) {
     left: 138px;
+  }
+}
+
+.tabs {
+  border: 0;
+}
+
+.tabs-content {
+  border: 0;
+}
+
+.tabs-title {
+  > a {
+    display: block;
+    padding: 20px 10px;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 700;
+
+    &:focus,
+    &[aria-selected=true] {
+      background: $color-primary;
+      color: $white;
+    }
   }
 }

@@ -8,7 +8,7 @@
         <?php echoFieldValueOrDefault('proiecte_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 columns actions actions-project">
-        <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Adaugă un proiect</a>
+        <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Propune un proiect</a>
         <a href="/implica-te/" class="button large underline">Vrei să te implici?</a>
       </div>
       <div class="small-12"></div>
@@ -19,7 +19,6 @@
 <section class="block block-content wrap container">
   <div class="content row">
     <div class="small-offset-1 small-10 columns actions actions-project">
-      <fieldset class="fieldset">
       <?php
         $filters    = getCategoryActiveFilters();
         $columnClass  = "small-12 medium-" . (12 / count($filters));
@@ -37,7 +36,6 @@
         <?php
         }
       ?>
-      </fieldset>
     </div>
     <?php
       $args = array(

@@ -7,6 +7,8 @@
         <?php echoFieldValueOrDefault('cum_lucram_titlu'); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
+        <p>Pe termen lung, vrem ca proiectele noastre să dea omului de rând informaţiile, mijloacele şi curajul să se implice mai mult în rezolvarea problemelor comunităţii. Ne dorim să contribuim la crearea unei societăţi civile puternice în România și credem că împreună putem face asta.</p>
+        <p>Lucrăm pe bază de voluntariat și în format open source.<br/>Code for Romania este o organizație non­partizană și apolitică. Mai multe poți citi și în <a href="https://github.com/code4romania/code-of-conduct" target="_blank">Codul nostru de Conduită</a>, construit pe modelul celor din rețeaua Code 4, și pe care toți voluntarii trebuie să îl aplice.</p>
         <p>În continuare vei vedea pașii prin care trece un proiect, de la idee la implementare.</p>
         <ol class="steps">
           <li class="step">
@@ -27,7 +29,7 @@
               </span>
               <span>Evaluare</span>
             </h2>
-            <p>Formularul de propunere de proiect ajunge la membrii Code for Romania care îl evaluează conform Grilei. Proiectul este admis/respins.</p>
+            <p>Formularul de propunere de proiect ajunge la membrii Code for Romania care îl evaluează conform <a href="https://docs.google.com/document/d/1Hs445EoQdEFE6mHVfMqunSnrCzfdVw3UXJzDnA5UmTw/edit?usp=sharing" target="_blank">Grilei</a>. Proiectul este admis/respins.</p>
           </li>
           <li class="step">
             <h2>
@@ -108,7 +110,7 @@
         <?php //echoFieldValueOrDefault('cum_lucram_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 columns actions actions-project">
-        <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Adaugă un proiect</a>
+        <a href="/proiecte/" class="button large underline" target="_blank">Vezi proiectele</a>
         <a href="/implica-te/" class="button large underline">Vrei să te implici?</a>
       </div>
     </div>

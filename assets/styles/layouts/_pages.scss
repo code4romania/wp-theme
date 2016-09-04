@@ -98,6 +98,18 @@
   }
 }
 
+.action-line {
+  text-align: center;
+
+  @include breakpoint(medium) {
+    text-align: left;
+
+    .button {
+      margin-left: -26px;
+    }
+  }
+
+}
 
 .actions {
   text-align: center;
@@ -320,6 +332,10 @@
   border-radius: 0;
 }
 
+.members {
+  margin-top: 40px;
+}
+
 .member {
   margin-bottom: 30px;
 
@@ -333,8 +349,12 @@
 
   .media-object-section {
     img {
-      width: 80px;
+      width: 60px;
       border-radius: 50%;
+
+      @include breakpoint(large) {
+        width: 80px;
+      }
     }
   }
 }
@@ -343,6 +363,10 @@
   .media-object-section {
     img {
       width: 40px;
+
+      @include breakpoint(large) {
+        width: 60px;
+      }
     }
   }
 }
@@ -414,18 +438,23 @@
   }
 }
 
-.numbers {
+.numbers,
+.list {
   margin-bottom: 30px;
 
   li {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .title-team {
   font-size: 30px;
   margin-top: 30px;
-  margin-bottom: 40px;
 }
 
 .project-hero {
@@ -508,6 +537,10 @@
   }
 }
 
+.involvement {
+  margin-top: 45px;
+}
+
 .tabs {
   border: 0;
 }
@@ -519,7 +552,7 @@
 .tabs-title {
   > a {
     display: block;
-    padding: 20px 10px;
+    padding: 25px 10px;
     line-height: 1;
     font-size: 16px;
     font-weight: 700;
@@ -529,5 +562,17 @@
       background: $color-primary;
       color: $white;
     }
+
+    @include breakpoint(medium) {
+      padding: 25px 16px;
+    }
+  }
+}
+
+.tabs-panel {
+  padding: 16px 10px;
+
+  @include breakpoint(medium) {
+    padding: 16px;
   }
 }

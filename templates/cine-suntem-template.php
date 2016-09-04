@@ -44,10 +44,10 @@
 
                   <div class="small-12 medium-6 large-4 columns" data-equalizer-watch>
                     <div class="member media-object">
-                      <div class="media-object-section middle">
+                      <div class="media-object-section">
                         <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">
                       </div>
-                      <div class="media-object-section middle">
+                      <div class="media-object-section">
                         <h3><?php echo $nume; ?></h3>
                         <p><?php echo $descriere; ?></p>
                       </div>
@@ -59,8 +59,16 @@
             }
           ?>
         </div>
-        <h2 class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns title-team">Voluntari</h2>
-        <div class="row">
+
+      </div>
+
+      <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
+        <h2 class="title-team">Voluntari</h2>
+        <p>Ne-am bucurat să ne dăm seama că nu suntem așa puțini. Nu suntem încă nici atât de mulți. Ne-am bucura tare să vii <a href="/implica-te/">alături de noi</a> și să creștem împreună comunitatea Code for Romania.</p>
+      </div>
+
+      <div class="small-offset-1 small-10 medium-11 columns">
+        <div class="members row">
           <div class="small-6 medium-4 large-3 columns">
             <div class="member member-small media-object">
               <div class="media-object-section">
@@ -192,6 +200,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 action-line columns">
+        <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Hai cu noi!</a>
       </div>
       <div class="small-12 columns"></div>
     </div>

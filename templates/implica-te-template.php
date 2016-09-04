@@ -16,8 +16,9 @@
 
 <section class="block wrap container">
   <div class="content row">
-    <div class="small-offset-1 small-10 columns">
+    <div class="small-offset-1 small-10 large-offset-2 large-8 columns">
 
+    <div class="involvement">
       <ul class="tabs involve row" data-tabs id="people-tabs">
         <li class="small-6 columns tabs-title is-active">
           <a href="#panel1" aria-controls="panel1" aria-selected="true" id="panel1-label">
@@ -33,17 +34,18 @@
 
       <div class="tabs-content" data-tabs-content="people-tabs">
         <div class="tabs-panel is-active" id="panel1" aria-hidden="true" aria-labelledby="panel1-label">
-          <p>one</p>
-          <p>Check me out! I'm a super cool Tab panel with text content!</p>
+          <p>Ești programator? Dacă da, poate vrei să te implici cât iti permite timpul pentru o cauză socială. Dacă tot vrei să ajuţi, dar nu eşti programator, ești binevenit. Poţi contribui pe  comunicare, design, organizare evenimente, cercetare și altele. <a href="https://www.surveymonkey.com/r/C6MZJJJ" target="_blank">Completează acest formular</a> ca să știm mai multe despre tine. Te vom contacta noi apoi pentru pașii următori.</p>
         </div>
         <div class="tabs-panel" id="panel2" aria-hidden="true" aria-labelledby="panel2-label">
-          <p>two</p>
-          <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg">
+          <p>Proiectul Code for Romania se bazează pe voluntariat. Dar întreţinerea platformei, cumpărarea domeniilor și hostingul, participarea în anumite proiecte și lucrurile administrative etc. implică anumite costuri.</p>
+          <p>Dacă îți plac <a href="/proiecte/">proiectele noastre</a>, poți investi în ele printr-o donație cât de mică. Orice contribuţie este utilă şi o apreciem enorm. Ea va ajuta proiectele să meargă înainte și pe noi să ne investim efortul în ce e cu adevărat important, adică în dezvoltarea proiectelor și creșterea comunității.</p>
         </div>
       </div>
+    </div>
 
+    <div class="involvement">
       <ul class="tabs involve row" data-tabs id="entities-tabs">
-         <li class="small-6 medium-3 columns tabs-title is-active">
+        <li class="small-6 medium-3 columns tabs-title is-active">
           <a href="#panel3" aria-controls="panel3" aria-selected="true" id="panel3-label">
             Companii
           </a>
@@ -67,22 +69,38 @@
 
       <div class="tabs-content" data-tabs-content="entities-tabs">
         <div class="tabs-panel is-active" id="panel3" aria-hidden="true" aria-labelledby="panel3-label">
-          <p>three</p>
-          <p>Check me out! I'm a super cool Tab panel with text content!</p>
+          <p>O societate mai puternică contribuie la un mediu de business mai sănătos.</p>
+          <p>Dacă vrei să susții proiecte care vor schimba încet încet România, ne-ar plăcea să ne prezentăm și să vedem cum putem lucra împreună.<br/>
+          <p>Câteva dintre modalităţile prin care ne poţi susţine sunt:</p>
+          <ol class="numbers">
+            <li>donează linii de cod (dacă reprezinți o companie de software dev)</li>
+            <li>susține-ne organizatoric (ex. găzduieste întâlnirile voluntarilor)</li>
+            <li>adoptă un proiect acoperind parțial sau total cheltuielile aferente</li>
+            <li>oferă premii pentru voluntarii nostri</li>
+            <li>donează produse (ex. software sau hardware)</li>
+            <li>prezintă-ne angajaților tăi (poate vor să fie voluntari)</li>
+            <li>oferă sponsorizari de orice alt fel.</li>
+          </ol>
+          <p>Ne bucurăm să citim ideile tale la <a href="mailto:parteneriate@code4.ro">parteneriate@code4.ro</a>.</p>
         </div>
         <div class="tabs-panel" id="panel4" aria-hidden="true" aria-labelledby="panel4-label">
-          <p>four</p>
-          <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
+          <p>Vă invităm să dezvoltăm împreună instrumente digitale pentru cetăţeni, care să:</p>
+          <ul class="list">
+            <li>rezolve probleme punctuale ale oamenilor</li>
+            <li>informeze cetățenii în mod transparent și rapid și să le faciliteze accesul la datele publice</li>
+            <li>implice activ cetățenii in procesul de guvernare</li>
+          </ul>
+          <p>Pe termen lung, credem că atât instituțiile, cât și cetățenii vor beneficia de îmbunătățirea nivelului culturii digitale în sectorul public: calitatea interacțiunii cetățean-instituție va crește, iar folosirea resurselor va fi optimizată.</p>
         </div>
         <div class="tabs-panel" id="panel5" aria-hidden="true" aria-labelledby="panel5-label">
-          <p>five</p>
-          <p>Check me out! I'm a super cool Tab panel with text content!</p>
+          <p>Știm că vă confruntați zi de zi cu o mulțime de provocări, de la gestionarea activităților cu voluntarii până la găsirea celei mai bune soluții pentru beneficiarii proiectelor voastre. Mai știm și că aveți o grămadă de idei bune, care rămân doar pe hârtie, din lipsă de resurse.</p>
         </div>
         <div class="tabs-panel" id="panel6" aria-hidden="true" aria-labelledby="panel6-label">
-          <p>six</p>
-          <p>Check me out! I'm a super cool Tab panel with text content!</p>
+          <p>Un parteneriat între Code For Romania și mediul academic este pentru studenți o modalitate foarte atractivă de implicare în proiecte extracuriculare. Putem dezvolta împreună proiecte de practică pentru studenți sau putem colabora pe proiecte de cercetare.</p>
         </div>
       </div>
+    </div>
+
     </div>
   </div>
 </section>

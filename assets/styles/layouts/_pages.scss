@@ -550,12 +550,36 @@
 }
 
 .tabs-title {
+  margin-bottom: 20px;
+
+  @include breakpoint(medium) {
+    margin-bottom: 0;
+  }
+
   > a {
     display: block;
     padding: 25px 10px;
     line-height: 1;
     font-size: 16px;
     font-weight: 700;
+    text-align: center;
+    background: lighten($black, 90);
+    color: lighten($black, 60);
+
+    i {
+      font-size: 28px;
+    }
+
+    span {
+      display: block;
+      margin-top: 5px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      background: lighten($black, 90);
+      color: lighten($black, 60);
+    }
 
     &:focus,
     &[aria-selected=true] {
@@ -564,6 +588,7 @@
     }
 
     @include breakpoint(medium) {
+      text-align: left;
       padding: 25px 16px;
     }
   }

@@ -4,9 +4,20 @@
 
   .checkbox {
     + label {
-      background: $black;
-      color: $white;
+      background: lighten($black, 90);
+      color: lighten($black, 60);
       margin: 0;
+
+      .material-icons {
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin-right: 5px;
+      }
+
+      .checked {
+        display: none;
+      }
 
       @include breakpoint(large) {
         white-space: nowrap;
@@ -14,8 +25,19 @@
     }
 
     &:checked {
+      + label {
+        .material-icons {
+          display: none;
+        }
+
+        .checked {
+          display: inline-block;
+        }
+      }
+
       + .proiecte_finalizate-class {
         background: $color-complete;
+        color: $white;
       }
 
       + .proiecte_in_desfasurare-class {
@@ -38,7 +60,7 @@
 
 .filter-checkbox {
   display: inline-block;
-  padding: 14px 18px;
+  padding: 14px 18px 18px;
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;

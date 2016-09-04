@@ -30,7 +30,11 @@
         <div class="form-item small-12 medium-6 large-4 columns">
           <input type="checkbox" class="project-filter-cb checkbox" checked="checked" id="<?php echo $cbID; ?>" data-category = "<?php echo $filter->slug; ?>" style="display: none;">
           <label for="<?php echo $cbID; ?>" class="<?php echo $class; ?> filter-button filter-checkbox ">
-            <span class="custom checkbox"></span> <?php  echo $filter->name; ?>
+            <span class="custom checkbox">
+              <i class="material-icons checked">&#xE834;</i>
+              <i class="material-icons">&#xE835;</i>
+            </span>
+            <?php  echo $filter->name; ?>
           </label>
         </div>
         <?php

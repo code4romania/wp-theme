@@ -457,86 +457,6 @@
   margin-top: 30px;
 }
 
-.project-hero {
-  margin: 30px 0;
-
-  .media-object-section {
-    display: block;
-
-    &:first-child {
-      padding-right: 0;
-      margin-bottom: 20px;
-
-      @include breakpoint(large) {
-        padding-right: 40px;
-        margin-bottom: 0;
-        width: 200px;
-      }
-    }
-
-    p {
-      margin: 0;
-
-      @include breakpoint(large) {
-        font-size: 18px;
-      }
-    }
-
-    @include breakpoint(large) {
-      display: table-cell;
-    }
-  }
-
-  &.media-object {
-    img {
-      max-width: 100%;
-
-      @include breakpoint(medium) {
-        width: 200px;
-        margin: 0 auto;
-        display: block;
-      }
-    }
-  }
-}
-
-.project-title-wrap {
-  @include breakpoint(medium) {
-    text-align: center;
-  }
-}
-
-.project-title {
-  @include breakpoint(medium) {
-    position: relative;
-    display: inline-block;
-    margin-top: 30px;
-  }
-}
-
-.project-owner {
-  display: block;
-  font-size: 14px;
-  text-align: left;
-  line-height: 1;
-  opacity: .8;
-
-  @include breakpoint(medium) {
-    display: block;
-    font-size: 14px;
-    text-align: left;
-    line-height: 1;
-    opacity: .8;
-    position: absolute;
-    top: 0;
-    left: 133px;
-  }
-
-  @include breakpoint(large) {
-    left: 138px;
-  }
-}
-
 .involvement {
   margin-top: 45px;
 }
@@ -601,3 +521,33 @@
     padding: 16px;
   }
 }
+
+.hero-project {
+  h1 {
+    text-align: left;
+  }
+  .media-object-section {
+    display: block;
+
+    img {
+      max-width: 100%;
+
+      @include breakpoint(medium) {
+        max-width: 200px;
+      }
+    }
+
+    @include breakpoint(medium) {
+      display: table-cell;
+    }
+  }
+}
+
+.project-owner {
+  display: block;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+

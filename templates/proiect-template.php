@@ -34,25 +34,21 @@
 
           ?>
 
-      <div class="project-title-wrap small-12 columns">
-        <h1 class="project-title">
-          <div class="show-for-medium project-thumb">
-            <img src="<?php echo $thumb_url; ?>" alt="<?php echo $titlu; ?>">
-          </div>
-          <?php echo $titlu; ?>
-          <span class="project-owner"><?php echo $organizatie; ?></span>
-        </h1>
-      </div>
-      <div class="small-12 medium-offset-1 medium-10 large-offset-2 large-8 columns">
-        <div class="project-hero media-object">
-          <div class="media-object-section show-for-small-only">
+      <div class="small-12 large-offset-1 large-10 columns">
+        <div class="hero-project media-object">
+          <div class="media-object-section middle">
             <img src="<?php echo $thumb_url; ?>" alt="<?php echo $titlu; ?>">
           </div>
           <div class="media-object-section">
-            <?php the_content(); ?>
+            <h1><?php echo $titlu; ?></h1>
+            <p class="project-owner"><?php echo $organizatie; ?></p>
+            <div class="project-desc">
+              <?php the_content(); ?>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>

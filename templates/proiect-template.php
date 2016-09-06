@@ -111,36 +111,45 @@
   </div>
 </section>
 
+<section class="block block-content block-details wrap container">
+  <div class="hero-content content row">
+    <div class="small-12 columns">
+      <h1>Ne-au ajutat</h1>
+      <?php
+        $membri         = get_field('membri_echipa', $post->ID);
+        $columnsNumber  = ceil(count($membri) / 3) * 3;
+
+        for($index = 0; $index < $columnsNumber; $index++) {
+          if($index < count($membri)) {
+
+            $membru = $membri[$index];
+            $poza   = repeaterFieldValueOrDefault("poza", $membru);
+
+            if($poza === null || $poza === "") {
+              $poza = "http://www.fillmurray.com/400/400";
+            }
+      ?>
+        <div class="member member-small media-object">
+          <div class="media-object-section">
+            <img src="<?php echo $poza; ?>" alt="<?php echoRepeaterFieldValueOrDefault("nume", $membru); ?>">
+          </div>
+          <div class="media-object-section middle">
+            <h3><?php echoRepeaterFieldValueOrDefault("nume", $membru); ?></h3>
+          </div>
+        </div>
+      <?php
+          }
+
+        }
+      ?>
+</div>
+</section>
+
 
 <?php echo $class; ?>
 <?php if($substadiu != "") { ?>
   <?php echo $substadiu; ?>
 <?php } ?>
-
-  <?php
-    $membri         = get_field('membri_echipa', $post->ID);
-    $columnsNumber  = ceil(count($membri) / 3) * 3;
-
-    for($index = 0; $index < $columnsNumber; $index++) {
-      if($index < count($membri)) {
-
-        $membru = $membri[$index];
-        $poza   = repeaterFieldValueOrDefault("poza", $membru);
-
-        if($poza === null || $poza === "") {
-          $poza   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
-        }
-  ?>
-
-        <img src="<?php echo $poza; ?>">
-        <?php echoRepeaterFieldValueOrDefault("initiala", $membru); ?>
-        <?php echoRepeaterFieldValueOrDefault("nume", $membru); ?>
-
-  <?php
-      }
-
-    }
-  ?>
 
 
     <?php

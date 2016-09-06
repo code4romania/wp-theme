@@ -18,7 +18,7 @@
 
 <section class="block block-content wrap container">
   <div class="content row">
-    <div class="small-offset-1 small-10 columns actions actions-project">
+    <div class="small-offset-1 small-10 columns actions actions-project actions-wrap">
       <?php
         $filters    = getCategoryActiveFilters();
         $columnClass  = "small-12 medium-" . (12 / count($filters));

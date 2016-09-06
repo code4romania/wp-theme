@@ -45,6 +45,10 @@
             <div class="project-desc">
               <?php the_content(); ?>
             </div>
+            <div class="actions actions-project">
+              <a href="<?php echo $actiunePrimaraLink; ?>" class="button large underline inverted" target="_blank"><?php echo $actiunePrimaraText; ?></a>
+              <a href="<?php echo $actiuneSecundaraLink; ?>" class="button large underline inverted"><?php echo $actiuneSecundaraText; ?></a>
+            </div>
           </div>
         </div>
       </div>
@@ -55,9 +59,54 @@
 
 <section class="block block-content block-details wrap container">
   <div class="content row">
-    <div class="small-12 columns actions actions-project">
-      <a href="<?php echo $actiunePrimaraLink; ?>" class="button large underline" target="_blank"><?php echo $actiunePrimaraText; ?></a>
-      <a href="<?php echo $actiuneSecundaraLink; ?>" class="button large underline"><?php echo $actiuneSecundaraText; ?></a>
+    <div class="small-12 columns">
+      <div class="ui-help">
+        <i class="material-icons">&#xE5CB;</i>
+        <i class="material-icons">&#xE925;</i>
+        <i class="material-icons">&#xE5CC;</i>
+      </div>
+      <div class="table-scroll">
+        <table class="progress-wrap">
+          <tr class="progress">
+            <td class="progress-step step-past">
+              <strong class="progress-no">1</strong>
+              <span class="progress-state">Definirea proiectului</span>
+            </td>
+            <td class="progress-step step-past">
+              <strong class="progress-no">2</strong>
+              <span class="progress-state">Evaluare</span>
+            </td>
+            <td class="progress-step step-past">
+              <strong class="progress-no">3</strong>
+              <span class="progress-state">Redactarea specificațiilor</span>
+            </td>
+            <td class="progress-step step-past">
+              <strong class="progress-no">4</strong>
+              <span class="progress-state">Publicarea proiectului</span>
+            </td>
+            <td class="progress-step step-past">
+              <strong class="progress-no">5</strong>
+              <span class="progress-state">Formarea echipei</span>
+            </td>
+            <td class="progress-step step-active">
+              <strong class="progress-no">6</strong>
+              <span class="progress-state">Arhitectură</span>
+            </td>
+            <td class="progress-step">
+              <strong class="progress-no">7</strong>
+              <span class="progress-state">Dezvoltare</span>
+            </td>
+            <td class="progress-step">
+              <strong class="progress-no">8</strong>
+              <span class="progress-state">Lansare și promovare</span>
+            </td>
+            <td class="progress-step">
+              <strong class="progress-no">9</strong>
+              <span class="progress-state">Monitorizare</span>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </section>

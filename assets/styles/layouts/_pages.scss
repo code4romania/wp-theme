@@ -113,7 +113,6 @@
 
 .actions {
   text-align: center;
-  padding: 0;
   margin-bottom: 30px;
 
   @include breakpoint(medium) {
@@ -141,7 +140,8 @@
     text-decoration: none;
   }
 
-  .block-inverted & {
+  .block-inverted &,
+  .hero-project & {
     margin-top: 0;
     margin-bottom: 60px;
 
@@ -154,6 +154,11 @@
         margin: 0 0 0 -26px;
       }
     }
+  }
+
+  .hero-project & {
+    margin-top: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -525,9 +530,27 @@
 .hero-project {
   h1 {
     text-align: left;
+    margin-top: 20px;
+
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
+
   }
   .media-object-section {
     display: block;
+
+    &:first-child {
+      padding-right: 0;
+
+      @include breakpoint(medium) {
+        padding-right: 30px;
+      }
+
+      @include breakpoint(large) {
+        padding-right: 60px;
+      }
+    }
 
     img {
       max-width: 100%;
@@ -549,5 +572,112 @@
   text-align: left;
   line-height: 1;
   margin-bottom: 20px;
+  background: #f00;
+}
+
+.ui-help {
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 57em) {
+    display: none;
+  }
+
+  .material-icons {
+    font-size: 16px;
+    color: lighten($black, 50);
+  }
+}
+
+.progress-wrap {
+  display: table;
+  width: 100%;
+}
+
+.progress {
+  background: lighten($black, 90);
+  height: auto;
+  margin: 0;
+  list-style: inside none;
+  display: table-row;
+
+  > li {
+    display: table-cell;
+    position: relative;
+    width: (100%/9);
+  }
+}
+
+.progress-step {
+  vertical-align: top;
+  text-align: left;
+  padding: 15px;
+  width: (100%/9);
+
+  &.step-past {
+    background: $color-primary;
+    color: $white;
+
+    &:nth-child(9n+1) {
+      background: rgba($color-primary, .30);
+    }
+
+    &:nth-child(9n+2) {
+      background: rgba($color-primary, .40);
+    }
+
+    &:nth-child(9n+3) {
+      background: rgba($color-primary, .50);
+    }
+
+    &:nth-child(9n+4) {
+      background: rgba($color-primary, .60);
+    }
+
+    &:nth-child(9n+5) {
+      background: rgba($color-primary, .70);
+    }
+
+    &:nth-child(9n+6) {
+      background: rgba($color-primary, .80);
+    }
+
+    &:nth-child(9n+7) {
+      background: rgba($color-primary, .90);
+    }
+
+    &:nth-child(9n+8) {
+      background: $color-primary;
+    }
+
+    &:nth-child(9n) {
+      background: $color-primary;
+    }
+  }
+}
+
+.progress-no {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 18px;
+
+  .step-past & {
+    // background: $color-primary;
+    color: $white;
+  }
+}
+
+.progress-state {
+  font-size: 14px;
+  line-height: 1.23;
+  // display: none;
+
+  .step-active & {
+    // position: absolute;
+    // display: block;
+    // left: 15px;
+  }
 }
 

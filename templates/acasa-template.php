@@ -31,7 +31,7 @@
         <p>Ca să-ți placă mai mult România, vino alături de noi. Suntem o ce rezolvă probleme sociale. Pe termen lung, credem ca putem.</p>
       </div>
       <div class="small-12 medium-offset-6 medium-6 columns actions">
-        <a href="<?php echoFieldValueOrDefault('proiecte_link'); ?>" class="button large underline">
+        <a href="<?php echoFieldValueOrDefault('proiecte_link'); ?>" class="button large underline inverted">
           <?php echoFieldValueOrDefault('proiecte_link_text'); ?>
         </a>
       </div>
@@ -101,7 +101,7 @@
       </h1>
       <div class="small-offset-1 small-10 medium-7 large-4 columns">
         <?php echoFieldValueOrDefault('implica-te_continut'); ?>
-        <div class="activities">
+        <div class="row activities">
           <?php
 
           if(get_field('implica-te_entitati')) {

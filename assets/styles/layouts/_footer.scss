@@ -1,8 +1,13 @@
 .footer {
-  border-top: $border-height solid $color-primary;
-  margin-bottom: 50px;
-  padding-top: 50px;
+  border-top: 1px solid $color-primary;
+  background: lighten($black, 95);
+  margin: 0;
+  padding: 50px 0;
   text-align: center;
+
+  .brand {
+    height: 30px;
+  }
 
   .menu {
     float: none;

@@ -171,13 +171,27 @@ p {
 
 .block-project {
   background: $color-primary;
-  padding: 0 0 30px;
+  padding: 0 0 90px;
+  position: relative;
 
   .project-thumb {
     display: inline-block;
     width: 100px;
     height: 100px;
     margin-right: 20px;
+  }
+
+  .status {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 18px 15px;
+    text-align: center;
+    color: $white;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
   }
 }
 

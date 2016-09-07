@@ -113,11 +113,8 @@
 
 .actions {
   text-align: center;
-  margin-bottom: 30px;
-
-  @include breakpoint(medium) {
-    margin-top: 30px;
-  }
+  margin-top: 40px;
+  margin-bottom: 10px;
 
   a {
     @include underline-reset;
@@ -142,7 +139,6 @@
 
   .block-inverted &,
   .hero-project & {
-    margin-top: 0;
     margin-bottom: 60px;
 
     @include breakpoint(medium) {
@@ -176,6 +172,7 @@
 
 .actions-wrap {
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .activities {
@@ -576,7 +573,6 @@
   text-align: left;
   line-height: 1;
   margin-bottom: 20px;
-  background: #f00;
 }
 
 .ui-help {

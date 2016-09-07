@@ -14,7 +14,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 1
               </span>
               <span>Definirea proiectului</span>
@@ -24,7 +24,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 2
               </span>
               <span>Evaluare</span>
@@ -34,7 +34,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 3
               </span>
               <span>Redactarea specificațiilor</span>
@@ -49,7 +49,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 4
               </span>
               <span>Publicarea proiectului</span>
@@ -59,7 +59,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 5
               </span>
               <span>Formarea echipei</span>
@@ -69,7 +69,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 6
               </span>
               <span>Arhitectură</span>
@@ -79,7 +79,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 7
               </span>
               <span>Dezvoltare</span>
@@ -89,7 +89,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 8
               </span>
               <span>Lansare și promovare</span>
@@ -99,7 +99,7 @@
           <li class="step">
             <h2>
               <span class="step-no">
-                <i class="material-icons">&#xE86F;</i>
+                <i class="material-icons">&#xE5CC;</i>
                 9
               </span>
               <span>Monitorizare</span>

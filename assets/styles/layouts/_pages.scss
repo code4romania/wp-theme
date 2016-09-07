@@ -34,6 +34,12 @@
       color: $white;
       margin-bottom: 0;
     }
+
+    .block-content & {
+      @include breakpoint(large) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   p {
@@ -72,6 +78,15 @@
       }
     }
 
+    .block-inverted &,
+    .block-inverted.block-activity &,
+    .block-inverted.block-content & {
+      color: $white;
+    }
+
+    .block-inverted & {
+      text-align: left;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -197,6 +212,10 @@
     margin-bottom: 0;
   }
 
+  .block-inverted & {
+    color: $white;
+  }
+
   &:hover {
     .material-icons,
     h2 {
@@ -211,6 +230,12 @@
 
     h2 {
       border-bottom-color: $black;
+    }
+
+    .block-inverted & {
+      h2 {
+        color: $white;
+      }
     }
   }
 
@@ -437,10 +462,10 @@
   }
 
   .material-icons {
-    font-size: 62px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    font-size: 35px;
+    position: relative;
+    top: 10px;
+    left: 10px;
   }
 }
 
@@ -449,7 +474,7 @@
   margin-bottom: 30px;
 
   li {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 5px;
 
     &:last-child {
@@ -534,7 +559,7 @@
     margin-top: 20px;
 
     @include breakpoint(medium) {
-      margin-top: 0;
+      margin-top: 40px;
     }
 
   }

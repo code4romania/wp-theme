@@ -64,14 +64,18 @@ li.menu-item {
 
   > a {
     @include underline;
-    color: $black;
+    color: $color-primary;
     letter-spacing: 1px;
     padding: 8px 10px;
 
     width: 100%;
 
     &:hover {
-      color: $color-primary;
+      color: $black;
+
+      &::after {
+        background: $black;
+      }
     }
 
     &::after {
@@ -79,6 +83,7 @@ li.menu-item {
       right: 12px;
       left: 12px;
       width: auto;
+      background: $color-primary;
 
       @include breakpoint(medium) {
         right: 10px;

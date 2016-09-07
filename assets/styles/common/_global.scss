@@ -157,6 +157,12 @@ p {
   margin-bottom: 30px;
 }
 
+.block-progress {
+  @include breakpoint(large) {
+    margin-bottom: 0;
+  }
+}
+
 .block-project {
   background: $color-primary;
   padding: 0 0 90px;

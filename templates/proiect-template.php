@@ -60,7 +60,7 @@
   </div>
 </section>
 
-<section class="block block-content block-details wrap container">
+<section class="block block-content block-progress wrap container">
   <div class="content row">
     <div class="small-12 columns">
       <div class="ui-help">
@@ -73,38 +73,30 @@
           <tr class="progress">
             <td class="progress-step step-past">
               <strong class="progress-no">1</strong>
-              <span class="progress-state">Definirea proiectului</span>
-            </td>
-            <td class="progress-step step-past">
-              <strong class="progress-no">2</strong>
-              <span class="progress-state">Evaluare</span>
-            </td>
-            <td class="progress-step step-past">
-              <strong class="progress-no">3</strong>
               <span class="progress-state">Redactarea specificațiilor</span>
             </td>
             <td class="progress-step step-past">
-              <strong class="progress-no">4</strong>
+              <strong class="progress-no">2</strong>
               <span class="progress-state">Publicarea proiectului</span>
             </td>
             <td class="progress-step step-past">
-              <strong class="progress-no">5</strong>
+              <strong class="progress-no">3</strong>
               <span class="progress-state">Formarea echipei</span>
             </td>
             <td class="progress-step step-active">
-              <strong class="progress-no">6</strong>
+              <strong class="progress-no">4</strong>
               <span class="progress-state">Arhitectură</span>
             </td>
             <td class="progress-step">
-              <strong class="progress-no">7</strong>
+              <strong class="progress-no">5</strong>
               <span class="progress-state">Dezvoltare</span>
             </td>
             <td class="progress-step">
-              <strong class="progress-no">8</strong>
+              <strong class="progress-no">6</strong>
               <span class="progress-state">Lansare și promovare</span>
             </td>
             <td class="progress-step">
-              <strong class="progress-no">9</strong>
+              <strong class="progress-no">7</strong>
               <span class="progress-state">Monitorizare</span>
             </td>
           </tr>
@@ -117,7 +109,7 @@
 <section class="block block-content block-details wrap container">
   <div class="hero-content content row">
     <div class="small-12 columns">
-      <h1>Ne-au ajutat</h1>
+      <h1>Colaboratori</h1>
       <div class="members row">
         <?php
           $membri         = get_field('membri_echipa', $post->ID);

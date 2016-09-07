@@ -63,7 +63,7 @@
       </div>
 
       <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
-        <h2 class="title-team">Voluntari</h2>
+        <h2 class="title-team">Colaboratori</h2>
         <p>Ne-am bucurat să ne dăm seama că nu suntem așa puțini. Nu suntem încă nici atât de mulți. Ne-am bucura tare să vii <a href="/implica-te/">alături de noi</a> și să creștem împreună comunitatea Code for Romania.</p>
       </div>
 

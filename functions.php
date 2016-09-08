@@ -119,5 +119,18 @@ function hide_editor() {
 
 }
 
+add_filter( 'nav_menu_link_attributes', 'my_nav_menu_attribs', 10, 3 );
+
+function my_nav_menu_attribs($atts, $item, $args) {
+  $menu_target = 109;
+
+  if ($item->ID == $menu_target) {
+    $atts['href'] = '#';
+    $atts['data-open'] = 'contact-overlay';
+  }
+
+  return $atts;
+}
+
 
 ?>

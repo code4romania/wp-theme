@@ -5,25 +5,30 @@
   }
 
   .menu {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    -webkit-justify-content: center;
-    justify-content: center;
-
-    > li {
-      display: inline-flex;
-      position: relative;
-      justify-content: center;
-      font-size: 22px;
-      overflow: hidden;
+    li.menu-item {
       text-align: center;
-      -webkit-flex: none;
-      flex: none;
+      margin: 15px 0;
+      display: block;
 
       > a {
         color: $white;
+        padding: 15px;
+        font-size: 32px;
+        width: auto;
+        display: inline-block;
+
+        &::after {
+          background: $white;
+        }
+
+        &:hover,
+        &.current-menu-item {
+          color: $white;
+
+          &::after {
+            background: transparent;
+          }
+        }
       }
     }
   }
@@ -31,16 +36,60 @@
 
 .reveal {
   padding: 0;
-  background: rgba($black, 0.65);
+  background: rgba($black, 0.75);
 }
 
 .close-button {
   color: $white;
   font-size: 0;
   right: 20px;
-  top: 20px;
+  top: 36px;
 
   &:hover {
     color: $white;
   }
+}
+
+.overlay-nav {
+  height: 100%;
+}
+
+.overlay-middle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interact {
+  color: $white;
+  margin: 30px 0 0;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .contact-send {
+    @include button-expand(true);
+
+    @include breakpoint(medium) {
+      margin-top: 30px;
+    }
+  }
+
+  label {
+    font-size: 18px;
+
+    @include breakpoint(medium) {
+      font-size: 16px;
+    }
+
+    @include breakpoint(large) {
+      font-size: 18px;
+    }
+  }
+}
+
+.contact-captcha {
+  margin-bottom: 15px;
 }

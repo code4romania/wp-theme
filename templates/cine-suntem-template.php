@@ -19,7 +19,7 @@
       <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
         <h1><?php echoFieldValueOrDefault('echipa_titlu'); ?></h1>
         <?php echoFieldValueOrDefault('echipa_continut'); ?>
-        <h2 class="title-team">Core team</h2>
+        <h2 class="title-team">Membrii fondatori</h2>
       </div>
       <div class="small-offset-1 small-10 medium-11 columns">
         <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="test-eq">

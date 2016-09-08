@@ -1,3 +1,28 @@
+label {
+  .reveal & {
+    color: $white;
+  }
+}
+
+div.wpcf7-validation-errors {
+  background: #f7e700;
+  color: $black;
+  font-size: 18px;
+  border: none;
+  color: $black;
+  padding: 15px;
+  margin: 30px 0;
+}
+
+div.wpcf7-mail-sent-ok {
+  background: #398f14;
+  border: 0;
+  color: $white;
+  font-size: 18px;
+  padding: 15px;
+  margin: 30px 0;
+}
+
 .form-item  {
   text-align: left;
   display: inline-block;

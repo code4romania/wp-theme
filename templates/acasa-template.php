@@ -118,10 +118,11 @@
 
               ?>
               <div class="small-6 columns">
-                <a href="#" class="activity">
+                <a href="/implica-te/" class="activity activity-visual">
                   <h2>
-                    <i class="material-icons">&#xE54B;</i>
+                    <i class="svg-icons"></i>
                     <span><?php echo $titlu;?></span>
+                    <i class="material-icons">&#xE5CC;</i>
                   </h2>
                   <p><?php echo $descriere;?></p>
                 </a>

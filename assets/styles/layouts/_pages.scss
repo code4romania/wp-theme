@@ -101,7 +101,7 @@
   right: 0;
   bottom: -60px;
   z-index: $index-media;
-  opacity: .7;
+  opacity: .4;
 
   @include breakpoint(medium) {
     opacity: 1;
@@ -194,6 +194,36 @@
   margin-top: 30px;
   padding: 0;
 
+  .svg-icons {
+    top: 17px;
+  }
+
+  .columns {
+    &:nth-child(4n+1) {
+      .svg-icons {
+        background-image: url(../icons/ico-time.svg);
+      }
+    }
+
+    &:nth-child(4n+2) {
+      .svg-icons {
+        background-image: url(../icons/ico-money.svg);
+      }
+    }
+
+    &:nth-child(4n+3) {
+      .svg-icons {
+        background-image: url(../icons/ico-companies.svg);
+      }
+    }
+
+    &:nth-child(4n) {
+      .svg-icons {
+        background-image: url(../icons/ico-organisations.svg);
+      }
+    }
+  }
+
   @include breakpoint(medium) {
     margin-top: 60px;
   }
@@ -201,7 +231,7 @@
 
 .activity {
   display: block;
-  color: $color-primary;
+  color: $black;
   margin-bottom: 30px;
 
   .block-content & {
@@ -216,48 +246,22 @@
     color: $white;
   }
 
-  &:hover {
-    .material-icons,
-    h2 {
-      color: $black;
-    }
-
-    p {
-      .block-activity & {
-        color: $black;
-      }
-    }
-
-    h2 {
-      border-bottom-color: $black;
-    }
-
-    .block-inverted & {
-      h2 {
-        color: $white;
-      }
-    }
-  }
-
   .material-icons {
-    font-size: 32px;
+    font-size: 20px;
     position: relative;
-    top: 5px;
-    margin-right: 5px;
+    top: 3px;
   }
 
   h2 {
     margin: 0;
     padding: 0 0 8px;
-
-    @include breakpoint(large) {
-      white-space: nowrap;
-    }
+    color: $color-primary;
+    white-space: nowrap;
   }
 
   p {
     .block-activity & {
-      color: $color-primary;
+      color: $black;
       font-size: 18px;
     }
 
@@ -697,4 +701,6 @@
     // left: 15px;
   }
 }
+
+
 

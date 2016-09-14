@@ -19,7 +19,7 @@ var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
-
+var svgstore     = require('gulp-svgstore');
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
 
@@ -218,11 +218,18 @@ gulp.task('fonts', function() {
 gulp.task('images', function() {
   return gulp.src(globs.images)
     .pipe(imagemin({
-      progressive: true,
-      interlaced: true,
-      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
+      svgoPlugins: [{convertStyleToAttrs: true}]
     }))
     .pipe(gulp.dest(path.dist + 'images'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('icons', function() {
+  return gulp.src('assets/icons/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(gulp.dest(path.dist + 'icons'))
     .pipe(browserSync.stream());
 });
 
@@ -260,6 +267,7 @@ gulp.task('watch', function() {
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
   gulp.watch([path.source + 'images/**/*'], ['images']);
+  gulp.watch([path.source + 'icons/**/*'], ['icons']);
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
@@ -269,7 +277,7 @@ gulp.task('watch', function() {
 gulp.task('build', function(callback) {
   runSequence('styles',
               'scripts',
-              ['fonts', 'images'],
+              ['fonts', 'images', 'icons'],
               callback);
 });
 

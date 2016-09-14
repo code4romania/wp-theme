@@ -110,15 +110,6 @@ function echoRepeaterFieldValueOrDefault ($item, $field, $defaultValue = "") {
   echo repeaterFieldValueOrDefault($item, $field, $defaultValue);
 }
 
-
-//Hide content editor for pages; the content is constructed via advanced custom fields.
-add_action( 'admin_init', 'hide_editor' );
-
-function hide_editor() {
-        remove_post_type_support('page', 'editor');
-
-}
-
 add_filter( 'nav_menu_link_attributes', 'my_nav_menu_attribs', 10, 3 );
 
 function my_nav_menu_attribs($atts, $item, $args) {

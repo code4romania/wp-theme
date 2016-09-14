@@ -226,10 +226,7 @@ gulp.task('images', function() {
 
 gulp.task('icons', function() {
   return gulp.src('assets/icons/*.svg')
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(gulp.dest(path.dist + 'icons'))
+    .pipe(gulp.dest(path.dist + 'icons/'))
     .pipe(browserSync.stream());
 });
 

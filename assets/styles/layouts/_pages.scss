@@ -383,6 +383,8 @@
   }
 
   .media-object-section {
+    position: relative;
+
     img {
       width: 60px;
       border-radius: 50%;
@@ -391,6 +393,29 @@
         width: 80px;
       }
     }
+  }
+}
+
+.member-social {
+  background: $color-primary;
+  color: $white;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 32px;
+
+  &:hover {
+    color: $color-primary;
+    background: $white;
+  }
+
+  @include breakpoint(medium) {
+    position: absolute;
+    top: 0;
+    left: -48px;
   }
 }
 

@@ -1,0 +1,68 @@
+.svg-icons {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  position: relative;
+
+  .tabs-title > a:focus &,
+  .tabs-title > a[aria-selected=true] & {
+    display: none;
+  }
+}
+
+.svg-inverted {
+  display: none;
+
+  .tabs-title > a:focus &,
+  .tabs-title > a[aria-selected=true] & {
+    display: inline-block;
+  }
+}
+
+.svg-time {
+  background-image: url(../icons/ico-time.svg);
+
+  &.svg-inverted {
+    background-image: url(../icons/ico-time-inverted.svg);
+  }
+}
+
+.svg-money {
+  background-image: url(../icons/ico-money.svg);
+
+  &.svg-inverted {
+    background-image: url(../icons/ico-money-inverted.svg);
+  }
+}
+
+.svg-companies {
+  background-image: url(../icons/ico-companies.svg);
+
+  &.svg-inverted {
+    background-image: url(../icons/ico-companies-inverted.svg);
+  }
+}
+
+.svg-universities {
+  background-image: url(../icons/ico-universities.svg);
+
+  &.svg-inverted {
+    background-image: url(../icons/ico-universities-inverted.svg);
+  }
+}
+
+.svg-organisations {
+  background-image: url(../icons/ico-organisations.svg);
+
+  &.svg-inverted {
+    background-image: url(../icons/ico-organisations-inverted.svg);
+  }
+}
+
+.svg-goverment {
+  background-image: url(../icons/ico-goverment.svg);
+
+  &.svg-inverted {
+    background-image: url(../icons/ico-goverment-inverted.svg);
+  }
+}

@@ -33,7 +33,7 @@
 </nav>
 
 
-<div id="contact-overlay" class="large reveal" data-reveal>
+<div id="contact-overlay" class="full reveal" data-reveal>
   <div class="overlay-content overlay-contact">
     <a href="#" class="close-button" title="Inchide" data-close>
       <i class="material-icons">&#xE5CD;</i>
@@ -41,7 +41,7 @@
 
     <div class="row interact">
       <div class="small-12 medium-offset-1 medium-10 columns">
-        <h2>Salut!</h2>
+        <h1>Salut!</h1>
         <p>Lorem ipsum bla bla, avem nevoie de un text aici.</p>
         <?php echo do_shortcode('[contact-form-7 id="106" title="Contact"]'); ?>
       </div>
@@ -50,7 +50,7 @@
 </div>
 
 
-<div id="add-project-overlay" class="large reveal" data-reveal>
+<div id="add-project-overlay" class="full reveal" data-reveal>
   <div class="overlay-content overlay-contact">
     <a href="#" class="close-button" title="Inchide" data-close>
       <i class="material-icons">&#xE5CD;</i>

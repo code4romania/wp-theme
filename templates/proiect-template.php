@@ -15,6 +15,8 @@
           $actiuneSecundaraTextCF = get_post_meta($post->ID, 'actiune_secundara_text',true);
           $actiuneSecundaraLinkCF = get_post_meta($post->ID, 'actiune_secundara_link',true);
           $substadiuCF            = get_post_meta($post->ID, 'substadiu',true);
+          $target_first = get_post_meta($post->ID, 'open_in_new_window_first',true);
+          $target_second = get_post_meta($post->ID, 'open_in_new_window_first',true);
 
           $titlu        = $titluCF !== NULL && $titluCF !== ""  ? $titluCF : get_the_title();
           $organizatie  = $organizatieCF !== NULL ? $organizatieCF : "";
@@ -46,8 +48,8 @@
               <?php the_content(); ?>
             </div>
             <div class="actions actions-project">
-              <a href="<?php echo $actiunePrimaraLink; ?>" class="button large underline inverted" target="_blank"><?php echo $actiunePrimaraText; ?></a>
-              <a href="<?php echo $actiuneSecundaraLink; ?>" class="button large underline inverted"><?php echo $actiuneSecundaraText; ?></a>
+              <a href="<?php echo $actiunePrimaraLink; ?>" target="<?php echo $target_first; ?>" class="button large underline inverted" target="_blank"><?php echo $actiunePrimaraText; ?></a>
+              <a href="<?php echo $actiuneSecundaraLink; ?>" target="<?php echo $target_second; ?>" class="button large underline inverted"><?php echo $actiuneSecundaraText; ?></a>
             </div>
           </div>
         </div>

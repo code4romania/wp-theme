@@ -23,13 +23,15 @@
         <ul class="tabs involve row" data-tabs id="people-tabs">
           <li class="small-6 columns tabs-title is-active">
             <a href="#panel1" aria-controls="panel1" aria-selected="true" id="panel1-label">
-              <i class="material-icons">&#xE54B;</i>
+              <i class="svg-icons svg-time"></i>
+              <i class="svg-icons svg-inverted svg-time"></i>
               <span>Timp</span>
             </a>
           </li>
           <li class="small-6 columns tabs-title">
             <a href="#panel2" aria-controls="panel2" aria-selected="false" id="panel2-label">
-              <i class="material-icons">&#xE54B;</i>
+              <i class="svg-icons svg-money"></i>
+              <i class="svg-icons svg-inverted svg-money"></i>
               <span>Bani</span>
             </a>
           </li>
@@ -50,25 +52,29 @@
         <ul class="tabs involve row" data-tabs id="entities-tabs">
           <li class="small-6 medium-3 columns tabs-title is-active">
             <a href="#panel3" aria-controls="panel3" aria-selected="true" id="panel3-label">
-              <i class="material-icons">&#xE54B;</i>
+              <i class="svg-icons svg-companies"></i>
+              <i class="svg-icons svg-inverted svg-companies"></i>
               <span>Companii</span>
             </a>
           </li>
           <li class="small-6 medium-3 columns tabs-title">
             <a href="#panel4" aria-controls="panel4" aria-selected="false" id="panel4-label">
-              <i class="material-icons">&#xE54B;</i>
+              <i class="svg-icons svg-goverment"></i>
+              <i class="svg-icons svg-inverted svg-goverment"></i>
               <span>Instituții</span>
             </a>
           </li>
           <li class="small-6 medium-3 columns tabs-title">
             <a href="#panel5" aria-controls="panel5" aria-selected="false" id="panel5-label">
-              <i class="material-icons">&#xE54B;</i>
+              <i class="svg-icons svg-organisations"></i>
+              <i class="svg-icons svg-inverted svg-organisations"></i>
               <span>ONG-uri</span>
             </a>
           </li>
           <li class="small-6 medium-3 columns tabs-title">
             <a href="#panel6" aria-controls="panel6" aria-selected="false" id="panel6-label">
-              <i class="material-icons">&#xE54B;</i>
+              <i class="svg-icons svg-universities"></i>
+              <i class="svg-icons svg-inverted svg-universities"></i>
               <span>Universități</span>
             </a>
           </li>

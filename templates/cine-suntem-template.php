@@ -19,7 +19,6 @@
       <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
         <h1><?php echoFieldValueOrDefault('echipa_titlu'); ?></h1>
         <?php echoFieldValueOrDefault('echipa_continut'); ?>
-        <h2 class="title-team">Membrii fondatori</h2>
       </div>
       <div class="small-offset-1 small-10 medium-11 columns">
         <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="test-eq">
@@ -63,142 +62,46 @@
       </div>
 
       <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
-        <h2 class="title-team">Colaboratori</h2>
-        <p>Ne-am bucurat să ne dăm seama că nu suntem așa puțini. Nu suntem încă nici atât de mulți. Ne-am bucura tare să vii <a href="/implica-te/">alături de noi</a> și să creștem împreună comunitatea Code for Romania.</p>
+        <h2 class="title-team"><?php echoFieldValueOrDefault('colaboratori_titlu'); ?></h2>
+        <?php echoFieldValueOrDefault('colaboratori_continut'); ?>
       </div>
 
       <div class="small-offset-1 small-10 medium-11 columns">
         <div class="members row">
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 medium-4 large-3 columns">
-            <div class="member member-small media-object">
-              <div class="media-object-section">
-                <img src="http://www.fillmurray.com/400/400" alt="Bogdan Ivănel">
-              </div>
-              <div class="media-object-section middle">
-                <h3>Bogdan Ivănel</h3>
-              </div>
-            </div>
-          </div>
+          <?php
+            $colaboratori = get_field('colaboratori');
+            $defaultMemberPic = 'http://www.fillmurray.com/400/400';
+            // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
+
+            $columnsNumber      = ceil(count($colaboratori) / 4) * 4;
+
+            for($index = 0; $index < $columnsNumber; $index++) {
+
+              if($index < count($colaboratori)) {
+
+                $colaborator     = $colaboratori[$index];
+                $nume       = repeaterFieldValueOrDefault("nume", $colaborator);
+                $poza       = repeaterFieldValueOrDefault("poza", $colaborator);
+
+                if($poza === null || $poza === "") {
+                  $poza = $defaultMemberPic;
+                } ?>
+
+                  <div class="small-6 medium-4 large-3 columns">
+                    <div class="member member-small media-object">
+                      <div class="media-object-section">
+                        <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">
+                      </div>
+                      <div class="media-object-section middle">
+                        <h3><?php echo $nume; ?></h3>
+                      </div>
+                    </div>
+                  </div>
+          <?php
+              }
+            }
+          ?>
+
         </div>
       </div>
       <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 action-line columns">

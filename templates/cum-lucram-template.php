@@ -110,7 +110,7 @@
         <?php //echoFieldValueOrDefault('cum_lucram_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 columns actions actions-project">
-        <a href="/proiecte/" class="button large underline" target="_blank">Vezi proiectele</a>
+        <a href="/proiecte/" class="button large underline">Vezi proiectele</a>
         <a href="/implica-te/" class="button large underline">Vrei să te implici?</a>
       </div>
     </div>

@@ -518,22 +518,21 @@
     font-size: 16px;
     font-weight: 700;
     text-align: center;
-    background: lighten($black, 90);
-    color: lighten($black, 60);
-
-    i {
-      font-size: 28px;
-    }
+    background: $white;
+    color: $color-primary;
 
     span {
       display: block;
       margin-top: 5px;
       font-size: 18px;
+
+      @include breakpoint(medium) {
+        font-size: 22px;
+      }
     }
 
     &:hover {
       background: lighten($black, 90);
-      color: lighten($black, 60);
     }
 
     &:focus,
@@ -543,7 +542,11 @@
     }
 
     @include breakpoint(medium) {
-      text-align: left;
+      padding: 25px 5px;
+    }
+
+    @include breakpoint(large) {
+      font-size: 32px;
       padding: 25px 16px;
     }
   }
@@ -554,6 +557,15 @@
 
   @include breakpoint(medium) {
     padding: 16px;
+  }
+}
+
+.involve {
+  .svg-icons {
+    @include breakpoint(medium) {
+      width: 64px;
+      height: 64px;
+    }
   }
 }
 

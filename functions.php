@@ -113,23 +113,24 @@ function echoRepeaterFieldValueOrDefault ($item, $field, $defaultValue = "") {
 /**
  * Hide editor on specific pages.
  */
-add_action( 'init', 'hide_editor' );
+add_action( 'admin_init', 'hide_editor' );
 
 function hide_editor() {
-  // $post_id = isset($_GET['post']) ? isset($_GET['post']) : isset($_POST['post_ID']);
-  // if( !isset( $post_id ) ) return;
+  $post_id = isset($_GET['post']) ? $_GET['post'] : '';
 
-  // $template_file = get_post_meta($post_id, '_wp_page_template', true);
+  if( !isset( $post_id ) ) return;
 
-  // if( $template_file === 'templates/cine-suntem-template.php' ||
-  //     $template_file === 'templates/acasa-template.php' ||
-  //     $template_file === 'templates/implica-te-template.php' ||
-  //     $template_file === 'templates/proiecte-template.php' ||
-  //     $template_file === 'templates/proiect-template.php' ||
-  //     $template_file === 'templates/cum-lucram-template.php'
-  //   ) {
+  $template_file = get_post_meta($post_id, '_wp_page_template', true);
+
+  if( $template_file === 'templates/cine-suntem-template.php' ||
+      $template_file === 'templates/acasa-template.php' ||
+      $template_file === 'templates/implica-te-template.php' ||
+      $template_file === 'templates/proiecte-template.php' ||
+      $template_file === 'templates/proiect-template.php' ||
+      $template_file === 'templates/cum-lucram-template.php'
+    ) {
     remove_post_type_support('page', 'editor');
-  // }
+  }
 }
 
 add_filter( 'nav_menu_link_attributes', 'my_nav_menu_attribs', 10, 3 );

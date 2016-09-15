@@ -18,11 +18,10 @@
     <div class="hero-content content row">
       <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
         <h1><?php echoFieldValueOrDefault('echipa_titlu'); ?></h1>
-        <?php echoFieldValueOrDefault('echipa_continut'); ?>
-        <h2 class="title-team">Membrii fondatori</h2>
+        <h2 class="title-team">Core</h2>
       </div>
       <div class="small-offset-1 small-10 medium-11 columns">
-        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="test-eq">
+        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="members-eq">
           <?php
             $membri             = get_field('membri');
             $defaultMemberPic = 'http://www.fillmurray.com/400/400';
@@ -44,17 +43,17 @@
                   $poza = $defaultMemberPic;
                 } ?>
 
-                  <div class="small-12 medium-6 large-4 columns" data-equalizer-watch>
+                  <div class="small-6 large-4 columns" data-equalizer-watch>
                     <div class="member media-object">
                       <div class="media-object-section">
                         <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">
-                      </div>
-                      <div class="media-object-section">
-                        <h3><?php echo $nume; ?></h3>
-                        <p><?php echo $descriere; ?></p>
                         <a href="<?php echo $social; ?>" target="_blank" class="member-social">
                           <?php echo $icon; ?>
                         </a>
+                      </div>
+                      <div class="media-object-section middle">
+                        <h3><?php echo $nume; ?></h3>
+                        <p><?php echo $descriere; ?></p>
                       </div>
                     </div>
                   </div>
@@ -73,7 +72,7 @@
       </div>
 
       <div class="small-offset-1 small-10 medium-11 columns">
-        <div class="members row">
+        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="volunteers-eq">
           <?php
             $colaboratori = get_field('colaboratori');
             $defaultMemberPic = 'http://www.fillmurray.com/400/400';
@@ -93,7 +92,7 @@
                   $poza = $defaultMemberPic;
                 } ?>
 
-                  <div class="small-12 medium-4 large-3 columns">
+                  <div class="small-6 large-4 columns" data-equalizer-watch>
                     <div class="member member-small media-object">
                       <div class="media-object-section">
                         <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">

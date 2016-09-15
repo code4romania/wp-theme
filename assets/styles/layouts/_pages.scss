@@ -362,11 +362,19 @@
 }
 
 .members {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .member {
   margin-bottom: 30px;
+
+  h3 {
+    margin-bottom: 0;
+
+    @include breakpoint(medium) {
+      margin-bottom: 8px;
+    }
+  }
 
   p {
     font-size: 16px;
@@ -378,13 +386,23 @@
 
   .media-object-section {
     position: relative;
+    display: block;
+
+    &:first-child {
+      position: relative;
+    }
+
+    @include breakpoint(medium) {
+      display: table-cell;
+    }
 
     img {
-      width: 60px;
+      width: 80px;
+      margin-bottom: 10px;
       border-radius: 50%;
 
-      @include breakpoint(large) {
-        width: 80px;
+      @include breakpoint(medium) {
+        margin-bottom: 0;
       }
     }
   }
@@ -400,28 +418,14 @@
   font-size: 20px;
   text-align: center;
   line-height: 32px;
+  position: absolute;
+  top: 0;
+  left: 60px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-primary;
     background: $white;
-  }
-
-  @include breakpoint(medium) {
-    position: absolute;
-    top: 0;
-    left: -48px;
-  }
-}
-
-.member-small {
-  .media-object-section {
-    img {
-      width: 40px;
-
-      @include breakpoint(large) {
-        width: 60px;
-      }
-    }
   }
 }
 
@@ -500,8 +504,8 @@
 }
 
 .title-team {
-  font-size: 30px;
-  margin-top: 30px;
+  font-size: 32px;
+  margin-bottom: 0;
 }
 
 .involvement {

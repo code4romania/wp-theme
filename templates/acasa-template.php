@@ -117,12 +117,12 @@
               }
 
               ?>
-              <div class="small-6 columns">
+              <div class="small-12 medium-6 columns">
                 <a href="/implica-te/" class="activity activity-visual">
                   <h2>
                     <i class="svg-icons"></i>
                     <span><?php echo $titlu;?></span>
-                    <i class="material-icons">&#xE5CC;</i>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
                   </h2>
                   <p><?php echo $descriere;?></p>
                 </a>

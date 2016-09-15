@@ -66,9 +66,9 @@
   <div class="content row">
     <div class="small-12 columns">
       <div class="ui-help">
-        <i class="material-icons">&#xE5CB;</i>
-        <i class="material-icons">&#xE925;</i>
-        <i class="material-icons">&#xE5CC;</i>
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
       </div>
       <div class="table-scroll">
         <table class="progress-wrap">

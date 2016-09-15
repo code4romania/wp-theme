@@ -11,7 +11,7 @@
         </a>
 
         <button class="burger show-for-small-only" data-open="nav-overlay">
-          <i class="material-icons">&#xE5D2;</i>
+          <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
 
         <nav id="nav" class="nav hide-for-small-only">

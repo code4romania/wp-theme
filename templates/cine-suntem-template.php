@@ -93,7 +93,7 @@
                   $poza = $defaultMemberPic;
                 } ?>
 
-                  <div class="small-6 medium-4 large-3 columns">
+                  <div class="small-12 medium-4 large-3 columns">
                     <div class="member member-small media-object">
                       <div class="media-object-section">
                         <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">

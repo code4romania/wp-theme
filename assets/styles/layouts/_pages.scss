@@ -246,12 +246,6 @@
     color: $white;
   }
 
-  .material-icons {
-    font-size: 20px;
-    position: relative;
-    top: 3px;
-  }
-
   h2 {
     margin: 0;
     padding: 0 0 8px;
@@ -489,13 +483,6 @@
     display: inline-block;
     margin-left: -70px;
   }
-
-  .material-icons {
-    font-size: 35px;
-    position: relative;
-    top: 10px;
-    left: 10px;
-  }
 }
 
 .numbers,
@@ -649,8 +636,9 @@
     display: none;
   }
 
-  .material-icons {
-    font-size: 16px;
+  .fa {
+    font-size: 20px;
+    margin: 0 3px;
     color: lighten($black, 60);
   }
 }

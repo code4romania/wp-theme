@@ -20,7 +20,7 @@
 <nav id="nav-overlay" class="full reveal" data-reveal>
   <div class="overlay-content overlay-nav">
     <a href="#" class="close-button" title="Inchide" data-close>
-      <i class="material-icons">&#xE5CD;</i>
+      <i class="fa fa-times" aria-hidden="true"></i>
     </a>
     <!-- <button class="button" data-open="contact-overlay">Contact</button> -->
     <!-- <a href="/">Home</a> -->
@@ -36,7 +36,7 @@
 <div id="contact-overlay" class="full reveal" data-reveal>
   <div class="overlay-content overlay-contact">
     <a href="#" class="close-button" title="Inchide" data-close>
-      <i class="material-icons">&#xE5CD;</i>
+      <i class="fa fa-times" aria-hidden="true"></i>
     </a>
 
     <div class="row interact">
@@ -53,7 +53,7 @@
 <div id="add-project-overlay" class="full reveal" data-reveal>
   <div class="overlay-content overlay-contact">
     <a href="#" class="close-button" title="Inchide" data-close>
-      <i class="material-icons">&#xE5CD;</i>
+      <i class="fa fa-times" aria-hidden="true"></i>
     </a>
 
     <div class="row interact">

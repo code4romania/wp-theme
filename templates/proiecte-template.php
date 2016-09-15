@@ -31,8 +31,8 @@
           <input type="checkbox" class="project-filter-cb checkbox" checked="checked" id="<?php echo $cbID; ?>" data-category = "<?php echo $filter->slug; ?>" style="display: none;">
           <label for="<?php echo $cbID; ?>" class="<?php echo $class; ?> filter-button filter-checkbox ">
             <span class="custom checkbox">
-              <i class="material-icons checked">&#xE834;</i>
-              <i class="material-icons">&#xE835;</i>
+              <i class="fa fa-check-square-o checked" aria-hidden="true"></i>
+              <i class="fa fa-square-o" aria-hidden="true"></i>
             </span>
             <?php  echo $filter->name; ?>
           </label>

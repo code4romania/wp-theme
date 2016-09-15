@@ -33,10 +33,10 @@ div.wpcf7-mail-sent-ok {
       color: lighten($black, 60);
       margin: 0;
 
-      .material-icons {
+      .fa {
         display: inline-block;
         position: relative;
-        top: 5px;
+        top: 2px;
         margin-right: 5px;
       }
 
@@ -51,7 +51,7 @@ div.wpcf7-mail-sent-ok {
 
     &:checked {
       + label {
-        .material-icons {
+        .fa {
           display: none;
         }
 

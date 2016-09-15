@@ -33,3 +33,21 @@
     }
   }
 }
+
+.social {
+  text-align: center;
+  margin: 50px 0 0;
+
+  > li {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: lighten($black, .75);
+
+    > a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

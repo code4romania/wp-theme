@@ -64,7 +64,7 @@
 
 <section class="block block-content block-progress wrap container">
   <div class="content row">
-    <div class="small-12 columns">
+    <div class="small-12 medium-offset-1 medium-10 columns">
       <div class="ui-help">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
@@ -110,7 +110,7 @@
 
 <section class="block block-content block-details wrap container">
   <div class="hero-content content row">
-    <div class="small-12 columns">
+    <div class="small-12 medium-offset-1 medium-10 columns">
       <h1>Colaboratori</h1>
       <div class="members row">
         <?php

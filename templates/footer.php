@@ -1,11 +1,36 @@
 <footer class="block footer">
   <div class="content row">
     <div class="small-12 columns">
+
       <?php
         if (has_nav_menu('footer_navigation')) :
           wp_nav_menu(['theme_location' => 'footer_navigation', 'items_wrap' => '<ul class="menu nav">%3$s</ul>']);
         endif;
       ?>
+
+      <ul class="social">
+        <li>
+          <a href="http://www.facebook.com/code4romania/" target="_blank">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/Code4Romania" target="_blank">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/code4romania/" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/code-for-romania" target="_blank">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+
 
       <p class="copy mono">&copy; 2016 Code for Romania. Organizație apolitică și nepartizană.</p>
 

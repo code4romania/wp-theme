@@ -20,7 +20,7 @@
     <div class="small-offset-1 small-10 large-offset-2 large-8 columns">
 
       <div class="involvement">
-        <ul class="tabs involve row" data-tabs id="people-tabs">
+        <ul class="tabs involve row" data-tabs data-match-height="true" id="people-tabs">
           <li class="small-6 columns tabs-title is-active">
             <a href="#panel1" aria-controls="panel1" aria-selected="true" id="panel1-label">
               <i class="svg-icons svg-time"></i>
@@ -49,7 +49,7 @@
       </div>
 
       <div class="involvement">
-        <ul class="tabs involve row" data-tabs id="entities-tabs">
+        <ul class="tabs involve row" data-tabs data-match-height="true" id="entities-tabs">
           <li class="small-6 medium-3 columns tabs-title is-active">
             <a href="#panel3" aria-controls="panel3" aria-selected="true" id="panel3-label">
               <i class="svg-icons svg-companies"></i>

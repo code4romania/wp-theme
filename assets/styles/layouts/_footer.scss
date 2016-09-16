@@ -14,8 +14,12 @@
 
     > li {
       display: inline-block;
-      margin: 0;
+      margin: 0 0 10px;
       padding: 0 10px;
+
+      a {
+        font-size: 14px;
+      }
     }
   }
 
@@ -32,6 +36,11 @@
       opacity: .8;
     }
   }
+}
+
+.legaleza {
+  margin: 0 0 50px;
+  padding: 10px 20px 20px;
 }
 
 .social {

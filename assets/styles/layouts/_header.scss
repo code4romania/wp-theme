@@ -56,10 +56,10 @@ header {
 
 li.menu-item {
   font-size: 16px;
-  padding: 0 5px;
+  padding: 0;
 
   @include breakpoint(large) {
-    padding: 0 40px;
+    padding: 0 15px;
   }
 
   > a {
@@ -112,6 +112,16 @@ li.menu-item {
 
       &::after {
         background: $black;
+      }
+    }
+  }
+
+  &.menu-item-154 {
+    > a {
+      font-weight: 700;
+
+      &:after {
+        height: 2px;
       }
     }
   }

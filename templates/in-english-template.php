@@ -1,4 +1,4 @@
-<?php /* Template Name: Legal */ ?>
+<?php /* Template Name: In English */ ?>
 
 <section class="block block-hero block-content wrap container">
   <div class="hero">
@@ -13,7 +13,7 @@
   <div class="content row">
     <div class="small-12 columns">
 
-      some other content goes here
+      some other content in english goes here
 
     </div>
   </div>

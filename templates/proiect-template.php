@@ -33,8 +33,6 @@
           $thumb_url = $defaultProjectPic;
         }
 
-        var_dump($substadii);
-
         ?>
 
       <div class="small-12 large-offset-1 large-10 columns">
@@ -69,10 +67,23 @@
 <section class="block block-content block-progress wrap container">
   <div class="content row">
     <div class="small-12 medium-offset-1 medium-10 columns">
-      <div class="owner">
-        <img src="<?php echo wp_get_attachment_url($organizatieLogo); ?>" alt="<?php echo $organizatie; ?>">
-        <p><?php echo $organizatie; ?></p>
-        <p><?php echo $organizatieDescriere; ?></p>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <div class="owner media-object">
+            <div class="media-object-section middle">
+              <a href="#" target="_blank">
+                <img src="<?php echo wp_get_attachment_url($organizatieLogo); ?>" alt="<?php echo $organizatie; ?>">
+              </a>
+            </div>
+            <div class="media-object-section middle">
+              <h2><?php echo $organizatie; ?></h2>
+            </div>
+            <p class="owner-desc"><?php echo $organizatieDescriere; ?></p>
+          </div>
+        </div>
+        <div class="small-12 medium-6 columns">
+          altceva / linkurile alea si social media?
+        </div>
       </div>
       <div class="ui-help">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -136,7 +147,7 @@
                 $poza = "http://www.fillmurray.com/400/400";
               }
         ?>
-          <div class="small-6 medium-4 large-3 columns">
+          <div class="small-6 large-4 columns">
             <div class="member member-small media-object">
               <div class="media-object-section">
                 <img src="<?php echo $poza; ?>" alt="<?php echoRepeaterFieldValueOrDefault("nume", $membru); ?>">

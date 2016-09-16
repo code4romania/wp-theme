@@ -642,6 +642,7 @@
 .progress-wrap {
   display: table;
   width: 100%;
+  margin: 0;
 }
 
 .progress {
@@ -672,5 +673,27 @@
   line-height: 1.23;
 }
 
+.owner {
+  background: $color-primary;
+  color: $white;
+  padding: 15px;
+  margin: 0 0 40px;
 
+  @include breakpoint(large) {
+    padding: 30px;
+  }
+
+  a img {
+    width: 80px;
+
+    @include breakpoint(medium) {
+      width: 100px;
+    }
+  }
+}
+
+.owner-desc {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
 

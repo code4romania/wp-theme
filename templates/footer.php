@@ -60,12 +60,11 @@
 
 <div id="contact-overlay" class="full reveal" data-reveal>
   <div class="overlay-content overlay-contact">
-    <a href="#" class="close-button" title="Inchide" data-close>
-      <i class="fa fa-times" aria-hidden="true"></i>
-    </a>
-
     <div class="row interact">
       <div class="small-12 medium-offset-1 medium-10 columns">
+        <a href="#" class="close-button" title="Inchide" data-close>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
         <h1>Salut!</h1>
         <p>Lorem ipsum bla bla, avem nevoie de un text aici.</p>
         <?php echo do_shortcode('[contact-form-7 id="106" title="Contact"]'); ?>
@@ -77,12 +76,11 @@
 
 <div id="add-project-overlay" class="full reveal" data-reveal>
   <div class="overlay-content overlay-contact">
-    <a href="#" class="close-button" title="Inchide" data-close>
-      <i class="fa fa-times" aria-hidden="true"></i>
-    </a>
-
     <div class="row interact">
       <div class="small-12 medium-offset-1 medium-10 columns">
+        <a href="#" class="close-button" title="Inchide" data-close>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
         <?php echo do_shortcode('[contact-form-7 id="110" title="Propune un proiect"]'); ?>
       </div>
     </div>

@@ -44,6 +44,10 @@
   right: 20px;
   top: 36px;
 
+  .overlay-contact & {
+    top: 0;
+  }
+
   &:hover {
     color: $white;
   }

@@ -2,6 +2,7 @@ body {
   border-top: $border-height solid $color-primary;
   font-size: 14px;
   line-height: 1.45;
+  -webkit-overflow-scrolling: touch;
 }
 
 [type='file'],
@@ -186,6 +187,10 @@ p {
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+
+    span {
+      text-transform: lowercase;
+    }
   }
 }
 
@@ -198,4 +203,12 @@ p {
 .column:last-child:not(:first-child),
 .columns:last-child:not(:first-child) {
   float: left;
+}
+
+.table-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+.reveal .columns {
+  position: relative;
 }

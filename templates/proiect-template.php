@@ -12,6 +12,7 @@
         $organizatie = get_post_meta($post->ID, 'organizatie',true);
         $organizatieLogo = get_post_meta($post->ID, 'organizatie_logo',true);
         $organizatieDescriere = get_post_meta($post->ID, 'organizatie_descriere',true);
+        $organizatieLink = get_post_meta($post->ID, 'organizatie_link',true);
         $actiunePrimaraTextCF = get_post_meta($post->ID, 'actiune_primara_text',true);
         $actiunePrimaraLinkCF = get_post_meta($post->ID, 'actiune_primara_link',true);
         $actiuneSecundaraTextCF = get_post_meta($post->ID, 'actiune_secundara_text',true);
@@ -71,7 +72,7 @@
         <div class="small-12 medium-6 columns">
           <div class="owner media-object">
             <div class="media-object-section middle">
-              <a href="#" target="_blank">
+              <a href="<?php echo $organizatieLink; ?>" target="_blank">
                 <img src="<?php echo wp_get_attachment_url($organizatieLogo); ?>" alt="<?php echo $organizatie; ?>">
               </a>
             </div>

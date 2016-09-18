@@ -49,7 +49,7 @@
         <h2 class="title-team">Core team</h2>
       </div>
       <div class="small-offset-1 small-10 columns">
-        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="members-eq">
+        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="false" id="members-eq">
           <?php
             $membri             = get_field('membri');
             $defaultMemberPic = 'http://www.fillmurray.com/400/400';

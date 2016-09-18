@@ -36,97 +36,97 @@
 
 // TODO: fix this
 .progress {
+  &.step-concept {
+    .progress-step {
+      &:nth-child(6n+1) {
+        color: $white;
+        background: rgba($color-primary, .40);
+      }
+    }
+  }
+
   &.step-specs {
     .progress-step {
-      &:nth-child(7n+1) {
+      &:nth-child(6n+1) {
+        color: $white;
+        background: rgba($color-primary, .40);
+      }
+
+      &:nth-child(6n+2) {
         color: $white;
         background: rgba($color-primary, .50);
-      }
-    }
-  }
-
-  &.step-publish {
-    .progress-step {
-      &:nth-child(7n+1) {
-        color: $white;
-        background: rgba($color-primary, .50);
-      }
-
-      &:nth-child(7n+2) {
-        color: $white;
-        background: rgba($color-primary, .60);
-      }
-    }
-  }
-
-  &.step-team {
-    .progress-step {
-      &:nth-child(7n+1) {
-        color: $white;
-        background: rgba($color-primary, .50);
-      }
-
-      &:nth-child(7n+2) {
-        color: $white;
-        background: rgba($color-primary, .60);
-      }
-
-      &:nth-child(7n+3) {
-        color: $white;
-        background: rgba($color-primary, .70);
       }
     }
   }
 
   &.step-design {
     .progress-step {
-      &:nth-child(7n+1) {
+      &:nth-child(6n+1) {
+        color: $white;
+        background: rgba($color-primary, .40);
+      }
+
+      &:nth-child(6n+2) {
         color: $white;
         background: rgba($color-primary, .50);
       }
 
-      &:nth-child(7n+2) {
+      &:nth-child(6n+3) {
         color: $white;
         background: rgba($color-primary, .60);
-      }
-
-      &:nth-child(7n+3) {
-        color: $white;
-        background: rgba($color-primary, .70);
-      }
-
-      &:nth-child(7n+4) {
-        color: $white;
-        background: rgba($color-primary, .80);
       }
     }
   }
 
   &.step-develop {
     .progress-step {
-      &:nth-child(7n+1) {
+      &:nth-child(6n+1) {
+        color: $white;
+        background: rgba($color-primary, .40);
+      }
+
+      &:nth-child(6n+2) {
         color: $white;
         background: rgba($color-primary, .50);
       }
 
-      &:nth-child(7n+2) {
+      &:nth-child(6n+3) {
         color: $white;
         background: rgba($color-primary, .60);
       }
 
-      &:nth-child(7n+3) {
+      &:nth-child(6n+4) {
+        color: $white;
+        background: rgba($color-primary, .70);
+      }
+    }
+  }
+
+  &.step-test {
+    .progress-step {
+      &:nth-child(6n+1) {
+        color: $white;
+        background: rgba($color-primary, .40);
+      }
+
+      &:nth-child(6n+2) {
+        color: $white;
+        background: rgba($color-primary, .50);
+      }
+
+      &:nth-child(6n+3) {
+        color: $white;
+        background: rgba($color-primary, .60);
+      }
+
+      &:nth-child(6n+4) {
         color: $white;
         background: rgba($color-primary, .70);
       }
 
-      &:nth-child(7n+4) {
+      &:nth-child(6n+5) {
         color: $white;
         background: rgba($color-primary, .80);
-      }
-
-      &:nth-child(7n+5) {
-        color: $white;
-        background: rgba($color-primary, .90);
       }
     }
   }
@@ -135,73 +135,32 @@
     .progress-step {
       color: $white;
 
-      &:nth-child(7n+1) {
+      &:nth-child(6n+1) {
+        color: $white;
+        background: rgba($color-primary, .40);
+      }
+
+      &:nth-child(6n+2) {
         color: $white;
         background: rgba($color-primary, .50);
       }
 
-      &:nth-child(7n+2) {
+      &:nth-child(6n+3) {
         color: $white;
         background: rgba($color-primary, .60);
       }
 
-      &:nth-child(7n+3) {
+      &:nth-child(6n+4) {
         color: $white;
         background: rgba($color-primary, .70);
       }
 
-      &:nth-child(7n+4) {
+      &:nth-child(6n+5) {
         color: $white;
         background: rgba($color-primary, .80);
       }
 
-      &:nth-child(7n+5) {
-        color: $white;
-        background: rgba($color-primary, .90);
-      }
-
-      &:nth-child(7n+6) {
-        color: $white;
-        background: $color-primary;
-      }
-    }
-  }
-
-  &.step-monitor {
-    .progress-step {
-      color: $white;
-
-      &:nth-child(7n+1) {
-        color: $white;
-        background: rgba($color-primary, .50);
-      }
-
-      &:nth-child(7n+2) {
-        color: $white;
-        background: rgba($color-primary, .60);
-      }
-
-      &:nth-child(7n+3) {
-        color: $white;
-        background: rgba($color-primary, .70);
-      }
-
-      &:nth-child(7n+4) {
-        color: $white;
-        background: rgba($color-primary, .80);
-      }
-
-      &:nth-child(7n+5) {
-        color: $white;
-        background: rgba($color-primary, .90);
-      }
-
-      &:nth-child(7n+6) {
-        color: $white;
-        background: $color-primary;
-      }
-
-      &:nth-child(7n) {
+      &:nth-child(6n) {
         color: $white;
         background: $color-primary;
       }

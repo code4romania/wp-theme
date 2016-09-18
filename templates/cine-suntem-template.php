@@ -1,6 +1,6 @@
 <?php /* Template Name: Cine suntem */ ?>
 
-<section class="block block-hero block-inverted block-content block-text wrap container">
+<section class="block block-hero block-inverted block-content block-text block-identity wrap container">
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
@@ -8,6 +8,34 @@
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <?php echoFieldValueOrDefault('cine_suntem_continut'); ?>
+
+        <div class="purpose row"  data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="false" >
+          <div class="small-6 medium-3 columns" data-equalizer-watch>
+            <div class="scope">
+              <i class="fa fa-database" aria-hidden="true"></i>
+              <h3>Informare &amp; acces la date publice</h3>
+            </div>
+            </div>
+          <div class="small-6 medium-3 columns" data-equalizer-watch>
+            <div class="scope">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <h3>Educare &amp; promovare a culturii</h3>
+            </div>
+            </div>
+          <div class="small-6 medium-3 columns" data-equalizer-watch>
+            <div class="scope">
+              <i class="fa fa-link" aria-hidden="true"></i>
+              <h3>Implicare civică &amp; colaborare</h3>
+            </div>
+            </div>
+          <div class="small-6 medium-3 columns" data-equalizer-watch>
+            <div class="scope">
+              <i class="fa fa-key" aria-hidden="true"></i>
+              <h3>Facilitare a accesului la servicii publice</h3>
+            </div>
+            </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -21,7 +49,7 @@
         <h2 class="title-team">Core team</h2>
       </div>
       <div class="small-offset-1 small-10 columns">
-        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="members-eq">
+        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="false" id="members-eq">
           <?php
             $membri             = get_field('membri');
             $defaultMemberPic = 'http://www.fillmurray.com/400/400';

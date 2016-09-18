@@ -14,36 +14,34 @@
   </div>
 </section>
 
-
 <section class="block wrap container">
   <div class="content row">
     <div class="small-offset-1 small-10 large-offset-2 large-8 columns">
 
-      <div class="involvement">
-        <ul class="tabs involve row" data-tabs id="people-tabs">
-          <li class="small-6 columns tabs-title is-active">
-            <a href="#panel1" aria-controls="panel1" aria-selected="true" id="panel1-label">
+      <div class="row">
+        <div class="small-12 large-6 columns">
+          <div class="involve">
+            <h2>
               <i class="svg-icons svg-time"></i>
-              <i class="svg-icons svg-inverted svg-time"></i>
               <span>Timp</span>
-            </a>
-          </li>
-          <li class="small-6 columns tabs-title">
-            <a href="#panel2" aria-controls="panel2" aria-selected="false" id="panel2-label">
-              <i class="svg-icons svg-money"></i>
-              <i class="svg-icons svg-inverted svg-money"></i>
-              <span>Bani</span>
-            </a>
-          </li>
-        </ul>
-
-        <div class="tabs-content" data-tabs-content="people-tabs">
-          <div class="tabs-panel is-active" id="panel1" aria-hidden="true" aria-labelledby="panel1-label">
+            </h2>
             <p>Ești programator? Dacă da, poate vrei să te implici cât iti permite timpul pentru o cauză socială. Dacă tot vrei să ajuţi, dar nu eşti programator, ești binevenit. Poţi contribui pe  comunicare, design, organizare evenimente, cercetare și altele. <a href="https://www.surveymonkey.com/r/C6MZJJJ" target="_blank">Completează acest formular</a> ca să știm mai multe despre tine. Te vom contacta noi apoi pentru pașii următori.</p>
+            <p>
+              <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Propune un proiect</a>
+            </p>
           </div>
-          <div class="tabs-panel" id="panel2" aria-hidden="true" aria-labelledby="panel2-label">
+        </div>
+        <div class="small-12 large-6 columns">
+          <div class="involve">
+            <h2>
+              <i class="svg-icons svg-money"></i>
+              <span>Bani</span>
+            </h2>
             <p>Proiectul Code for Romania se bazează pe voluntariat. Dar întreţinerea platformei, cumpărarea domeniilor și hostingul, participarea în anumite proiecte și lucrurile administrative etc. implică anumite costuri.</p>
             <p>Dacă îți plac <a href="/proiecte/">proiectele noastre</a>, poți investi în ele printr-o donație cât de mică. Orice contribuţie este utilă şi o apreciem enorm. Ea va ajuta proiectele să meargă înainte și pe noi să ne investim efortul în ce e cu adevărat important, adică în dezvoltarea proiectelor și creșterea comunității.</p>
+            <p>
+              <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline button-donate" target="_blank">Donează</a>
+            </p>
           </div>
         </div>
       </div>

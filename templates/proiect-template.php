@@ -13,6 +13,8 @@
         $organizatieLogo = get_post_meta($post->ID, 'organizatie_logo',true);
         $organizatieDescriere = get_post_meta($post->ID, 'organizatie_descriere',true);
         $organizatieLink = get_post_meta($post->ID, 'organizatie_link',true);
+        $github = get_post_meta($post->ID, 'github',true);
+        $budget = get_post_meta($post->ID, 'buget',true);
         $actiunePrimaraTextCF = get_post_meta($post->ID, 'actiune_primara_text',true);
         $actiunePrimaraLinkCF = get_post_meta($post->ID, 'actiune_primara_link',true);
         $actiuneSecundaraTextCF = get_post_meta($post->ID, 'actiune_secundara_text',true);
@@ -39,7 +41,13 @@
       <div class="small-12 large-offset-1 large-10 columns">
         <div class="hero-project media-object">
           <div class="media-object-section middle">
-            <img src="<?php echo $thumb_url; ?>" alt="<?php echo $titlu; ?>">
+            <img src="<?php echo $thumb_url; ?>" alt="<?php the_title(); ?>">
+            <?php if($github): ?>
+              <a href="<?php echo $github; ?>" class="project-git mono" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <span>Vezi codul</span>
+              </a>
+            <?php endif; ?>
           </div>
           <div class="media-object-section">
             <h1><?php the_title(); ?></h1>
@@ -72,18 +80,50 @@
         <div class="small-12 medium-6 columns">
           <div class="owner media-object">
             <div class="media-object-section middle">
-              <a href="<?php echo $organizatieLink; ?>" target="_blank">
+              <?php if($organizatieLink): ?>
+                <a href="<?php echo $organizatieLink; ?>" target="_blank">
+                  <img src="<?php echo wp_get_attachment_url($organizatieLogo); ?>" alt="<?php echo $organizatie; ?>">
+                </a>
+              <?php else: ?>
                 <img src="<?php echo wp_get_attachment_url($organizatieLogo); ?>" alt="<?php echo $organizatie; ?>">
-              </a>
+              <?php endif; ?>
             </div>
             <div class="media-object-section middle">
-              <h2><?php echo $organizatie; ?></h2>
+              <h2>
+                <span>O idee:</span>
+                <?php echo $organizatie; ?>
+              </h2>
+              <?php if($budget): ?>
+                <a href="<?php echo $budget; ?>" class="owner-budget" target="_blank">Vezi bugetul</a>
+              <?php endif; ?>
             </div>
-            <p class="owner-desc"><?php echo $organizatieDescriere; ?></p>
           </div>
         </div>
         <div class="small-12 medium-6 columns">
-          altceva / linkurile alea si social media?
+          <div class="meta-project">
+            <ul class="social social-project">
+              <li>
+                <a href="#" class="social-icon social-facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-icon social-twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-icon social-google-plus">
+                  <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-icon social-linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="ui-help">
@@ -96,31 +136,27 @@
           <tr class="progress <?php echo $substadii; ?>">
             <td class="progress-step">
               <strong class="progress-no">1</strong>
-              <span class="progress-state">Redactarea specificațiilor</span>
+              <span class="progress-state">Concept</span>
             </td>
             <td class="progress-step">
               <strong class="progress-no">2</strong>
-              <span class="progress-state">Publicarea proiectului</span>
+              <span class="progress-state">Redactarea specificațiilor</span>
             </td>
             <td class="progress-step">
               <strong class="progress-no">3</strong>
-              <span class="progress-state">Formarea echipei</span>
+              <span class="progress-state">Arhitectură technică</span>
             </td>
             <td class="progress-step">
               <strong class="progress-no">4</strong>
-              <span class="progress-state">Arhitectură</span>
-            </td>
-            <td class="progress-step">
-              <strong class="progress-no">5</strong>
               <span class="progress-state">Dezvoltare</span>
             </td>
             <td class="progress-step">
-              <strong class="progress-no">6</strong>
-              <span class="progress-state">Lansare și promovare</span>
+              <strong class="progress-no">5</strong>
+              <span class="progress-state">Testare</span>
             </td>
             <td class="progress-step">
-              <strong class="progress-no">7</strong>
-              <span class="progress-state">Monitorizare</span>
+              <strong class="progress-no">6</strong>
+              <span class="progress-state">Lansare</span>
             </td>
           </tr>
         </table>

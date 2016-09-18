@@ -147,10 +147,6 @@ p {
   li {
     font-size: 16px;
     color: $black;
-
-    @include breakpoint(medium) {
-      font-size: 20px;
-    }
   }
 }
 
@@ -194,10 +190,57 @@ p {
   }
 }
 
+.block-donate {
+  background: $color-donate;
+  padding: 0 0 40px;
+
+  a.donate-cta {
+    color: $white;
+    white-space: nowrap;
+    margin-left: -26px;
+
+    &:after {
+      background: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+
+      &:after {
+        background: $white;
+      }
+    }
+  }
+
+  .actions {
+    text-align: left;
+
+    @include breakpoint(medium) {
+      text-align: center;
+    }
+
+    a.donate-cta {
+      @include breakpoint(medium) {
+        margin: 0;
+      }
+    }
+  }
+}
+
 .block-details {
   .actions {
     margin: 0;
   }
+}
+
+.block-identity {
+  padding-bottom: 40px;
+}
+
+.list-images {
+  list-style: inside none;
+  margin-bottom: 0;
 }
 
 .column:last-child:not(:first-child),

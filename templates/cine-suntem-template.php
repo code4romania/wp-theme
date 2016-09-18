@@ -9,7 +9,7 @@
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <?php echoFieldValueOrDefault('cine_suntem_continut'); ?>
 
-        <div class="purpose row"  data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="false" >
+        <div class="purpose row"  data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" >
           <div class="small-6 medium-3 columns" data-equalizer-watch>
             <div class="scope">
               <i class="fa fa-database" aria-hidden="true"></i>
@@ -49,7 +49,7 @@
         <h2 class="title-team">Core team</h2>
       </div>
       <div class="small-offset-1 small-10 columns">
-        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="false" id="members-eq">
+        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="members-eq">
           <?php
             $membri             = get_field('membri');
             $defaultMemberPic = 'http://www.fillmurray.com/400/400';

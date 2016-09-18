@@ -596,6 +596,7 @@
 }
 
 .involve {
+  margin-bottom: 30px;
   margin-top: 20px;
 
   h2 {
@@ -618,12 +619,20 @@
   p {
     &:last-child {
       margin: 0;
+      text-align: center;
+
+      @include breakpoint(large) {
+        text-align: left;
+      }
     }
   }
 
   .button {
-    margin-left: -26px;
     margin-bottom: 0;
+
+    @include breakpoint(large) {
+      margin-left: -26px;
+    }
   }
 
   &.tabs {
@@ -632,6 +641,36 @@
       margin-right: 0;
     }
   }
+}
+
+.involve-action {
+  color: $white;
+  padding: 20px 15px;
+
+  @include breakpoint(medium) {
+    padding: 20px 25px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.involve-time {
+  background: $color-primary;
+}
+
+.involve-money {
+  background: $color-donate;
 }
 
 .hero-project {

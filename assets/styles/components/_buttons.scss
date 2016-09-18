@@ -43,6 +43,14 @@
     }
   }
 
+  &.button-donate {
+    color: $color-donate;
+
+    &:after {
+      background: $color-donate;
+    }
+  }
+
   &.inverted {
     color: $white;
 
@@ -56,14 +64,6 @@
       &::after {
         background: $white;
       }
-    }
-  }
-
-  &.button-donate {
-    color: $color-donate;
-
-    &:after {
-      background: $color-donate;
     }
   }
 }

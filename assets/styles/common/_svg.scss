@@ -3,20 +3,6 @@
   width: 48px;
   height: 48px;
   position: relative;
-
-  .tabs-title > a:focus &,
-  .tabs-title > a[aria-selected=true] & {
-    display: none;
-  }
-}
-
-.svg-inverted {
-  display: none;
-
-  .tabs-title > a:focus &,
-  .tabs-title > a[aria-selected=true] & {
-    display: inline-block;
-  }
 }
 
 .svg-time {
@@ -32,6 +18,10 @@
 
   &.svg-inverted {
     background-image: url(../icons/ico-money-inverted.svg);
+  }
+
+  &.svg-donate {
+    background-image: url(../icons/ico-money-donate.svg);
   }
 }
 

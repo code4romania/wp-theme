@@ -29,7 +29,7 @@
               </span>
               <span>Evaluare</span>
             </h2>
-            <p>Formularul de propunere de proiect ajunge la membrii Code for Romania care îl evaluează conform <a href="https://docs.google.com/document/d/1Hs445EoQdEFE6mHVfMqunSnrCzfdVw3UXJzDnA5UmTw/edit?usp=sharing" target="_blank">Grilei</a>. Proiectul este admis/respins.</p>
+            <p>Formularul de propunere de proiect ajunge la membrii Code for Romania care îl evaluează conform <a href="https://drive.google.com/file/d/0BytTRZxTh5diV3VrdFFhV0xWazQ/view?usp=sharing" target="_blank">Grilei</a>. Proiectul este admis/respins.</p>
           </li>
           <li class="step">
             <h2>
@@ -44,7 +44,8 @@
               <li>Aşa ştim cu toţii valoarea reală a proiectului şi a muncii depuse;</li>
               <li>Deşi lucrăm cu toţii ca voluntari, sunt anumite costuri minime necesare (ex.: domeniu, hosting etc.).</li>
             </ol>
-            <p>Pentru implementare, organizaţia care propune proiectul trebuie să fie pregătită să acopere aceste costuri minime.Toate acestea ne ajută să facem proiectul ușor implementabil şi user-friendly.</p>
+            <p>Pentru implementare, ONG-ul care propune proiectul trebuie să fie pregătită să acopere aceste costuri minime. Toate acestea ne ajută să facem proiectul ușor implementabil şi user-friendly.</p>
+            <p>Dacă proiectul vine din partea unei instituții publice,  aceasta trebuie să acopere și parte din costurile muncii depuse.</p>
           </li>
           <li class="step">
             <h2>

@@ -28,6 +28,7 @@
     <div class="hero-content content row">
       <h1 class="small-12 columns"><?php echoFieldValueOrDefault('proiecte_titlu'); ?></h1>
       <div class="small-offset-1 small-10 medium-offset-6 medium-6 columns">
+        <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate.</p>
         <p>Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
       </div>
       <div class="small-12 medium-offset-6 medium-6 columns actions">

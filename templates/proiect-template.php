@@ -140,7 +140,7 @@
             </td>
             <td class="progress-step">
               <strong class="progress-no">2</strong>
-              <span class="progress-state">Redactarea specificațiilor</span>
+              <span class="progress-state">Specificații UX</span>
             </td>
             <td class="progress-step">
               <strong class="progress-no">3</strong>

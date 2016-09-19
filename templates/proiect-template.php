@@ -144,7 +144,7 @@
             </td>
             <td class="progress-step">
               <strong class="progress-no">3</strong>
-              <span class="progress-state">Arhitectură technică</span>
+              <span class="progress-state">Arhitectură tehnică</span>
             </td>
             <td class="progress-step">
               <strong class="progress-no">4</strong>

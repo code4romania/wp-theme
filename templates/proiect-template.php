@@ -69,7 +69,11 @@
     </div>
   </div>
   <div class="status <?php echo $class; ?>">
-    Acest proiect este <span><?php echo $category->name; ?></span>.
+    <?php if($category->slug == 'proiect_cu_nevoie_de_voluntari'): ?>
+      Acest proiect <span><?php echo $category->name; ?></span>.
+    <?php else: ?>
+      Acest proiect este <span><?php echo $category->name; ?></span>.
+    <?php endif; ?>
   </div>
 </section>
 

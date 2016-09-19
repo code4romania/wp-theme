@@ -938,8 +938,15 @@
 }
 
 .donate-info {
-  margin: 0;
-  line-height: 1.1;
+  height: 30px;
+  margin-top: 20px;
+  display: inline-block;
+
+  img {
+    height: 100%;
+  }
+  // margin: 0;
+  // line-height: 1.1;
 }
 
 

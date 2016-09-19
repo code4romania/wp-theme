@@ -14,17 +14,17 @@
 
             <ul class="list-images row">
               <li class="small-6 medium-4 large-3 columns">
-                <a href="https://www.github.com/" class="partner">
+                <a href="https://www.github.com/" class="partner" target="_blank">
                   <img src="<?php bloginfo('template_url'); ?>/dist/images/github.png" alt="Github">
                 </a>
               </li>
               <li class="small-6 medium-4 large-3 columns">
-                <a href="https://www.google.com/nonprofits/" class="partner">
+                <a href="https://www.google.com/nonprofits/" class="partner" target="_blank">
                   <img src="<?php bloginfo('template_url'); ?>/dist/images/google.png" alt="Google">
                 </a>
               </li>
               <li class="small-6 medium-4 large-3 columns">
-                <a href="https://slack.com/" class="partner">
+                <a href="https://slack.com/" class="partner" target="_blank">
                   <img src="<?php bloginfo('template_url'); ?>/dist/images/slack.png" alt="Slack">
                 </a>
               </li>

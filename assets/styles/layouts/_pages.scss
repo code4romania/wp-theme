@@ -108,10 +108,6 @@
     .block-donate & {
       color: $white;
       font-size: 18px;
-
-      @include breakpoint(medium) {
-        text-align: center;
-      }
     }
 
     &:last-child {

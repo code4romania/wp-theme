@@ -4,7 +4,7 @@
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">Proiecte</h1>
-      <div class="small-offset-1 small-10 medium-offset-2  medium-6 columns">
+      <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <?php echoFieldValueOrDefault('proiecte_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 columns actions actions-project">

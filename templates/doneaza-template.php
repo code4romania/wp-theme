@@ -35,7 +35,7 @@
             </form>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
             <img src="<?php bloginfo('template_url'); ?>/dist/images/paypal.png" alt="PayPal">
-            <p class="donate-info"><small>PayPal este un procesator de plati online cu peste 14 ani experienta in siguranta datelor si <a href="http://66.media.tumblr.com/3e2170e16a9d5cf0bdb4af264fae1534/tumblr_nugr8k4aqS1r3kmkso4_r1_500.gif" target="_blank" class="easter">technologii</a> de ultima generatie.</small></p>
+            <p class="donate-info"><small>PayPal este un procesator de plati online cu peste 14 ani experienta in siguranta datelor si <a href="http://66.media.tumblr.com/3e2170e16a9d5cf0bdb4af264fae1534/tumblr_nugr8k4aqS1r3kmkso4_r1_500.gif" target="_blank" class="easter">tehnologie</a> de ultima generatie.</small></p>
           </div>
         </div>
         <div class="small-12 large-6 columns">

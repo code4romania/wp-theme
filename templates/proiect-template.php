@@ -171,7 +171,7 @@
 
 <section class="block block-content block-details wrap container">
   <div class="hero-content content row">
-    <div class="small-12 medium-offset-1 medium-10 columns">
+    <div class="small-offset-1 small-10 columns">
       <h1>Echipa</h1>
       <div class="members row">
         <?php

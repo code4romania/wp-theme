@@ -45,8 +45,6 @@
           } else {
             projects.closest('.columns').hide();
           }
-
-
         });
       },
       finalize: function() {

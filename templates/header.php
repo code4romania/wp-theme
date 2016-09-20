@@ -1,4 +1,4 @@
-<header class="top">
+<header class="header top">
   <div class="title-bar clearfix">
     <div class="content row">
       <div class="small-12 columns">

@@ -13,9 +13,13 @@
       > a {
         color: $white;
         padding: 15px;
-        font-size: 32px;
+        font-size: 20px;
         width: auto;
         display: inline-block;
+
+        @include breakpoint(medium) {
+          font-size: 32px;
+        }
 
         &::after {
           background: $white;

@@ -1,0 +1,109 @@
+.type-post {
+  margin: 30px 0 60px;
+  position: relative;
+
+  @include breakpoint(large) {
+    border-top: 1px solid lighten($black, 80);
+    padding: 15px 0 0;
+  }
+
+  .updated {
+    @include breakpoint(large) {
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+  }
+
+  h2 {
+    border-top: 1px solid lighten($black, 80);
+    margin: 10px 0 5px;
+    padding: 10px 0 0;
+
+    @include breakpoint(large) {
+      border-top: none;
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+
+  .entry-summary {
+    margin: 20px 0 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .more {
+    margin-top: 10px;
+  }
+
+  .button {
+    margin-left: -20px;
+    margin-bottom: 0;
+  }
+}
+
+.author {
+  font-size: 16px;
+  font-weight: 400;
+  color: lighten($black, 20);
+}
+
+.updated {
+  color: lighten($black, 50);
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.entry-excerpt {
+  @include breakpoint(large) {
+    padding-left: 300px;
+  }
+}
+
+.entry-meta {
+  font-size: 14px;
+  color: lighten($black, 50);
+
+  .fa {
+    font-size: 5px;
+    position: relative;
+    top: -3px;
+    margin: 0 8px;
+  }
+}
+
+.block-single {
+  h1 {
+    margin-bottom: 0 !important;
+    text-align: left;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .back {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    @include breakpoint(large) {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      margin: 0;
+    }
+
+    .fa {
+      margin-right: 3px;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.entry-content {
+  margin: 30px 0 60px;
+}

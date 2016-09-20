@@ -16,7 +16,7 @@
 
 <section class="block wrap container">
   <div class="content row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true">
-    <div class="small-12 medium-offset-1 medium-10 large-offset-0 large-6 columns">
+    <div class="small-12 medium-offset-1 medium-10 large-5 columns">
       <div class="involve involve-action involve-time" data-equalizer-watch>
         <h2>
           <i class="svg-icons svg-inverted svg-time"></i>
@@ -29,7 +29,7 @@
         </p>
       </div>
     </div>
-    <div class="small-12 medium-offset-1 medium-10 large-offset-0 large-6 columns">
+    <div class="small-12 medium-offset-1 medium-10 large-offset-0 large-5 columns">
       <div class="involve involve-action involve-money" data-equalizer-watch>
         <h2>
           <i class="svg-icons svg-donate svg-money"></i>
@@ -38,11 +38,11 @@
         <p>Proiectul Code for Romania se bazează pe voluntariat. Cu toate acestea, întreţinerea platformei, domeniile web și hostingul, participarea în anumite proiecte, lucrurile administrative etc. implică anumite costuri.</p>
         <p>Dacă îți plac <a href="/proiecte/">proiectele noastre</a>, poți investi în ele printr-o donație. Orice contribuţie, oricât de mică, este utilă şi foarte apreciată. Fiecare donație ajută proiectele să meargă înainte și ne permite să ne investim energia în lucrurile cu adevărat importante: dezvoltarea proiectelor și creșterea comunității.</p>
         <p>
-          <a href="/doneaza/" class="button large underline button-donate inverted">Donează</a>
+          <a href="/doneaza/" class="button large underline button-donate inverted">Ajută-ne să continuăm!</a>
         </p>
       </div>
     </div>
-    <div class="small-12 large-6 columns">
+    <div class="small-offset-1 small-10 medium-offset-2 medium-8 large-offset-1 large-5 columns">
       <div class="involve" data-equalizer-watch>
         <h2>
           <i class="svg-icons svg-companies"></i>
@@ -61,11 +61,11 @@
           <li>Oferă sponsorizari de orice alt fel.</li>
         </ul>
         <p>
-          <a href="mailto:parteneriate@code4.ro" class="button large underline">Scrie-ne un mail!</a>
+          <a href="mailto:parteneriate@code4.ro" class="button large underline">Scrie-ne un mail</a>
         </p>
       </div>
     </div>
-    <div class="small-12 large-6 columns">
+    <div class="small-offset-1 small-10 medium-offset-2 medium-8 large-offset-0 large-5 columns">
       <div class="involve" data-equalizer-watch>
         <h2>
           <i class="svg-icons svg-goverment"></i>
@@ -79,11 +79,11 @@
         </ul>
         <p>Pe termen lung, credem că atât instituțiile, cât și cetățenii vor beneficia de îmbunătățirea nivelului culturii digitale în sectorul public: calitatea interacțiunii cetățean-instituție va crește, iar folosirea resurselor va fi optimizată.</p>
         <p>
-          <a href="#" class="button large underline">Bai Raluca!</a>
+          <a href="mailto:parteneriate@code4.ro" class="button large underline">Nu știu ce sa scriu aici</a>
         </p>
       </div>
     </div>
-    <div class="small-12 large-6 columns">
+    <div class="small-offset-1 small-10 medium-offset-2 medium-8 large-offset-1 large-5 columns">
       <div class="involve" data-equalizer-watch>
         <h2>
           <i class="svg-icons svg-organisations"></i>
@@ -91,11 +91,11 @@
         </h2>
         <p>Știm că vă confruntați zi de zi cu o mulțime de provocări, de la gestionarea activităților cu voluntarii până la găsirea celei mai bune soluții pentru beneficiarii proiectelor voastre. Mai știm și că aveți o grămadă de idei bune, care rămân doar pe hârtie, din lipsă de resurse.</p>
         <p>
-          <a href="#" class="button large underline">Propune un proiect</a>
+          <a href="mailto:parteneriate@code4.ro" class="button large underline">Propune un proiect</a>
         </p>
       </div>
     </div>
-    <div class="small-12 large-6 columns">
+    <div class="small-offset-1 small-10 medium-offset-2 medium-8 large-offset-0 large-5 columns">
       <div class="involve" data-equalizer-watch>
         <h2>
           <i class="svg-icons svg-universities"></i>
@@ -103,7 +103,7 @@
         </h2>
         <p>Un parteneriat între Code For Romania și mediul academic este o modalitate foarte atractivă de implicare a studenților în activități extracuriculare. Putem dezvolta împreună proiecte de practică pentru studenți sau putem colabora la proiecte de cercetare.</p>
         <p>
-          <a href="#" class="button large underline">Parteneri?</a>
+          <a href="mailto:parteneriate@code4.ro" class="button large underline">Vrem să vă cunoaștem</a>
         </p>
       </div>
     </div>

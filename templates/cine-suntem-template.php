@@ -94,9 +94,10 @@
 
       </div>
 
-      <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
+      <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns team-up">
         <h2 class="title-team"><?php echoFieldValueOrDefault('colaboratori_titlu'); ?></h2>
         <?php echoFieldValueOrDefault('colaboratori_continut'); ?>
+        <a href="https://www.surveymonkey.com/r/C6MZJJJ" class="button large underline" target="_blank">Hai cu noi!</a>
       </div>
 
       <div class="small-offset-1 small-10 columns">
@@ -137,8 +138,10 @@
 
         </div>
       </div>
-      <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 action-line columns">
-        <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Hai cu noi!</a>
+      <div class="small-offset-1 small-10 columns action-line">
+        <p class="donate-action">
+          <span>Felicitările ne fac fericiți,</span> <a href="/doneaza/" class="button large underline button-donate">donațiile</a><span> ne ajută să continuăm.</span>
+        </p>
       </div>
       <div class="small-12 columns"></div>
     </div>

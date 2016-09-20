@@ -43,6 +43,26 @@
     }
   }
 
+  &.medium {
+    color: $color-primary;
+    font-size: 20px;
+
+    &:after {
+      background: $color-primary;
+      height: 1px;
+      left: 20px;
+      right: 20px;
+    }
+
+    &:hover {
+      color: $black;
+
+      &::after {
+        background: $black;
+      }
+    }
+  }
+
   &.button-donate {
     color: $color-donate;
 

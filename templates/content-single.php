@@ -1,15 +1,22 @@
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
-    <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
-    </header>
-    <div class="entry-content">
-      <?php the_content(); ?>
+<section class="block block-content block-single wrap container">
+  <article class="hero">
+    <div class="hero-content content row">
+      <header class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
+        <a href="/actualizari/" class="back">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <span>Înapoi</span>
+        </a>
+        <h1><?php the_title(); ?></h1>
+        <?php get_template_part('templates/entry-meta'); ?>
+      </header>
+      <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
+        <div class="entry-content">
+          <?php the_content(); ?>
+        </div>
+      </div>
     </div>
-    <footer>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
-    </footer>
-    <?php comments_template('/templates/comments.php'); ?>
   </article>
+</section>
+
 <?php endwhile; ?>

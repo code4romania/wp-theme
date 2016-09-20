@@ -96,6 +96,11 @@
           ?>
         </div>
     <?php } ?>
+    <div class="small-offset-1 small-10 columns actions actions-project">
+      <p class="donate-action">
+        <span>Dacă îți plac proiectele noastre,</span> <a href="/doneaza/" class="button large underline button-donate">ajută-ne să continuăm</a><span>.</span>
+      </p>
+    </div>
     <div class="small-12 columns"></div>
   </div>
 </section>

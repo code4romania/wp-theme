@@ -137,15 +137,8 @@
 
 .action-line {
   text-align: center;
-
-  @include breakpoint(medium) {
-    text-align: left;
-
-    .button {
-      margin-left: -26px;
-    }
-  }
-
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .actions {
@@ -527,67 +520,9 @@
   margin-top: 30px;
 }
 
-.tabs {
-  border: 0;
-}
-
-.tabs-content {
-  border: 0;
-}
-
-.tabs-title {
-  margin-bottom: 20px;
-
-  @include breakpoint(medium) {
-    margin-bottom: 0;
-  }
-
-  > a {
-    display: block;
-    padding: 25px 10px;
-    line-height: 1;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    background: $white;
-    color: $color-primary;
-
-    span {
-      display: block;
-      margin-top: 5px;
-      font-size: 18px;
-
-      @include breakpoint(medium) {
-        font-size: 22px;
-      }
-    }
-
-    &:hover {
-      background: lighten($black, 90);
-    }
-
-    &:focus,
-    &[aria-selected=true] {
-      background: $color-primary;
-      color: $white;
-    }
-
-    @include breakpoint(medium) {
-      padding: 25px 5px;
-    }
-
-    @include breakpoint(large) {
-      font-size: 32px;
-      padding: 25px 16px;
-    }
-  }
-}
-
-.tabs-panel {
-  padding: 16px 10px;
-
-  @include breakpoint(medium) {
-    padding: 16px;
+.banks {
+  h2 {
+    font-size: 26px;
   }
 }
 
@@ -617,7 +552,7 @@
       margin: 0;
       text-align: center;
 
-      @include breakpoint(large) {
+      @include breakpoint(medium) {
         text-align: left;
       }
     }
@@ -626,7 +561,7 @@
   .button {
     margin-bottom: 0;
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       margin-left: -26px;
     }
   }
@@ -947,6 +882,38 @@
   }
   // margin: 0;
   // line-height: 1.1;
+}
+
+.donate-action {
+  .block & {
+    font-size: 26px;
+    margin: 0;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  .button {
+    padding: 0 5px;
+    margin: 0;
+    line-height: 1;
+    display: inline;
+    top: -3px;
+
+    &:after {
+      bottom: -2px;
+      left: 5px;
+      right: 5px;
+    }
+  }
+}
+
+.team-up {
+  .button {
+    margin-left: -26px;
+    margin-bottom: 0;
+  }
 }
 
 

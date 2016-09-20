@@ -61,7 +61,7 @@
           <li>Oferă sponsorizari de orice alt fel.</li>
         </ul>
         <p>
-          <a href="mailto:<?php echo antispambot('parteneriate@code4.ro'); ?>" class="button large underline">Scrie-ne un mail</a>
+          <a href="mailto:<?php echo antispambot('parteneriate@code4.ro'); ?>" class="button large underline">Scrie-ne un e-mail</a>
         </p>
       </div>
     </div>

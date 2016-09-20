@@ -61,7 +61,7 @@
           <li>Oferă sponsorizari de orice alt fel.</li>
         </ul>
         <p>
-          <a href="mailto:parteneriate@code4.ro" class="button large underline">Scrie-ne un mail</a>
+          <a href="mailto:<?php echo antispambot('parteneriate@code4.ro'); ?>" class="button large underline">Scrie-ne un mail</a>
         </p>
       </div>
     </div>
@@ -79,7 +79,7 @@
         </ul>
         <p>Pe termen lung, credem că atât instituțiile, cât și cetățenii vor beneficia de îmbunătățirea nivelului culturii digitale în sectorul public: calitatea interacțiunii cetățean-instituție va crește, iar folosirea resurselor va fi optimizată.</p>
         <p>
-          <a href="mailto:parteneriate@code4.ro" class="button large underline">Nu știu ce sa scriu aici</a>
+          <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" target="_blank" class="button large underline">Propune un proiect</a>
         </p>
       </div>
     </div>
@@ -91,7 +91,7 @@
         </h2>
         <p>Știm că vă confruntați zi de zi cu o mulțime de provocări, de la gestionarea activităților cu voluntarii până la găsirea celei mai bune soluții pentru beneficiarii proiectelor voastre. Mai știm și că aveți o grămadă de idei bune, care rămân doar pe hârtie, din lipsă de resurse.</p>
         <p>
-          <a href="mailto:parteneriate@code4.ro" class="button large underline">Propune un proiect</a>
+          <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" target="_blank" class="button large underline">Propune un proiect</a>
         </p>
       </div>
     </div>
@@ -103,7 +103,7 @@
         </h2>
         <p>Un parteneriat între Code For Romania și mediul academic este o modalitate foarte atractivă de implicare a studenților în activități extracuriculare. Putem dezvolta împreună proiecte de practică pentru studenți sau putem colabora la proiecte de cercetare.</p>
         <p>
-          <a href="mailto:parteneriate@code4.ro" class="button large underline">Vrem să vă cunoaștem</a>
+          <a href="mailto:<?php echo antispambot('parteneriate@code4.ro'); ?>" class="button large underline">Vrem să vă cunoaștem</a>
         </p>
       </div>
     </div>

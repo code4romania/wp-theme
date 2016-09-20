@@ -35,7 +35,7 @@
             <h2>O societate mai puternică contribuie la un mediu de business mai sănătos.</h2>
             <p>Dacă vrei să susții proiecte care vor schimba încet încet România, ne-ar plăcea să ne prezentăm și să vedem cum putem lucra împreună.</p>
             <div class="actions">
-              <a href="mailto:bani@code4.ro"class="button large underline">Dă-ne un mail</a>
+              <a href="mailto:<?php echo antispambot('parteneriate@code4.ro'); ?>"class="button large underline">Scrie-ne un mail</a>
             </div>
           </div>
 

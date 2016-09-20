@@ -3,7 +3,7 @@
   <article class="hero">
     <div class="hero-content content row">
       <header class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <a href="/actualizari/" class="back">
+        <a href="#" class="back" onclick="history.go(-1);">
           <i class="fa fa-angle-left" aria-hidden="true"></i>
           <span>Înapoi</span>
         </a>

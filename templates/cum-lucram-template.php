@@ -7,9 +7,6 @@
         <?php echoFieldValueOrDefault('cum_lucram_titlu'); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <p>Pe termen lung, vrem ca proiectele noastre să dea omului de rând informaţiile, mijloacele şi curajul să se implice mai mult în rezolvarea problemelor comunităţii. Ne dorim să contribuim la crearea unei societăţi civile puternice în România și credem că împreună putem face asta.</p>
-        <p>Lucrăm pe bază de voluntariat și în format open source.<br/>Code for Romania este o organizație non­partizană și apolitică. Mai multe poți citi și în <a href="https://github.com/code4romania/code-of-conduct" target="_blank">Codul nostru de Conduită</a>, construit pe modelul celor din rețeaua Code 4, și pe care toți voluntarii trebuie să îl aplice.</p>
-        <p>În continuare vei vedea pașii prin care trece un proiect, de la idee la implementare.</p>
         <ol class="steps">
           <li class="step">
             <h2>
@@ -75,7 +72,7 @@
               </span>
               <span>Arhitectură</span>
             </h2>
-            <p style="color: #f00;">Echipa de proiect evaluează diferitele soluții tehnice, o alege pe cea mai bună (din punct de vedere resurse și relevanță pentru proiect) şi planifică implementarea ei.</p>
+            <p>Echipa proiectului se angajează să stabilească soluția tehnică adecvată problemei pe care proiectul își propune să o rezolve; conform specificațiilor definite în fazele anterioare. Soluția va avea la bază standarde clare de calitate a codului și a modului de lucru. Totul se întâmplă sub îndrumarea unui tech lead care coordonează echipa și comunică activ cu toate entitățile implicate.</p>
           </li>
           <li class="step">
             <h2>
@@ -85,7 +82,7 @@
               </span>
               <span>Dezvoltare</span>
             </h2>
-            <p>Dezvoltarea se mută în GitHub, sub coordonarea unui technical lead si unui project manager.</p>
+            <p>Odată stabilită soluția tehnică, se pot crea task-uri specifice și dezvoltarea poate începe. Vrem ca dezvoltarea soluțiilor noastre să fie simplă și eficientă; credem foarte mult în protoype-uri funcționale înainte de orice. Întreg procesul este transparent și ușor de urmărit pe <a href="https://github.com/code4romania/" target="_blank">GitHub-ul organizației</a>. </p>
           </li>
           <li class="step">
             <h2>

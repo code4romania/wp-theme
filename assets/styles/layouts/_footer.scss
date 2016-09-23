@@ -74,3 +74,18 @@
     }
   }
 }
+
+.social-thanks {
+  text-align: center;
+  margin-top: 40px;
+
+  > li {
+    font-size: 32px;
+    margin: 0 5px;
+
+    > a {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

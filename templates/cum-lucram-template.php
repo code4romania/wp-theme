@@ -16,7 +16,7 @@
               </span>
               <span>Definirea proiectului</span>
             </h2>
-            <p>Pentru a propune un proiect, <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" target="_blank">completează aici descrierea proiectului</a>. Formularul ne ajută să înţelegem relevanța problemei, grupurile țintă și ce vrei să obții în final, ca să putem decide cum și dacă te putem susține.</p>
+            <p>Pentru a propune un proiect, <a href="https://code4romania.typeform.com/to/fDNLY4" target="_blank">completează aici descrierea proiectului</a>. Formularul ne ajută să înţelegem relevanța problemei, grupurile țintă și ce vrei să obții în final, ca să putem decide cum și dacă te putem susține.</p>
           </li>
           <li class="step">
             <h2>

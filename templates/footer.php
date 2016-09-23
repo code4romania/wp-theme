@@ -65,8 +65,7 @@
         <a href="#" class="close-button" title="Inchide" data-close>
           <i class="fa fa-times" aria-hidden="true"></i>
         </a>
-        <h1>Salut!</h1>
-        <p>Lorem ipsum bla bla, avem nevoie de un text aici.</p>
+        <div class="reveal-title">Salut!</div>
         <?php echo do_shortcode('[contact-form-7 id="106" title="Contact"]'); ?>
       </div>
     </div>

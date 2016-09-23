@@ -48,7 +48,7 @@
 
         if($query->have_posts()) { ?>
 
-          <div class="small-12 columns project-list">
+          <div class="small-12 columns project-list" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true">
              <?php
                 while($query->have_posts()) {
                   $query->the_post();
@@ -72,7 +72,7 @@
                   $thumb_url = $defaultProjectPic;
                 } ?>
 
-                <div class="small-6 large-3 columns">
+                <div class="small-6 large-3 columns" data-equalizer-watch>
                   <a href="<?php the_permalink(); ?>" title="Nume proiect" class="project" data-category="<?php echo $category->slug; ?>">
                     <div class="<?php echo $class; ?> badge"></div>
                     <img src="<?php echo $thumb_url;?>">
@@ -112,14 +112,11 @@
             foreach ($entities as $entity) {
               $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
               $descriere = repeaterFieldValueOrDefault("descriere", $entity);
-              $poza      = repeaterFieldValueOrDefault("poza", $entity);
-              if($poza === null || $poza === "") {
-                $poza = $defaultEntityPic;
-              }
+              $label      = repeaterFieldValueOrDefault("label", $entity);
 
               ?>
               <div class="small-12 medium-6 columns">
-                <a href="/implica-te/" class="activity activity-visual">
+                <a href="/implica-te/#<?php echo $label; ?>" class="activity activity-visual">
                   <h2>
                     <i class="svg-icons"></i>
                     <span><?php echo $titlu;?></span>

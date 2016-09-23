@@ -8,7 +8,7 @@
         <?php echoFieldValueOrDefault('proiecte_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 columns actions actions-project">
-        <a href="https://sebastiangabor1.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Propune un proiect</a>
+        <a href="https://code4romania.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Propune un proiect</a>
         <a href="/implica-te/" class="button large underline">Vrei să te implici?</a>
       </div>
       <div class="small-12"></div>
@@ -54,7 +54,7 @@
       if($query->have_posts()) {
         $defaultProjectPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-project.png";
               ?>
-        <div class="small-offset-1 small-10 columns project-list">
+        <div class="small-offset-1 small-10 columns project-list" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true">
           <?php
             $index = 0;
 
@@ -80,7 +80,7 @@
                 }
 
                 ?>
-                <div class="small-6 large-4 columns">
+                <div class="small-6 large-4 columns" data-equalizer-watch>
                   <a href="<?php the_permalink(); ?>" class="project project-card card <?php echo $class; ?>" data-category="<?php echo $category->slug; ?>">
                     <div class="<?php echo $class; ?> badge"></div>
                     <img src="<?php echo $thumb_url; ?>">

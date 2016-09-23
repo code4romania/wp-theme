@@ -107,22 +107,24 @@
           <div class="meta-project">
             <ul class="social social-project">
               <li>
-                <a href="#" class="social-icon social-facebook">
+                <a href="#" onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo urlencode(get_page_link()); ?>', 'sharer','status=no,height=500,width=500,resizable=no,toolbar=no,menubar=no,scrollbars=no,location=no,directories=no');" class="social-icon social-facebook" >
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#" class="social-icon social-twitter">
+                <?php $tweet =  get_the_title() . ', un proiect Code for Romania #code4romania #opendata #romania' . get_page_link();?>
+
+                <a href="#" onclick="window.open('https://twitter.com/home?status=<?php echo urlencode($tweet); ?>', 'sharer','status=no,height=500,width=500,resizable=no,toolbar=no,menubar=no,scrollbars=no,location=no,directories=no');" class="social-icon social-twitter">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#" class="social-icon social-google-plus">
+                <a href="#" onclick="window.open('https://plus.google.com/share?url=<?php echo urlencode(get_page_link()); ?>', 'sharer','status=no,height=500,width=500,resizable=no,toolbar=no,menubar=no,scrollbars=no,location=no,directories=no')" class="social-icon social-google-plus">
                   <i class="fa fa-google-plus" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#" class="social-icon social-linkedin">
+                <a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_page_link()); ?>&title=<?php echo urlencode(get_the_title()); ?>', 'sharer','status=no,height=500,width=500,resizable=no,toolbar=no,menubar=no,scrollbars=no,location=no,directories=no')" class="social-icon social-linkedin">
                   <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
               </li>
@@ -173,7 +175,7 @@
   <div class="hero-content content row">
     <div class="small-offset-1 small-10 columns">
       <h1>Echipa</h1>
-      <div class="members row">
+      <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true">
         <?php
           $membri         = get_field('membri_echipa', $post->ID);
           $columnsNumber  = ceil(count($membri) / 3) * 3;
@@ -188,7 +190,7 @@
                 $poza = "http://www.fillmurray.com/400/400";
               }
         ?>
-          <div class="small-6 large-4 columns">
+          <div class="small-6 large-4 columns" data-equalizer-watch>
             <div class="member member-small media-object">
               <div class="media-object-section">
                 <img src="<?php echo $poza; ?>" alt="<?php echoRepeaterFieldValueOrDefault("nume", $membru); ?>">
@@ -207,5 +209,44 @@
     </div>
   </div>
 </section>
+
+<?php if(get_field('parteneri', $post->ID)) { ?>
+<section class="block block-content block-details wrap container">
+  <div class="hero-content content row">
+    <div class="small-offset-1 small-10 columns">
+      <h1>Parteneri</h1>
+      <ul class="list-images row">
+        <?php
+
+          $parteneri = get_field('parteneri', $post->ID);
+          $columnsNumber  = ceil(count($parteneri) / 3) * 3;
+
+          for($index = 0; $index < $columnsNumber; $index++) {
+            if($index < count($parteneri)) {
+
+              $partener = $parteneri[$index];
+              $poza   = repeaterFieldValueOrDefault("poza", $partener);
+              $link   = repeaterFieldValueOrDefault("link", $partener);
+
+              if($poza === null || $poza === "") {
+                $poza = "http://www.fillmurray.com/400/400";
+              }
+        ?>
+
+          <li class="small-6 medium-4 large-3 columns">
+            <a href="<?php echo $link; ?>" class="partner" target="_blank">
+              <img src="<?php echo $poza; ?>" alt="<?php echoRepeaterFieldValueOrDefault("nume", $partener); ?>">
+            </a>
+          </li>
+        <?php
+            }
+
+          }
+        ?>
+      </ul>
+    </div>
+  </div>
+</section>
+<?php } ?>
 
 <?php endwhile; ?>

@@ -104,3 +104,11 @@
 .contact-captcha {
   margin-bottom: 15px;
 }
+
+.reveal-title {
+  font-size: 18px;
+
+  @include breakpoint(medium) {
+    font-size: 32px;
+  }
+}

@@ -13,22 +13,34 @@
             <h2>In-Kind</h2>
 
             <ul class="list-images row">
-              <li class="small-6 medium-4 large-3 columns">
-                <a href="https://www.github.com/" class="partner" target="_blank">
-                  <img src="<?php bloginfo('template_url'); ?>/dist/images/github.png" alt="Github">
-                </a>
-              </li>
-              <li class="small-6 medium-4 large-3 columns">
-                <a href="https://www.google.com/nonprofits/" class="partner" target="_blank">
-                  <img src="<?php bloginfo('template_url'); ?>/dist/images/google.png" alt="Google">
-                </a>
-              </li>
-              <li class="small-6 medium-4 large-3 columns">
-                <a href="https://slack.com/" class="partner" target="_blank">
-                  <img src="<?php bloginfo('template_url'); ?>/dist/images/slack.png" alt="Slack">
-                </a>
-              </li>
+              <?php
+                // if(get_field('sustinatori')) {
+
+                  $sustinatori = get_field('sustinatori');
+                  $columnsNumber  = ceil(count($sustinatori) / 3) * 3;
+
+                  for($index = 0; $index < $columnsNumber; $index++) {
+                    if($index < count($sustinatori)) {
+
+                      $sustinator = $sustinatori[$index];
+                      $poza   = repeaterFieldValueOrDefault("logo", $sustinator);
+
+                      if($poza === null || $poza === "") {
+                        $poza = "http://www.fillmurray.com/400/400";
+                      }
+              ?>
+                <li class="small-6 medium-4 large-3 columns">
+                  <a href="<?php echoRepeaterFieldValueOrDefault("link", $sustinator); ?>" class="partner" target="_blank" title="<?php echoRepeaterFieldValueOrDefault("nume", $sustinator); ?>">
+                    <img src="<?php echo $poza; ?>" alt="<?php echoRepeaterFieldValueOrDefault("nume", $sustinator); ?>">
+                  </a>
+                </li>
+              <?php
+                    }
+                  }
+                // }
+              ?>
             </ul>
+
           </div>
 
           <div class="partners">

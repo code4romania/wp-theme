@@ -341,29 +341,33 @@
     color: $black;
     font-size: 18px;
     font-weight: 700;
-    padding: 10px 13px 0;
+    line-height: 20px;
+    padding: 10px 13px 5px;
     margin: 0;
 
     @include breakpoint(medium) {
       font-size: 22px;
+      line-height: 24px;
     }
 
     @include breakpoint(large) {
       font-size: 24px;
+      line-height: 26px;
     }
   }
 
   .badge {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -15px;
+    z-index: 1;
   }
 
   .project-org {
     color: $black;
     font-size: 14px;
     display: block;
-    padding: 0 13px 20px;
+    padding: 0 13px 15px;
   }
 
   .block-inverted & {
@@ -372,10 +376,24 @@
       color: $black;
     }
 
+    @include breakpoint(large) {
+      img,
+      .badge {
+        filter: grayscale(100%);
+      }
+    }
+
     &:hover {
       h2,
       .project-org {
         color: $color-primary;
+      }
+
+      @include breakpoint(large) {
+        img,
+        .badge {
+          filter: grayscale(0);
+        }
       }
     }
   }

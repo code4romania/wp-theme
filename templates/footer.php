@@ -56,32 +56,3 @@
     <?php endif; ?>
   </div>
 </nav>
-
-
-<div id="contact-overlay" class="full reveal" data-reveal>
-  <div class="overlay-content overlay-contact">
-    <div class="row interact">
-      <div class="small-12 medium-offset-1 medium-10 columns">
-        <a href="#" class="close-button" title="Inchide" data-close>
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </a>
-        <div class="reveal-title">Salut!</div>
-        <?php echo do_shortcode('[contact-form-7 id="106" title="Contact"]'); ?>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="add-project-overlay" class="full reveal" data-reveal>
-  <div class="overlay-content overlay-contact">
-    <div class="row interact">
-      <div class="small-12 medium-offset-1 medium-10 columns">
-        <a href="#" class="close-button" title="Inchide" data-close>
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </a>
-        <?php echo do_shortcode('[contact-form-7 id="110" title="Propune un proiect"]'); ?>
-      </div>
-    </div>
-  </div>
-</div>

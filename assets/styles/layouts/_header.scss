@@ -119,11 +119,9 @@ li.menu-item {
   &.menu-item-152,
   &.menu-item-154 {
     > a {
-      font-weight: 700;
       color: $color-donate;
 
       &:after {
-        height: 2px;
         background: $color-donate;
       }
     }

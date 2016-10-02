@@ -24,8 +24,23 @@
                 </a>
               </li>
               <li class="small-6 medium-4 large-3 columns">
+                <a href="http://azure.microsoft.com" class="partner" target="_blank">
+                  <img src="<?php bloginfo('template_url'); ?>/dist/images/azure.png" alt="Microsoft Azure">
+                </a>
+              </li>
+              <li class="small-6 medium-4 large-3 columns">
+                <a href="http://moqups.com" class="partner" target="_blank">
+                  <img src="<?php bloginfo('template_url'); ?>/dist/images/moqups.png" alt="Moqups">
+                </a>
+              </li>
+              <li class="small-6 medium-4 large-3 columns">
                 <a href="https://slack.com/" class="partner" target="_blank">
                   <img src="<?php bloginfo('template_url'); ?>/dist/images/slack.png" alt="Slack">
+                </a>
+              </li>
+              <li class="small-6 medium-4 large-3 columns">
+                <a href="http://youthhub.ro/" class="partner" target="_blank">
+                  <img src="<?php bloginfo('template_url'); ?>/dist/images/youthhub.png" alt="Youth Hub">
                 </a>
               </li>
             </ul>

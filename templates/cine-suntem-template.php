@@ -44,9 +44,9 @@
 <section class="block block-hero block-content block-team wrap container">
   <div class="hero">
     <div class="hero-content content row">
-      <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns">
+      <div class="small-offset-1 small-10 medium-offset-3 medium-6 columns team-top">
         <h1><?php echoFieldValueOrDefault('echipa_titlu'); ?></h1>
-        <h2 class="title-team">Core team</h2>
+        <h2>Core team</h2>
       </div>
       <div class="small-offset-1 small-10 columns">
         <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="false" id="members-eq">
@@ -94,8 +94,8 @@
 
       </div>
 
-      <div class="small-offset-1 small-10 medium-offset-4 medium-7 large-offset-5 large-6 columns team-up">
-        <h2 class="title-team"><?php echoFieldValueOrDefault('colaboratori_titlu'); ?></h2>
+      <div class="small-offset-1 small-10 medium-offset-3 medium-6 columns team-top">
+        <h2><?php echoFieldValueOrDefault('colaboratori_titlu'); ?></h2>
         <?php echoFieldValueOrDefault('colaboratori_continut'); ?>
         <a href="https://www.surveymonkey.com/r/C6MZJJJ" class="button large underline" target="_blank">Hai cu noi!</a>
       </div>
@@ -136,6 +136,42 @@
             }
           ?>
 
+        </div>
+      </div>
+      <div class="small-offset-1 small-10 columns team-top press">
+        <h2>Au povestit despre noi</h2>
+        <div class="partners press">
+          <ul class="list-images row">
+            <?php
+              $presa = get_field('presa');
+              $defaultMemberPic = 'http://www.fillmurray.com/400/400';
+              // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
+
+              $columnsNumber      = ceil(count($presa) / 4) * 4;
+
+              for($index = 0; $index < $columnsNumber; $index++) {
+
+                if($index < count($presa)) {
+
+                  $articol     = $presa[$index];
+                  $nume       = repeaterFieldValueOrDefault("titlu", $articol);
+                  $logo       = repeaterFieldValueOrDefault("logo", $articol);
+                  $link       = repeaterFieldValueOrDefault("link", $articol);
+
+                  if($logo === null || $logo === "") {
+                    $logo = $defaultMemberPic;
+                  } ?>
+
+                    <li class="small-4 medium-3 large-2 columns">
+                      <a href="<?php echo $link; ?>" class="partner" target="_blank" title="<?php echo $nume; ?>">
+                        <img src="<?php echo $logo; ?>" alt="">
+                      </a>
+                    </li>
+            <?php
+                }
+              }
+            ?>
+          </ul>
         </div>
       </div>
       <div class="small-offset-1 small-10 columns action-line">

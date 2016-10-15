@@ -25,8 +25,7 @@
       margin-top: 40px;
     }
 
-    .block-hello &,
-    .block-team & {
+    .block-hello & {
       text-align: left;
     }
 
@@ -541,11 +540,6 @@
   }
 }
 
-.title-team {
-  font-size: 32px;
-  margin-bottom: 0;
-}
-
 .involvement {
   margin-top: 30px;
 }
@@ -860,6 +854,24 @@
   h2 {
     margin: 0 0 20px;
   }
+
+  &.press {
+    .partner {
+      @include breakpoint(large) {
+        border: none;
+      }
+
+      img {
+        opacity: .4;
+      }
+
+      &:hover {
+        img {
+          opacity: .9;
+        }
+      }
+    }
+  }
 }
 
 .easter {
@@ -946,9 +958,28 @@
   }
 }
 
-.team-up {
-  .button {
-    margin-left: -26px;
+.team-top {
+  @include breakpoint(medium) {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 32px;
     margin-bottom: 0;
+  }
+
+  .button {
+    margin-bottom: 0;
+    margin-left: -26px;
+
+    @include breakpoint(medium) {
+      margin-left: 0;
+    }
+  }
+
+  &.press {
+    h2 {
+      font-size: 26px;
+    }
   }
 }

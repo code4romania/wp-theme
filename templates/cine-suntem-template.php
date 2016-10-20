@@ -101,7 +101,7 @@
       </div>
 
       <div class="small-offset-1 small-10 columns">
-        <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="volunteers-eq">
+        <div class="members members-all row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="volunteers-eq">
           <?php
             $colaboratori = get_field('colaboratori');
             $defaultMemberPic = 'http://www.fillmurray.com/400/400';

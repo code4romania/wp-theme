@@ -14,6 +14,11 @@
 
             <ul class="list-images row">
               <li class="small-6 medium-4 large-3 columns">
+                <a href="https://www.canva.com/" class="partner" target="_blank">
+                  <img src="<?php bloginfo('template_url'); ?>/dist/images/canva.png" alt="Canva">
+                </a>
+              </li>
+              <li class="small-6 medium-4 large-3 columns">
                 <a href="https://www.github.com/" class="partner" target="_blank">
                   <img src="<?php bloginfo('template_url'); ?>/dist/images/github.png" alt="Github">
                 </a>

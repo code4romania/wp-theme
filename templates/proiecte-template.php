@@ -5,7 +5,7 @@
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">Proiecte</h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <?php echoFieldValueOrDefault('proiecte_continut'); ?>
+        <?php the_field('proiecte_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 columns actions actions-project">
         <a href="https://code4romania.typeform.com/to/fDNLY4" class="button large underline" target="_blank">Propune un proiect</a>

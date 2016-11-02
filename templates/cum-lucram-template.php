@@ -4,7 +4,7 @@
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php echoFieldValueOrDefault('cum_lucram_titlu'); ?>
+        <?php the_field('cum_lucram_titlu'); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <ol class="steps">
@@ -105,7 +105,7 @@
             <p>Proiectul este finalizat, dar munca noastră nu s-a terminat. Vom analiza câţi oameni folosesc produsul dezvoltat, care este impactul lui și ce am reușit raportat la scopul iniţiali. Vrem să dezvoltăm proiecte de impact și să învățăm din fiecare proiect creat, ca să facem și mai bine data viitoare.</p>
           </li>
         </ol>
-        <?php //echoFieldValueOrDefault('cum_lucram_continut'); ?>
+        <?php //the_field('cum_lucram_continut'); ?>
       </div>
       <div class="small-offset-1 small-10 columns actions actions-project">
         <a href="/proiecte/" class="button large underline">Vezi proiectele</a>

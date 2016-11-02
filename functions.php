@@ -89,8 +89,7 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
 //Return the vaule of a ACF or the default value
 function fieldValueOrDefault ($field, $defaultValue = "", $pageId = "") {
 
-    return $pageId != "" ? (get_field($field, $pageId) ? get_field($field, $pageId) : $defaultValue) :
-                         (get_field($field)          ? get_field($field) : $defaultValue);
+    return $pageId != "";
 
 }
 

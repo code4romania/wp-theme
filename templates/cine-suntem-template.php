@@ -4,10 +4,10 @@
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php echoFieldValueOrDefault('cine_suntem_titlu'); ?>
+        <?php the_field('cine_suntem_titlu'); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <?php echoFieldValueOrDefault('cine_suntem_continut'); ?>
+        <?php the_field('cine_suntem_continut'); ?>
 
         <div class="purpose row"  data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" >
           <div class="small-6 medium-3 columns" data-equalizer-watch>
@@ -45,7 +45,7 @@
   <div class="hero">
     <div class="hero-content content row">
       <div class="small-offset-1 small-10 medium-offset-3 medium-6 columns team-top">
-        <h1><?php echoFieldValueOrDefault('echipa_titlu'); ?></h1>
+        <h1><?php the_field('echipa_titlu'); ?></h1>
         <h2>Core team</h2>
       </div>
       <div class="small-offset-1 small-10 columns">
@@ -95,8 +95,8 @@
       </div>
 
       <div class="small-offset-1 small-10 medium-offset-3 medium-6 columns team-top">
-        <h2><?php echoFieldValueOrDefault('colaboratori_titlu'); ?></h2>
-        <?php echoFieldValueOrDefault('colaboratori_continut'); ?>
+        <h2><?php the_field('colaboratori_titlu'); ?></h2>
+        <?php the_field('colaboratori_continut'); ?>
         <a href="https://www.surveymonkey.com/r/C6MZJJJ" class="button large underline" target="_blank">Hai cu noi!</a>
       </div>
 

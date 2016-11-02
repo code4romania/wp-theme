@@ -5,18 +5,19 @@
     <div class="hero-content content row">
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <h1>
-          <?php echoFieldValueOrDefault('intro_titlu'); ?><br/>
-          <?php echoFieldValueOrDefault('intro_subtitlu'); ?>
+          <?php the_field('intro_titlu'); ?><br/>
+          <?php the_field('intro_subtitlu'); ?>
         </h1>
-        <?php echoFieldValueOrDefault('intro_continut'); ?>
+        <?php  the_field('intro_continut');?>
       </div>
       <div class="small-12 columns actions">
-        <a href="<?php echoFieldValueOrDefault('afla_cine_suntem_link'); ?>" class="button large underline">
-          <?php echoFieldValueOrDefault('afla_cine_suntem_text'); ?>
+        <a href="<?php
+          the_field('afla_cine_suntem_link');?>" class="button large underline">
+          <?php the_field('afla_cine_suntem_text'); ?>
         </a>
         <span class="spacer">sau</span>
-        <a href="<?php echoFieldValueOrDefault('vezi_proiectele_link'); ?>" class="button large underline">
-          <?php echoFieldValueOrDefault('vezi_proiectele_text'); ?>
+        <a href="<?php the_field('vezi_proiectele_link'); ?>" class="button large underline">
+          <?php the_field('vezi_proiectele_text'); ?>
         </a>
       </div>
     </div>
@@ -26,14 +27,14 @@
 <section class="block block-hero block-inverted wrap container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-12 columns"><?php echoFieldValueOrDefault('proiecte_titlu'); ?></h1>
+      <h1 class="small-12 columns"><?php the_field('proiecte_titlu'); ?></h1>
       <div class="small-offset-1 small-10 medium-offset-6 medium-6 columns">
         <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate.</p>
         <p>Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
       </div>
       <div class="small-12 medium-offset-6 medium-6 columns actions">
-        <a href="<?php echoFieldValueOrDefault('proiecte_link'); ?>" class="button large underline inverted">
-          <?php echoFieldValueOrDefault('proiecte_link_text'); ?>
+        <a href="<?php the_field('proiecte_link'); ?>" class="button large underline inverted">
+          <?php the_field('proiecte_link_text'); ?>
         </a>
       </div>
       <?php
@@ -48,42 +49,42 @@
 
         if($query->have_posts()) { ?>
 
-          <div class="small-12 columns project-list" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true">
-             <?php
-                while($query->have_posts()) {
-                  $query->the_post();
+        <div class="small-12 columns project-list" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true">
+          <?php
+            while($query->have_posts()) {
+              $query->the_post();
 
-                  $thumb_url      = "";
-                  $defaultProjectPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-project.png";
-                  $category       = get_the_category()[0];
-                  $titluCF        = get_post_meta($post->ID, 'titlu',true);
-                  $organizatieCF  = get_post_meta($post->ID, 'organizatie',true);
+              $thumb_url      = "";
+              $defaultProjectPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-project.png";
+              $category       = get_the_category()[0];
+              $titluCF        = get_post_meta($post->ID, 'titlu',true);
+              $organizatieCF  = get_post_meta($post->ID, 'organizatie',true);
 
-                  $titlu     = $titluCF !== NULL && $titluCF !== ""  ? $titluCF : get_the_title();
-                  $organizatie = $organizatieCF !== NULL ? $organizatieCF : "";
+              $titlu     = $titluCF !== NULL && $titluCF !== ""  ? $titluCF : get_the_title();
+              $organizatie = $organizatieCF !== NULL ? $organizatieCF : "";
 
-                  $content  = $titlu  . " // " . $organizatie;
-                  $class  = $category->slug . '-card' . ' ' . $category->slug . '-class';
+              $content  = $titlu  . " // " . $organizatie;
+              $class  = $category->slug . '-card' . ' ' . $category->slug . '-class';
 
-                if (has_post_thumbnail()) {
-                    $thumb_id  = get_post_thumbnail_id();
-                    $thumb_url = wp_get_attachment_image_src($thumb_id, "full")[0];
+              if (has_post_thumbnail()) {
+                $thumb_id  = get_post_thumbnail_id();
+                $thumb_url = wp_get_attachment_image_src($thumb_id, "full")[0];
                 } else {
-                  $thumb_url = $defaultProjectPic;
-                } ?>
+                $thumb_url = $defaultProjectPic;
+              } ?>
 
-                <div class="small-6 large-3 columns" data-equalizer-watch>
-                  <a href="<?php the_permalink(); ?>" title="Nume proiect" class="project" data-category="<?php echo $category->slug; ?>">
-                    <div class="<?php echo $class; ?> badge"></div>
-                    <img src="<?php echo $thumb_url;?>">
-                    <h2><?php echo $titlu;?></h2>
-                    <span class="project-org"><?php echo $organizatie;?></span>
-                  </a>
-                </div>
+              <div class="small-6 large-3 columns" data-equalizer-watch>
+                <a href="<?php the_permalink(); ?>" title="Nume proiect" class="project" data-category="<?php echo $category->slug; ?>">
+                  <div class="<?php echo $class; ?> badge"></div>
+                  <img src="<?php echo $thumb_url;?>">
+                  <h2><?php echo $titlu;?></h2>
+                  <span class="project-org"><?php echo $organizatie;?></span>
+                </a>
+              </div>
 
-            <?php } ?>
+          <?php } ?>
 
-          </div>
+        </div>
       <?php wp_reset_query(); } ?>
     </div>
     <div class="hero-media">
@@ -98,21 +99,21 @@
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php echoFieldValueOrDefault('implica-te_titlu'); ?>
+        <?php the_field('implica-te_titlu'); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-7 large-4 columns">
-        <?php echoFieldValueOrDefault('implica-te_continut'); ?>
+        <?php the_field('implica-te_continut'); ?>
         <div class="row activities">
           <?php
+            // a fost get_field('implica-te_entitati')
+            if(false) {
+              $entities         = get_field('implica-te_entitati');
+              $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
 
-          if(get_field('implica-te_entitati')) {
-            $entities         = get_field('implica-te_entitati');
-            $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
-
-            foreach ($entities as $entity) {
-              $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
-              $descriere = repeaterFieldValueOrDefault("descriere", $entity);
-              $label      = repeaterFieldValueOrDefault("label", $entity);
+              foreach ($entities as $entity) {
+                $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
+                $descriere = repeaterFieldValueOrDefault("descriere", $entity);
+                $label      = repeaterFieldValueOrDefault("label", $entity);
 
               ?>
               <div class="small-12 medium-6 columns">
@@ -126,8 +127,8 @@
                 </a>
               </div>
 
-            <?php  }
-          } ?>
+              <?php  }
+            } ?>
         </div>
       </div>
       <div class="small-12 columns"></div>

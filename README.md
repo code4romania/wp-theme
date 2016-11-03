@@ -26,6 +26,21 @@ Code for Romania.
 #### Cu continut
 - Foloseste [Search Replace DB](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/) pentru trecerea de la code4.ro la code4.local. Prefixul tabelelor trebuie modificat in `wp-config.php`, vezi DB dupa import pentru prefix.
 
+### Module
+```
+acf-repeater
+advanced-custom-fields
+advanced-custom-fields-font-awesome
+akismet
+better-wp-security
+custom-post-type-ui
+limit-login-attempts
+open-graph-rescrape
+radio-buttons-for-taxonomies
+wonderm00ns-simple-facebook-open-graph-tags
+wp-super-cache
+```
+
 ### Tema
 - `git clone https://github.com/code4romania/theme.git code4` in `themes`.
 - Presupunem ca Node/NPM si Bower sunt parte din setup-ul tau:

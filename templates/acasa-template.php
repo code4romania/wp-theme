@@ -105,17 +105,16 @@
         <?php the_field('implica-te_continut'); ?>
         <div class="row activities">
           <?php
-            // a fost get_field('implica-te_entitati')
-            if(false) {
-              $entities         = get_field('implica-te_entitati');
-              $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
+            $entities = get_field('implica-te_entitati');
 
-              foreach ($entities as $entity) {
-                $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
-                $descriere = repeaterFieldValueOrDefault("descriere", $entity);
-                $label      = repeaterFieldValueOrDefault("label", $entity);
+            $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
 
-              ?>
+            foreach ($entities as $entity) {
+              $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
+              $descriere = repeaterFieldValueOrDefault("descriere", $entity);
+              $label      = repeaterFieldValueOrDefault("label", $entity);
+
+            ?>
               <div class="small-12 medium-6 columns">
                 <a href="/implica-te/#<?php echo $label; ?>" class="activity activity-visual">
                   <h2>
@@ -126,9 +125,7 @@
                   <p><?php echo $descriere;?></p>
                 </a>
               </div>
-
-              <?php  }
-            } ?>
+            <?php  } ?>
         </div>
       </div>
       <div class="small-12 columns"></div>

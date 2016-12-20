@@ -10,7 +10,7 @@
           <?php get_template_part('templates/content', 'page'); ?>
 
           <div class="partners">
-            <h2>Parteneri</h2>
+            <h2>Sponsori</h2>
             <ul class="list-images row">
               <li class="small-6 medium-4 large-3 columns">
                 <div class="partner">

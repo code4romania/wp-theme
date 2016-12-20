@@ -10,6 +10,17 @@
           <?php get_template_part('templates/content', 'page'); ?>
 
           <div class="partners">
+            <h2>Parteneri</h2>
+            <ul class="list-images row">
+              <li class="small-6 medium-4 large-3 columns">
+                <div class="partner">
+                  <img src="<?php bloginfo('template_url'); ?>/dist/images/rts.png" alt="RTS Consult">
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="partners">
             <h2>In-Kind</h2>
 
             <ul class="list-images row">

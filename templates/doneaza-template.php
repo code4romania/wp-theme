@@ -24,6 +24,14 @@
   <div class="hero-content content row">
 
     <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
+      <div class="row">
+        <div class="small-12 columns">
+          <h3>Până pe 31 Dec, ne poți susține cu 20% din impozitul pe profit datorat statului, pe acest an fiscal. O astfel de sponsorizare care nu costă nimic.</h3>
+          <div class="donate-action" style="margin-bottom: 60px; margin-top: 20px;">
+            <a href="https://drive.google.com/file/d/0BytTRZxTh5diVzRTQkdQNjBCZjA/view" target="_blank" class="button large underline button-donate">Citește ghidul atașat</a> <span>și</span> <a href="https://drive.google.com/file/d/0BytTRZxTh5diVXIwdWhzakcyN1E/view" target="_blank" class="button large underline button-donate">descarcă contractul de sponsorizare</a>
+          </div>
+        </div>
+      </div>
       <div class="donate row">
         <div class="small-12 large-6 columns">
           <div class="donate-option">

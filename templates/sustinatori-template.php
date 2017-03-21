@@ -25,6 +25,11 @@
 
             <ul class="list-images row">
               <li class="small-6 medium-4 large-3 columns">
+                <a href="http://www.arkmedia.ro/" class="partner" target="_blank">
+                  <img src="http://code4.ro/wp-content/uploads/2017/03/arkmedia-logo.png" alt="Ark Media">
+                </a>
+              </li>
+              <li class="small-6 medium-4 large-3 columns">
                 <a href="https://www.canva.com/" class="partner" target="_blank">
                   <img src="<?php bloginfo('template_url'); ?>/dist/images/canva.png" alt="Canva">
                 </a>
@@ -52,6 +57,11 @@
               <li class="small-6 medium-4 large-3 columns">
                 <a href="https://slack.com/" class="partner" target="_blank">
                   <img src="<?php bloginfo('template_url'); ?>/dist/images/slack.png" alt="Slack">
+                </a>
+              </li>
+              <li class="small-6 medium-4 large-3 columns">
+                <a href="https://web.facebook.com/tedscoffeecompany/" class="partner" target="_blank">
+                  <img src="http://code4.ro/wp-content/uploads/2017/03/tedscoffee.jpg" alt="Ted's Coffee">
                 </a>
               </li>
               <li class="small-6 medium-4 large-3 columns">

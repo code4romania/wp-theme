@@ -32,7 +32,7 @@
       </ul>
 
 
-      <p class="copy mono">&copy; 2016 Code for Society / Code for Romania.<br/> Organizație neguvernamentală independentă, neafiliată politic și apolitică.</p>
+      <p class="copy mono">&copy; <?php echo date('Y'); ?> Code for Romania.<br/> Organizație neguvernamentală independentă, neafiliată politic și apolitică.</p>
 
       <a class="brand footer-logo" href="<?= esc_url(home_url('/')); ?>">
         <img src="<?php bloginfo('template_url'); ?>/dist/images/footer-logo.png" alt="<?php bloginfo('name'); ?>">

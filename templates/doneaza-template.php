@@ -26,10 +26,7 @@
     <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
       <div class="row">
         <div class="small-12 columns">
-          <h3>Până pe 31 Dec, ne poți susține cu 20% din impozitul pe profit datorat statului, pe acest an fiscal. O astfel de sponsorizare care nu costă nimic.</h3>
-          <div class="donate-action" style="margin-bottom: 60px; margin-top: 20px;">
-            <a href="https://drive.google.com/file/d/0BytTRZxTh5diVzRTQkdQNjBCZjA/view" target="_blank" class="button large underline button-donate">Citește ghidul atașat</a> <span>și</span> <a href="https://drive.google.com/file/d/0BytTRZxTh5diVXIwdWhzakcyN1E/view" target="_blank" class="button large underline button-donate">descarcă contractul de sponsorizare</a>
-          </div>
+          <p style="margin: -10px 0 40px;">Proiectele noastre însumează mii de ore de muncă voluntară, care se oferă cu bucurie și entuziasm. Managementul Asociației Code for Romania, coordonarea voluntarilor și gestionarea resurselor necesită mai mult decât un angajament voluntar, necesită angajamente permanente din partea unor profesioniști pe care acum nu ne permitem să-i plătim, dar ne-am dori. Pentru asta avem nevoie de sprijin.</p>
         </div>
       </div>
       <div class="donate row">
@@ -49,8 +46,8 @@
         </div>
         <div class="small-12 large-6 columns banks">
           <h2>Donează prin transfer bancar</h2>
-          <p>ASOCIAȚIA CODE FOR SOCIETY</p>
-          <p>Sediul: Piața Alba Iulia nr. 7, bloc I6, etaj 1, ap. 9, sect. 3, București</p>
+          <p>ASOCIAȚIA CODE FOR ROMANIA</p>
+          <p>Sediul: Piața Alba Iulia nr. 7, bloc I6, etaj 1, ap. 6, sect. 3, București</p>
           <p>CUI: 36317167</p>
           <p>
             Cont bancar RON: <strong>RO38BTRLRONCRT0348260401</strong><br>

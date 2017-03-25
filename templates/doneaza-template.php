@@ -32,7 +32,7 @@
       <div class="donate row">
         <div class="small-12 columns" style="margin-bottom: 40px;">
           <h3>Vrei sa ne susţii cu cei 2% din impozitul pe venit?</h3>
-          <p>Gasești <a href="https://drive.google.com/open?id=1eGJ1rSiuTxWzLrqtt-y90uk25Dk1wHBd1iRWaZ92j5A" target="_blank">aici</a> instrucțiunile, iar aici formularele <a href="https://drive.google.com/open?id=0BytTRZxTh5diWUo3VGFRRVRpRHc" target="_blank">200</a> și <a href="https://drive.google.com/open?id=0BytTRZxTh5dieGtDRDZ2SHZvQUk" target="_blank">230</a>.</p>
+          <p>Gasești <a href="https://drive.google.com/open?id=1eGJ1rSiuTxWzLrqtt-y90uk25Dk1wHBd1iRWaZ92j5A" target="_blank">aici</a> instrucțiunile, iar aici formularele <a href="https://drive.google.com/open?id=0BytTRZxTh5diWUo3VGFRRVRpRHc" target="_blank">200</a> și <a href="https://drive.google.com/open?id=0BytTRZxTh5diV2lFTWY3RTB5NEE" target="_blank">230</a>.</p>
         </div>
         <div class="small-12 large-6 columns">
           <div class="donate-option">

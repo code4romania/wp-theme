@@ -7,33 +7,36 @@
         <?php the_field('cine_suntem_titlu'); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <?php the_field('cine_suntem_continut'); ?>
-
         <div class="purpose row"  data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" >
-          <div class="small-6 medium-3 columns" data-equalizer-watch>
-            <div class="scope">
-              <i class="fa fa-database" aria-hidden="true"></i>
-              <h3>Informare &amp; acces la date publice</h3>
-            </div>
-            </div>
-          <div class="small-6 medium-3 columns" data-equalizer-watch>
-            <div class="scope">
-              <i class="fa fa-book" aria-hidden="true"></i>
-              <h3>Educare &amp; promovare a culturii</h3>
-            </div>
-            </div>
-          <div class="small-6 medium-3 columns" data-equalizer-watch>
-            <div class="scope">
-              <i class="fa fa-link" aria-hidden="true"></i>
-              <h3>Implicare civică &amp; colaborare</h3>
-            </div>
-            </div>
-          <div class="small-6 medium-3 columns" data-equalizer-watch>
-            <div class="scope">
-              <i class="fa fa-key" aria-hidden="true"></i>
-              <h3>Facilitare a accesului la servicii publice</h3>
-            </div>
-            </div>
+
+          <?php the_field('cine_suntem_continut'); ?>
+
+          <?php
+            $activitati = get_field('cine_suntem_activitati');
+            $columnsNumber = ceil(count($activitati) / 4) * 4;
+
+            for($index = 0; $index < $columnsNumber; $index++) {
+
+              if($index < count($activitati)) {
+
+                $activitate     = $activitati[$index];
+                $icon       = repeaterFieldValueOrDefault("icon_activitate", $activitate);
+                $text       = repeaterFieldValueOrDefault("text_activitate", $activitate);
+
+                ?>
+
+                <div class="small-6 medium-3 columns" data-equalizer-watch>
+                  <div class="scope">
+                    <i class="fa fa-<?php echo $icon; ?>" aria-hidden="true"></i>
+                    <h3><?php echo $text; ?></h3>
+                  </div>
+                </div>
+
+          <?php
+              }
+            }
+          ?>
+
         </div>
 
       </div>

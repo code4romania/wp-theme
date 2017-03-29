@@ -7,10 +7,12 @@
         <?php the_field('cine_suntem_titlu'); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <div class="purpose row"  data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" >
 
+        <div class="purpose-intro">
           <?php the_field('cine_suntem_continut'); ?>
+        </div>
 
+        <div class="purpose row"  data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" >
           <?php
             $activitati = get_field('cine_suntem_activitati');
             $columnsNumber = ceil(count($activitati) / 4) * 4;
@@ -100,11 +102,12 @@
       <div class="small-offset-1 small-10 medium-offset-3 medium-6 columns team-top">
         <h2><?php the_field('colaboratori_titlu'); ?></h2>
         <?php the_field('colaboratori_continut'); ?>
-        <a href="https://www.surveymonkey.com/r/C6MZJJJ" class="button large underline" target="_blank">Hai cu noi!</a>
+
+        <a href="<?php the_field('colaboratori_button_link'); ?>" class="button large underline" target="_blank"><?php the_field('colaboratori_button_label'); ?></a>
       </div>
 
       <div class="small-offset-1 small-10 columns">
-        <div class="members members-all row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="volunteers-eq">
+        <div class="members members-all row" id="volunteers-eq">
           <?php
             $colaboratori = get_field('colaboratori');
             $defaultMemberPic = 'http://www.fillmurray.com/400/400';
@@ -124,7 +127,7 @@
                   $poza = $defaultMemberPic;
                 } ?>
 
-                  <div class="small-6 large-4 columns" data-equalizer-watch>
+                  <div class="small-6 large-4 columns">
                     <div class="member member-small media-object">
                       <div class="media-object-section">
                         <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">

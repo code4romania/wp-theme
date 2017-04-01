@@ -4,7 +4,7 @@
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php the_field('cine_suntem_titlu'); ?>
+        <?php the_title(); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
 
@@ -182,7 +182,7 @@
       </div>
       <div class="small-offset-1 small-10 columns action-line">
         <p class="donate-action">
-          <span>Felicitările ne fac fericiți,</span> <a href="/doneaza/" class="button large underline button-donate">donațiile</a><span> ne ajută să continuăm.</span>
+          <span><?php echo the_field('doneaza_string_1'); ?></span> <a href="/doneaza/" class="button large underline button-donate"><?php echo the_field('doneaza_string_action_label'); ?></a><span> <?php echo the_field('doneaza_string_2'); ?></span>
         </p>
       </div>
       <div class="small-12 columns"></div>

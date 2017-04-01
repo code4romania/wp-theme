@@ -331,6 +331,10 @@
 
   &:hover {
     background: $white;
+
+    img {
+      border: 1px solid lighten($black, 50);
+    }
   }
 
   @include breakpoint(large) {

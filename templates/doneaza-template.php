@@ -7,13 +7,13 @@
       <?php get_template_part('templates/page', 'header'); ?>
 
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <p>Vrem să creștem sustenabil. De aceea avem nevoie de susținere constantă, prin sume oricât de mici, lunare. Te invităm să ne sprijini pe Patreon, o platformă de crowd-funding folosită de ONG-uri din întreaga lume. Poți seta o plată recurentă, oricât de mică. Code for Romania depinde de asta.</p>
+        <?php the_field('doneaza_hero'); ?>
       </div>
 
       <div class="small-offset-1 small-10 columns actions">
         <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" class="button large underline donate-cta" target="_blank">
-          <img src="<?php bloginfo('template_url'); ?>/dist/images/patreon.png" alt="Patreon" class="button-ui" aria-hidden="true">
-          Donează prin Patreon
+          <img src="<?php the_field('doneaza_call_to_action_icon'); ?>" alt="<?php the_field('doneaza_call_to_action_string'); ?>" class="button-ui" aria-hidden="true">
+          <?php the_field('doneaza_call_to_action_string'); ?>
         </a>
       </div>
     </div>
@@ -24,43 +24,30 @@
   <div class="hero-content content row">
 
     <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-      <div class="row">
-        <div class="small-12 columns">
-          <p style="margin: -10px 0 40px;">Proiectele noastre însumează mii de ore de muncă voluntară, care se oferă cu bucurie și entuziasm. Managementul Asociației Code for Romania, coordonarea voluntarilor și gestionarea resurselor necesită mai mult decât un angajament voluntar, necesită angajamente permanente din partea unor profesioniști pe care acum nu ne permitem să-i plătim, dar ne-am dori. Pentru asta avem nevoie de sprijin.</p>
-        </div>
-      </div>
+
       <div class="donate row">
-        <div class="small-12 columns" style="margin-bottom: 40px;">
-          <h3>Vrei sa ne susţii cu cei 2% din impozitul pe venit?</h3>
-          <p>Gasești <a href="https://drive.google.com/open?id=1eGJ1rSiuTxWzLrqtt-y90uk25Dk1wHBd1iRWaZ92j5A" target="_blank">aici</a> instrucțiunile, iar aici formularele <a href="https://drive.google.com/open?id=0BytTRZxTh5diWUo3VGFRRVRpRHc" target="_blank">200</a> și <a href="https://drive.google.com/open?id=0BytTRZxTh5diV2lFTWY3RTB5NEE" target="_blank">230</a>.</p>
+        <div class="small-12 columns dontate-intro">
+          <?php the_field('doneaza_intro'); ?>
         </div>
+
         <div class="small-12 large-6 columns">
           <div class="donate-option">
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="dontate-cta">
               <input type="hidden" name="cmd" value="_s-xclick">
               <input type="hidden" name="hosted_button_id" value="U4QBTHU9J5HUS">
-              <input type="image" src="<?php bloginfo('template_url'); ?>/dist/images/donate-paypal.png" name="submit" alt="Doneaza prin PayPal" class="img-button">
+              <input type="image" src="<?php the_field('doneaza_secondary_image'); ?>" name="submit" alt="Doneaza prin PayPal" class="img-button">
               <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
             </form>
             <div class="donate-info">
-              <img src="<?php bloginfo('template_url'); ?>/dist/images/paypal.png" alt="PayPal">
+              <?php the_field('doneaza_secondary_content'); ?>
             </div>
-            <p>PayPal este un procesator de plăţi online cu peste 14 ani experienţă în siguranţa datelor si <a href="http://66.media.tumblr.com/3e2170e16a9d5cf0bdb4af264fae1534/tumblr_nugr8k4aqS1r3kmkso4_r1_500.gif" target="_blank" class="easter">tehnologii</a> de ultimă generaţie.</p>
           </div>
         </div>
         <div class="small-12 large-6 columns banks">
-          <h2>Donează prin transfer bancar</h2>
-          <p>ASOCIAȚIA CODE FOR ROMANIA</p>
-          <p>Sediul: Piața Alba Iulia nr. 7, bloc I6, etaj 1, ap. 6, sect. 3, București</p>
-          <p>CUI: 36317167</p>
-          <p>
-            Cont bancar RON: <strong>RO38BTRLRONCRT0348260401</strong><br>
-            Cont bancar EUR: <strong>RO85BTRLEURCRT0348260401</strong><br>
-            Cont bancar USD: <strong>RO89BTRLUSDCRT0348260401</strong>
-          <p>
-            Deschis la Banca Transilvania Sucursala Unirii <br>
-            Swift: BTRLRO22
-          </p>
+          <h2><?php the_field('doneaza_tertiary_title'); ?></h2>
+          <div class="donate-content">
+            <?php the_field('doneaza_tertiary_content'); ?>
+          </div>
         </div>
       </div>
     </div>

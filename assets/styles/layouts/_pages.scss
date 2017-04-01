@@ -954,15 +954,16 @@
 }
 
 .donate-info {
-  height: 30px;
-  margin-top: 20px;
-  display: inline-block;
-
   img {
-    height: 100%;
+    height: 30px;
+    width: auto;
+    margin-bottom: 20px;
+    display: block;
   }
-  // margin: 0;
-  // line-height: 1.1;
+}
+
+.dontate-intro {
+  margin-bottom: 30px;
 }
 
 .donate-action {

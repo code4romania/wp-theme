@@ -5,8 +5,6 @@
     <div class="hero-content content row">
       <?php get_template_part('templates/page', 'header'); ?>
 
-
-
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <?php echo the_field('implica-te_hero'); ?>
       </div>

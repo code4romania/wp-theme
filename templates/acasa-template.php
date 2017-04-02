@@ -110,22 +110,27 @@
             $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
 
             foreach ($entities as $entity) {
-              $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
-              $descriere = repeaterFieldValueOrDefault("descriere", $entity);
-              $label      = repeaterFieldValueOrDefault("label", $entity);
+              $titlu     = repeaterFieldValueOrDefault("implica_titlu", $entity);
+              $descriere = repeaterFieldValueOrDefault("implica_descriere", $entity);
+              $icon      = repeaterFieldValueOrDefault("implica_icon", $entity);
 
-            ?>
-              <div class="small-12 medium-6 columns">
-                <a href="/implica-te/#<?php echo $label; ?>" class="activity activity-visual">
-                  <h2>
-                    <i class="svg-icons"></i>
-                    <span><?php echo $titlu;?></span>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  </h2>
-                  <p><?php echo $descriere;?></p>
-                </a>
-              </div>
-            <?php  } ?>
+              $html = "<div class='small-12 medium-6 columns'>" .
+                        "<a href='/implica-te/#" . $icon . "' class='activity activity-visual'>" .
+                          "<h2>" .
+                            "<i class='svg-icons svg-" . $icon ."'></i>" .
+                            "<span>" . $titlu . "</span>" .
+                            "<i class='fa fa-angle-right' aria-hidden='true'></i>" .
+                          "</h2>" .
+                          "<p>" . $descriere . "</p>" .
+                        "</a>" .
+                      "</div>";
+
+
+              echo $html;
+
+            }
+
+          ?>
         </div>
       </div>
       <div class="small-12 columns"></div>

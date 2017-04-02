@@ -220,32 +220,6 @@
     top: 17px;
   }
 
-  .columns {
-    &:nth-child(4n+1) {
-      .svg-icons {
-        background-image: url(../icons/ico-time.svg);
-      }
-    }
-
-    &:nth-child(4n+2) {
-      .svg-icons {
-        background-image: url(../icons/ico-money.svg);
-      }
-    }
-
-    &:nth-child(4n+3) {
-      .svg-icons {
-        background-image: url(../icons/ico-companies.svg);
-      }
-    }
-
-    &:nth-child(4n) {
-      .svg-icons {
-        background-image: url(../icons/ico-organisations.svg);
-      }
-    }
-  }
-
   @include breakpoint(medium) {
     margin-top: 60px;
   }
@@ -276,6 +250,12 @@
 
     .block-activity & {
       font-size: 20px;
+    }
+
+    span {
+      .block-activity & {
+        margin-right: 5px;
+      }
     }
   }
 

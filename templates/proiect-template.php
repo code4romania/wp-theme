@@ -9,6 +9,7 @@
         $category = get_the_category()[0];
         $class = $category->slug . '-class';
         $titluCF = get_post_meta($post->ID, 'titlu',true);
+        $organizatieTitlu = get_post_meta($post->ID, 'organizatie_titlu',true);
         $organizatie = get_post_meta($post->ID, 'organizatie',true);
         $organizatieLogo = get_post_meta($post->ID, 'organizatie_logo',true);
         $organizatieDescriere = get_post_meta($post->ID, 'organizatie_descriere',true);
@@ -38,14 +39,13 @@
 
         ?>
 
-      <div class="small-12 large-offset-1 large-10 columns">
+      <div class="small-12 columns">
         <div class="hero-project media-object">
           <div class="media-object-section middle">
             <img src="<?php echo $thumb_url; ?>" alt="<?php the_title(); ?>">
             <?php if($github): ?>
               <a href="<?php echo $github; ?>" class="project-git mono" target="_blank">
                 <i class="fa fa-github" aria-hidden="true"></i>
-                <span>Vezi codul</span>
               </a>
             <?php endif; ?>
           </div>
@@ -56,10 +56,10 @@
             </div>
             <div class="actions actions-project">
               <?php if(!empty($actiunePrimaraText)): ?>
-                <a href="<?php echo $actiunePrimaraLink; ?>" target="<?php echo $target_first; ?>" class="button large underline inverted" target="_blank"><?php echo $actiunePrimaraText; ?></a>
+                <a href="<?php echo $actiunePrimaraLink; ?>" target="<?php echo $target_first; ?>" class="button large underline" target="_blank"><?php echo $actiunePrimaraText; ?></a>
               <?php endif ?>
               <?php if(!empty($actiuneSecundaraText)): ?>
-                <a href="<?php echo $actiuneSecundaraLink; ?>" target="<?php echo $target_second; ?>" class="button large underline inverted"><?php echo $actiuneSecundaraText; ?></a>
+                <a href="<?php echo $actiuneSecundaraLink; ?>" target="<?php echo $target_second; ?>" class="button large underline"><?php echo $actiuneSecundaraText; ?></a>
               <?php endif ?>
             </div>
           </div>
@@ -69,11 +69,7 @@
     </div>
   </div>
   <div class="status <?php echo $class; ?>">
-    <?php if($category->slug == 'proiect_cu_nevoie_de_voluntari'): ?>
-      Acest proiect <span><?php echo $category->name; ?></span>.
-    <?php else: ?>
-      Acest proiect este <span><?php echo $category->name; ?></span>.
-    <?php endif; ?>
+    <?php the_field('substadiu_label'); ?>
   </div>
 </section>
 
@@ -94,7 +90,7 @@
             </div>
             <div class="media-object-section middle">
               <h2>
-                <span>O idee:</span>
+                <span><?php echo $organizatieTitlu; ?></span>
                 <?php echo $organizatie; ?>
               </h2>
               <?php if($budget): ?>
@@ -174,7 +170,7 @@
 <section class="block block-content block-details wrap container">
   <div class="hero-content content row">
     <div class="small-offset-1 small-10 columns">
-      <h1>Echipa</h1>
+      <h1><?php the_field('echipa_titlu'); ?></h1>
       <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true">
         <?php
           $membri         = get_field('membri_echipa', $post->ID);

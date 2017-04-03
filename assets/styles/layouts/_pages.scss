@@ -1,6 +1,6 @@
 .hero {
   margin: 0 auto;
-  padding: 40px 0 0;
+  padding: 0;
   position: relative;
   overflow: hidden;
 
@@ -30,7 +30,7 @@
     }
 
     .block-project & {
-      color: $white;
+      // color: $white;
       margin-bottom: 0;
     }
 
@@ -78,10 +78,10 @@
     }
 
     .block-project & {
-      color: $white;
+      // color: $white;
 
       a {
-        color: $white;
+        // color: $white;
         text-decoration: underline;
 
         &:hover {
@@ -369,9 +369,9 @@
     }
 
     @include breakpoint(large) {
-      img,
-      .badge {
+      img {
         filter: grayscale(100%);
+        border: none;
       }
     }
 
@@ -677,6 +677,11 @@
   }
 }
 
+.hero-project {
+  background: $white;
+  margin: 0 0 30px;
+}
+
 .project-owner {
   display: block;
   font-size: 18px;
@@ -735,8 +740,7 @@
 }
 
 .owner {
-  background: $color-primary;
-  color: $white;
+  color: $black;
   padding: 15px;
   margin: 0 0 40px;
 
@@ -748,11 +752,14 @@
     }
   }
 
-  h2 span {
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 6px;
+  h2 {
+    font-size: 18px;
+
+    span {
+      display: block;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
   }
 }
 

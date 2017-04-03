@@ -75,7 +75,6 @@
 
               <div class="small-6 large-3 columns" data-equalizer-watch>
                 <a href="<?php the_permalink(); ?>" title="Nume proiect" class="project" data-category="<?php echo $category->slug; ?>">
-                  <div class="<?php echo $class; ?> badge"></div>
                   <img src="<?php echo $thumb_url;?>">
                   <h2><?php echo $titlu;?></h2>
                   <span class="project-org"><?php echo $organizatie;?></span>

@@ -145,24 +145,24 @@
         </div>
       </div>
       <div class="small-offset-1 small-10 columns team-top press">
-        <h2>Au povestit despre noi</h2>
+        <h2><?php echo the_field('presa_titlu_h2'); ?></h2>
         <div class="partners press">
           <ul class="list-images row">
             <?php
-              $presa = get_field('presa');
+              $presa = get_field('presa_articole');
               $defaultMemberPic = 'http://www.fillmurray.com/400/400';
               // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
 
-              $columnsNumber      = ceil(count($presa) / 4) * 4;
+              $columnsNumber = count($presa);
 
               for($index = 0; $index < $columnsNumber; $index++) {
 
                 if($index < count($presa)) {
 
                   $articol     = $presa[$index];
-                  $nume       = repeaterFieldValueOrDefault("titlu", $articol);
-                  $logo       = repeaterFieldValueOrDefault("logo", $articol);
-                  $link       = repeaterFieldValueOrDefault("link", $articol);
+                  $nume       = repeaterFieldValueOrDefault("articole_presa_titlu", $articol);
+                  $logo       = repeaterFieldValueOrDefault("articole_presa_logo", $articol);
+                  $link       = repeaterFieldValueOrDefault("articole_presa_link", $articol);
 
                   if($logo === null || $logo === "") {
                     $logo = $defaultMemberPic;
@@ -182,7 +182,7 @@
       </div>
       <div class="small-offset-1 small-10 columns action-line">
         <p class="donate-action">
-          <span><?php echo the_field('doneaza_string_1'); ?></span> <a href="/doneaza/" class="button large underline button-donate"><?php echo the_field('doneaza_string_action_label'); ?></a><span> <?php echo the_field('doneaza_string_2'); ?></span>
+          <span><?php echo the_field('propozitie_part_1'); ?></span> <a href="/doneaza/" class="button large underline button-donate"><?php echo the_field('propozitie_cta_label'); ?></a><span> <?php echo the_field('propozitie_part_2'); ?></span>
         </p>
       </div>
       <div class="small-12 columns"></div>

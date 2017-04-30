@@ -5,19 +5,19 @@
     <div class="hero-content content row">
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <h1>
-          <?php the_field('intro_titlu'); ?><br/>
-          <?php the_field('intro_subtitlu'); ?>
+          <?php the_field('mission_titlu_part_1'); ?><br/>
+          <?php the_field('mission_titlu_part_2'); ?>
         </h1>
-        <?php  the_field('intro_continut');?>
+        <?php  the_field('mission_content_body');?>
       </div>
       <div class="small-12 columns actions">
         <a href="<?php
-          the_field('afla_cine_suntem_link');?>" class="button large underline">
-          <?php the_field('afla_cine_suntem_text'); ?>
+          the_field('mission_link_url_1');?>" class="button large underline">
+          <?php the_field('mission_link_label_1'); ?>
         </a>
         <span class="spacer">sau</span>
-        <a href="<?php the_field('vezi_proiectele_link'); ?>" class="button large underline">
-          <?php the_field('vezi_proiectele_text'); ?>
+        <a href="<?php the_field('mission_link_url_2'); ?>" class="button large underline">
+          <?php the_field('mission_link_label_2'); ?>
         </a>
       </div>
     </div>
@@ -27,14 +27,13 @@
 <section class="block block-hero block-inverted wrap container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-12 columns"><?php the_field('proiecte_titlu'); ?></h1>
-      <div class="small-offset-1 small-10 medium-offset-6 medium-6 columns">
-        <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate.</p>
-        <p>Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+      <h1 class="small-12 columns"><?php the_field('what_we_work_title'); ?></h1>
+      <div class="small-offset-1 small-10 medium-offset-6 medium-6 columns hero-description">
+        <?php the_field('what_we_work_content'); ?>
       </div>
       <div class="small-12 medium-offset-6 medium-6 columns actions">
-        <a href="<?php the_field('proiecte_link'); ?>" class="button large underline inverted">
-          <?php the_field('proiecte_link_text'); ?>
+        <a href="<?php the_field('what_we_work_link_url'); ?>" class="button large underline inverted">
+          <?php the_field('what_we_work_link_label'); ?>
         </a>
       </div>
       <?php

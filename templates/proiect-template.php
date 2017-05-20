@@ -136,30 +136,28 @@
       <div class="table-scroll">
         <table class="progress-wrap">
           <tr class="progress <?php echo $substadii; ?>">
-            <td class="progress-step">
-              <strong class="progress-no">1</strong>
-              <span class="progress-state">Concept</span>
-            </td>
-            <td class="progress-step">
-              <strong class="progress-no">2</strong>
-              <span class="progress-state">Specificații UX</span>
-            </td>
-            <td class="progress-step">
-              <strong class="progress-no">3</strong>
-              <span class="progress-state">Arhitectură tehnică</span>
-            </td>
-            <td class="progress-step">
-              <strong class="progress-no">4</strong>
-              <span class="progress-state">Dezvoltare</span>
-            </td>
-            <td class="progress-step">
-              <strong class="progress-no">5</strong>
-              <span class="progress-state">Testare</span>
-            </td>
-            <td class="progress-step">
-              <strong class="progress-no">6</strong>
-              <span class="progress-state">Lansare</span>
-            </td>
+
+            <?php
+              $steps = get_field('steps_list');
+
+              for($index = 0; $index < count($steps); $index++) {
+
+                if($index < count($steps)) {
+
+                  $step = $steps[$index];
+                  $name = repeaterFieldValueOrDefault("stem_item", $step);
+
+                  ?>
+
+                  <td class="progress-step">
+                    <strong class="progress-no"><?php echo $index + 1; ?></strong>
+                    <span class="progress-state"><?php echo $name; ?></span>
+                  </td>
+
+            <?php
+                }
+              }
+            ?>
           </tr>
         </table>
       </div>

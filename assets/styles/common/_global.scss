@@ -192,6 +192,11 @@ p {
   background: $color-donate;
   padding: 0 0 40px;
 
+  p a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
   a.donate-cta {
     color: $white;
     white-space: nowrap;
@@ -230,10 +235,6 @@ p {
   .actions {
     margin: 0;
   }
-}
-
-.block-identity {
-  padding-bottom: 40px;
 }
 
 .list-images {

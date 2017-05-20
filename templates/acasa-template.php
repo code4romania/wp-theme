@@ -15,7 +15,7 @@
           the_field('mission_link_url_1');?>" class="button large underline">
           <?php the_field('mission_link_label_1'); ?>
         </a>
-        <span class="spacer">sau</span>
+        <span class="spacer"><?php the_field('mission_separator'); ?></span>
         <a href="<?php the_field('mission_link_url_2'); ?>" class="button large underline">
           <?php the_field('mission_link_label_2'); ?>
         </a>

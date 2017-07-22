@@ -1,39 +1,44 @@
 <?php /* Template Name: Cine suntem */ ?>
 
-<section class="block block-hero block-inverted block-content block-text block-identity wrap container">
+<section class="block block-content block-text block-identity wrap container">
   <div class="hero">
     <div class="hero-content content row">
       <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php the_field('cine_suntem_titlu'); ?>
+        <?php the_title(); ?>
       </h1>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <?php the_field('cine_suntem_continut'); ?>
+
+        <div class="purpose-intro">
+          <?php the_field('cine_suntem_continut'); ?>
+        </div>
 
         <div class="purpose row"  data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" >
-          <div class="small-6 medium-3 columns" data-equalizer-watch>
-            <div class="scope">
-              <i class="fa fa-database" aria-hidden="true"></i>
-              <h3>Informare &amp; acces la date publice</h3>
-            </div>
-            </div>
-          <div class="small-6 medium-3 columns" data-equalizer-watch>
-            <div class="scope">
-              <i class="fa fa-book" aria-hidden="true"></i>
-              <h3>Educare &amp; promovare a culturii</h3>
-            </div>
-            </div>
-          <div class="small-6 medium-3 columns" data-equalizer-watch>
-            <div class="scope">
-              <i class="fa fa-link" aria-hidden="true"></i>
-              <h3>Implicare civică &amp; colaborare</h3>
-            </div>
-            </div>
-          <div class="small-6 medium-3 columns" data-equalizer-watch>
-            <div class="scope">
-              <i class="fa fa-key" aria-hidden="true"></i>
-              <h3>Facilitare a accesului la servicii publice</h3>
-            </div>
-            </div>
+          <?php
+            $activitati = get_field('cine_suntem_activitati');
+            $columnsNumber = ceil(count($activitati) / 4) * 4;
+
+            for($index = 0; $index < $columnsNumber; $index++) {
+
+              if($index < count($activitati)) {
+
+                $activitate     = $activitati[$index];
+                $icon       = repeaterFieldValueOrDefault("icon_activitate", $activitate);
+                $text       = repeaterFieldValueOrDefault("text_activitate", $activitate);
+
+                ?>
+
+                <div class="small-6 medium-3 columns" data-equalizer-watch>
+                  <div class="scope">
+                    <i class="fa fa-<?php echo $icon; ?>" aria-hidden="true"></i>
+                    <h3><?php echo $text; ?></h3>
+                  </div>
+                </div>
+
+          <?php
+              }
+            }
+          ?>
+
         </div>
 
       </div>
@@ -52,7 +57,7 @@
         <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="false" id="members-eq">
           <?php
             $membri             = get_field('membri');
-            $defaultMemberPic = 'http://www.fillmurray.com/400/400';
+            $defaultMemberPic = '//www.fillmurray.com/400/400';
             // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
             $columnsNumber      = ceil(count($membri) / 4) * 4;
 
@@ -97,14 +102,15 @@
       <div class="small-offset-1 small-10 medium-offset-3 medium-6 columns team-top">
         <h2><?php the_field('colaboratori_titlu'); ?></h2>
         <?php the_field('colaboratori_continut'); ?>
-        <a href="https://www.surveymonkey.com/r/C6MZJJJ" class="button large underline" target="_blank">Hai cu noi!</a>
+
+        <a href="<?php the_field('colaboratori_button_link'); ?>" class="button large underline" target="_blank"><?php the_field('colaboratori_button_label'); ?></a>
       </div>
 
       <div class="small-offset-1 small-10 columns">
-        <div class="members members-all row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true" id="volunteers-eq">
+        <div class="members members-all row" id="volunteers-eq">
           <?php
             $colaboratori = get_field('colaboratori');
-            $defaultMemberPic = 'http://www.fillmurray.com/400/400';
+            $defaultMemberPic = '//www.fillmurray.com/400/400';
             // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
 
             $columnsNumber      = ceil(count($colaboratori) / 4) * 4;
@@ -121,7 +127,7 @@
                   $poza = $defaultMemberPic;
                 } ?>
 
-                  <div class="small-6 large-4 columns" data-equalizer-watch>
+                  <div class="small-6 large-4 columns">
                     <div class="member member-small media-object">
                       <div class="media-object-section">
                         <img src="<?php echo $poza; ?>" alt="<?php echo $nume; ?>">
@@ -139,24 +145,24 @@
         </div>
       </div>
       <div class="small-offset-1 small-10 columns team-top press">
-        <h2>Au povestit despre noi</h2>
+        <h2><?php echo the_field('presa_titlu_h2'); ?></h2>
         <div class="partners press">
           <ul class="list-images row">
             <?php
-              $presa = get_field('presa');
-              $defaultMemberPic = 'http://www.fillmurray.com/400/400';
+              $presa = get_field('presa_articole');
+              $defaultMemberPic = '//www.fillmurray.com/400/400';
               // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
 
-              $columnsNumber      = ceil(count($presa) / 4) * 4;
+              $columnsNumber = count($presa);
 
               for($index = 0; $index < $columnsNumber; $index++) {
 
                 if($index < count($presa)) {
 
                   $articol     = $presa[$index];
-                  $nume       = repeaterFieldValueOrDefault("titlu", $articol);
-                  $logo       = repeaterFieldValueOrDefault("logo", $articol);
-                  $link       = repeaterFieldValueOrDefault("link", $articol);
+                  $nume       = repeaterFieldValueOrDefault("articole_presa_titlu", $articol);
+                  $logo       = repeaterFieldValueOrDefault("articole_presa_logo", $articol);
+                  $link       = repeaterFieldValueOrDefault("articole_presa_link", $articol);
 
                   if($logo === null || $logo === "") {
                     $logo = $defaultMemberPic;
@@ -176,7 +182,7 @@
       </div>
       <div class="small-offset-1 small-10 columns action-line">
         <p class="donate-action">
-          <span>Felicitările ne fac fericiți,</span> <a href="/doneaza/" class="button large underline button-donate">donațiile</a><span> ne ajută să continuăm.</span>
+          <span><?php echo the_field('propozitie_part_1'); ?></span> <a href="/doneaza/" class="button large underline button-donate"><?php echo the_field('propozitie_cta_label'); ?></a><span> <?php echo the_field('propozitie_part_2'); ?></span>
         </p>
       </div>
       <div class="small-12 columns"></div>

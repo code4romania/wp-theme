@@ -5,19 +5,19 @@
     <div class="hero-content content row">
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <h1>
-          <?php the_field('intro_titlu'); ?><br/>
-          <?php the_field('intro_subtitlu'); ?>
+          <?php the_field('mission_titlu_part_1'); ?><br/>
+          <?php the_field('mission_titlu_part_2'); ?>
         </h1>
-        <?php  the_field('intro_continut');?>
+        <?php  the_field('mission_content_body');?>
       </div>
       <div class="small-12 columns actions">
         <a href="<?php
-          the_field('afla_cine_suntem_link');?>" class="button large underline">
-          <?php the_field('afla_cine_suntem_text'); ?>
+          the_field('mission_link_url_1');?>" class="button large underline">
+          <?php the_field('mission_link_label_1'); ?>
         </a>
-        <span class="spacer">sau</span>
-        <a href="<?php the_field('vezi_proiectele_link'); ?>" class="button large underline">
-          <?php the_field('vezi_proiectele_text'); ?>
+        <span class="spacer"><?php the_field('mission_separator'); ?></span>
+        <a href="<?php the_field('mission_link_url_2'); ?>" class="button large underline">
+          <?php the_field('mission_link_label_2'); ?>
         </a>
       </div>
     </div>
@@ -27,14 +27,13 @@
 <section class="block block-hero block-inverted wrap container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-12 columns"><?php the_field('proiecte_titlu'); ?></h1>
-      <div class="small-offset-1 small-10 medium-offset-6 medium-6 columns">
-        <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate.</p>
-        <p>Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+      <h1 class="small-12 columns"><?php the_field('what_we_work_title'); ?></h1>
+      <div class="small-offset-1 small-10 medium-offset-6 medium-6 columns hero-description">
+        <?php the_field('what_we_work_content'); ?>
       </div>
       <div class="small-12 medium-offset-6 medium-6 columns actions">
-        <a href="<?php the_field('proiecte_link'); ?>" class="button large underline inverted">
-          <?php the_field('proiecte_link_text'); ?>
+        <a href="<?php the_field('what_we_work_link_url'); ?>" class="button large underline inverted">
+          <?php the_field('what_we_work_link_label'); ?>
         </a>
       </div>
       <?php
@@ -75,7 +74,6 @@
 
               <div class="small-6 large-3 columns" data-equalizer-watch>
                 <a href="<?php the_permalink(); ?>" title="Nume proiect" class="project" data-category="<?php echo $category->slug; ?>">
-                  <div class="<?php echo $class; ?> badge"></div>
                   <img src="<?php echo $thumb_url;?>">
                   <h2><?php echo $titlu;?></h2>
                   <span class="project-org"><?php echo $organizatie;?></span>
@@ -110,22 +108,27 @@
             $defaultEntityPic = esc_url(get_template_directory_uri()) . "/assets/images/default-entity-pic.png";
 
             foreach ($entities as $entity) {
-              $titlu     = repeaterFieldValueOrDefault("titlu", $entity);
-              $descriere = repeaterFieldValueOrDefault("descriere", $entity);
-              $label      = repeaterFieldValueOrDefault("label", $entity);
+              $titlu     = repeaterFieldValueOrDefault("implica_titlu", $entity);
+              $descriere = repeaterFieldValueOrDefault("implica_descriere", $entity);
+              $icon      = repeaterFieldValueOrDefault("implica_icon", $entity);
 
-            ?>
-              <div class="small-12 medium-6 columns">
-                <a href="/implica-te/#<?php echo $label; ?>" class="activity activity-visual">
-                  <h2>
-                    <i class="svg-icons"></i>
-                    <span><?php echo $titlu;?></span>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                  </h2>
-                  <p><?php echo $descriere;?></p>
-                </a>
-              </div>
-            <?php  } ?>
+              $html = "<div class='small-12 medium-6 columns'>" .
+                        "<a href='/implica-te/#" . $icon . "' class='activity activity-visual'>" .
+                          "<h2>" .
+                            "<i class='svg-icons svg-" . $icon ."'></i>" .
+                            "<span>" . $titlu . "</span>" .
+                            "<i class='fa fa-angle-right' aria-hidden='true'></i>" .
+                          "</h2>" .
+                          "<p>" . $descriere . "</p>" .
+                        "</a>" .
+                      "</div>";
+
+
+              echo $html;
+
+            }
+
+          ?>
         </div>
       </div>
       <div class="small-12 columns"></div>

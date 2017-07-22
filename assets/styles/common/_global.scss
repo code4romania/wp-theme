@@ -1,6 +1,6 @@
 body {
   border-top: $border-height solid $color-primary;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.45;
   -webkit-overflow-scrolling: touch;
 }
@@ -160,8 +160,7 @@ p {
 }
 
 .block-project {
-  background: $color-primary;
-  padding: 0 0 90px;
+  padding: 0 0 60px;
   position: relative;
 
   .project-thumb {
@@ -192,6 +191,11 @@ p {
 .block-donate {
   background: $color-donate;
   padding: 0 0 40px;
+
+  p a {
+    color: #fff;
+    text-decoration: underline;
+  }
 
   a.donate-cta {
     color: $white;
@@ -231,10 +235,6 @@ p {
   .actions {
     margin: 0;
   }
-}
-
-.block-identity {
-  padding-bottom: 40px;
 }
 
 .list-images {

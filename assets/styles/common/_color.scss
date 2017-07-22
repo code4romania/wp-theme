@@ -1,5 +1,11 @@
-.proiecte_finalizate-class {
-  background-color: $color-complete;
+.finalizat-class {
+  color: $color-complete;
+
+  &.status {
+    .block-project & {
+      background: $color-complete;
+    }
+  }
 
   &.project {
     background-color: transparent;
@@ -11,26 +17,32 @@
 }
 
 .proiecte_in_desfasurare-class {
-  background-color: $color-wip;
+  color: $color-wip;
 
-  &.project {
-    background-color: transparent;
+  &.status {
+    .block-project & {
+      background: $color-wip;
+    }
   }
 }
 
 .proiect_cu_nevoie_de_voluntari-class {
-  background-color: $color-need;
+  color: $color-need;
 
-  &.project {
-    background-color: transparent;
+  &.status {
+    .block-project & {
+      background: $color-need;
+    }
   }
 }
 
 .proiect_propus-class {
-  background-color: $color-option;
+  color: $color-option;
 
-  &.project {
-    background-color: transparent;
+  &.status {
+    .block-project & {
+      background: $color-option;
+    }
   }
 }
 

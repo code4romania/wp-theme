@@ -1,6 +1,6 @@
 .hero {
   margin: 0 auto;
-  padding: 40px 0 0;
+  padding: 0;
   position: relative;
   overflow: hidden;
 
@@ -14,6 +14,7 @@
   position: relative;
   margin: 0 auto;
   z-index: $index-hero;
+  padding-top: 30px;
 
   h1 {
     @include breakpoint(medium) {
@@ -30,7 +31,7 @@
     }
 
     .block-project & {
-      color: $white;
+      // color: $white;
       margin-bottom: 0;
     }
 
@@ -78,10 +79,10 @@
     }
 
     .block-project & {
-      color: $white;
+      // color: $white;
 
       a {
-        color: $white;
+        // color: $white;
         text-decoration: underline;
 
         &:hover {
@@ -220,32 +221,6 @@
     top: 17px;
   }
 
-  .columns {
-    &:nth-child(4n+1) {
-      .svg-icons {
-        background-image: url(../icons/ico-time.svg);
-      }
-    }
-
-    &:nth-child(4n+2) {
-      .svg-icons {
-        background-image: url(../icons/ico-money.svg);
-      }
-    }
-
-    &:nth-child(4n+3) {
-      .svg-icons {
-        background-image: url(../icons/ico-companies.svg);
-      }
-    }
-
-    &:nth-child(4n) {
-      .svg-icons {
-        background-image: url(../icons/ico-organisations.svg);
-      }
-    }
-  }
-
   @include breakpoint(medium) {
     margin-top: 60px;
   }
@@ -277,6 +252,12 @@
     .block-activity & {
       font-size: 20px;
     }
+
+    span {
+      .block-activity & {
+        margin-right: 5px;
+      }
+    }
   }
 
   p {
@@ -289,6 +270,11 @@
       margin-top: 0;
     }
   }
+}
+
+.project-type {
+  margin-bottom: 30px;
+  font-size: 32px;
 }
 
 .project-list {
@@ -318,6 +304,14 @@
 
 }
 
+.hero-description {
+  font-size: 18px;
+
+  p {
+    font-size: 18px;
+  }
+}
+
 .project {
   background: $white;
   display: block;
@@ -326,6 +320,10 @@
 
   &:hover {
     background: $white;
+
+    img {
+      border: 1px solid lighten($black, 50);
+    }
   }
 
   @include breakpoint(large) {
@@ -333,6 +331,15 @@
 
     .page-template-proiecte-template & {
       margin-bottom: 40px;
+    }
+  }
+
+  img {
+    border: 1px solid lighten($black, 80);
+    width: 100%;
+
+    .hero-content & {
+      border: none;
     }
   }
 
@@ -356,10 +363,10 @@
   }
 
   .badge {
-    position: absolute;
-    left: 0;
-    top: -15px;
-    z-index: 1;
+    // position: absolute;
+    // left: 0;
+    // top: -15px;
+    // z-index: 1;
   }
 
   .project-org {
@@ -376,9 +383,9 @@
     }
 
     @include breakpoint(large) {
-      img,
-      .badge {
+      img {
         filter: grayscale(100%);
+        border: none;
       }
     }
 
@@ -399,10 +406,10 @@
 }
 
 .badge {
-  height: $border-height;
-  text-indent: -9999px;
-  width: 100%;
-  border-radius: 0;
+  // height: $border-height;
+  // text-indent: -9999px;
+  // width: 100%;
+  // border-radius: 0;
 }
 
 .members {
@@ -415,7 +422,13 @@
 }
 
 .member {
-  margin-bottom: 30px;
+  margin-bottom: 0;
+  height: 160px;
+
+  @include breakpoint(medium) {
+    margin-bottom: 30px;
+    height: 80px;
+  }
 
   h3 {
     margin-bottom: 0;
@@ -678,6 +691,11 @@
   }
 }
 
+.hero-project {
+  background: $white;
+  margin: 0 0 30px;
+}
+
 .project-owner {
   display: block;
   font-size: 18px;
@@ -736,8 +754,7 @@
 }
 
 .owner {
-  background: $color-primary;
-  color: $white;
+  color: $black;
   padding: 15px;
   margin: 0 0 40px;
 
@@ -749,11 +766,14 @@
     }
   }
 
-  h2 span {
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 6px;
+  h2 {
+    font-size: 18px;
+
+    span {
+      display: block;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
   }
 }
 
@@ -762,9 +782,18 @@
   @include underline-white();
 }
 
+.purpose-intro {
+  p {
+    .block-inverted & {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}
+
 .purpose {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 
   .fa {
     font-size: 42px;
@@ -926,15 +955,16 @@
 }
 
 .donate-info {
-  height: 30px;
-  margin-top: 20px;
-  display: inline-block;
-
   img {
-    height: 100%;
+    height: 30px;
+    width: auto;
+    margin-bottom: 20px;
+    display: block;
   }
-  // margin: 0;
-  // line-height: 1.1;
+}
+
+.dontate-intro {
+  margin-bottom: 30px;
 }
 
 .donate-action {

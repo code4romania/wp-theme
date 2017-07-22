@@ -19,11 +19,10 @@
     common: {
       init: function() {
 
-        $(document).foundation(); // Foundation JavaScript
 
       },
       finalize: function() {
-
+        $(document).foundation(); // Foundation JavaScript
       }
     },
     // Home page

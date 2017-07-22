@@ -181,7 +181,7 @@
               $poza   = repeaterFieldValueOrDefault("poza", $membru);
 
               if($poza === null || $poza === "") {
-                $poza = "http://www.fillmurray.com/400/400";
+                $poza = "//www.fillmurray.com/400/400";
               }
         ?>
           <div class="small-6 large-4 columns" data-equalizer-watch>
@@ -223,7 +223,7 @@
               $link   = repeaterFieldValueOrDefault("link", $partener);
 
               if($poza === null || $poza === "") {
-                $poza = "http://www.fillmurray.com/400/400";
+                $poza = "//www.fillmurray.com/400/400";
               }
         ?>
 

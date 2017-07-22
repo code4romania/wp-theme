@@ -36,7 +36,7 @@
         <?php if(qtrans_getLanguage() === "ro") { ?>
           &copy; <?php echo date('Y'); ?> Code for Romania.<br/> Organizație neguvernamentală independentă, neafiliată politic și apolitică.
         <?php } else { ?>
-          &copy; <?php echo date('Y'); ?> Code for Romania.<br/> An independent, non-partisan, non-political, non-govermental organisation.
+          &copy; <?php echo date('Y'); ?> Code for Romania.<br/> An independent, non-partisan, non-political, non-govermental organization.
         <?php } ?>
       </p>
 

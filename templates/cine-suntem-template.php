@@ -57,7 +57,7 @@
         <div class="members row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="false" id="members-eq">
           <?php
             $membri             = get_field('membri');
-            $defaultMemberPic = 'http://www.fillmurray.com/400/400';
+            $defaultMemberPic = '//www.fillmurray.com/400/400';
             // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
             $columnsNumber      = ceil(count($membri) / 4) * 4;
 
@@ -110,7 +110,7 @@
         <div class="members members-all row" id="volunteers-eq">
           <?php
             $colaboratori = get_field('colaboratori');
-            $defaultMemberPic = 'http://www.fillmurray.com/400/400';
+            $defaultMemberPic = '//www.fillmurray.com/400/400';
             // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
 
             $columnsNumber      = ceil(count($colaboratori) / 4) * 4;
@@ -150,7 +150,7 @@
           <ul class="list-images row">
             <?php
               $presa = get_field('presa_articole');
-              $defaultMemberPic = 'http://www.fillmurray.com/400/400';
+              $defaultMemberPic = '//www.fillmurray.com/400/400';
               // $defaultMemberPic   = esc_url(get_template_directory_uri()) . "/assets/images/default-member-pic.png";
 
               $columnsNumber = count($presa);

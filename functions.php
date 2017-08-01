@@ -170,6 +170,17 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+function add_contact_to_menu($items, $args) {
+
+  if( $args->theme_location == 'footer_navigation')  {
+    $items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="mailto:' . antispambot('contact@code4.ro'). '">Contact</a></li>';
+  }
+
+  return $items;
+}
+
+add_filter('wp_nav_menu_items', 'add_contact_to_menu', 10, 2);
+
 /**
  * Hide email from Spam Bots using a shortcode.
  *

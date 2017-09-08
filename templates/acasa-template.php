@@ -87,7 +87,8 @@
     </div>
     <div class="hero-media">
       <div class="image-wrap image-wrap-landscape">
-        <img src="<?php bloginfo('template_url'); ?>/dist/images/hero-proiecte.jpg">
+        <!-- TODO: change with other visual -->
+        <!-- <img src="<?php bloginfo('template_url'); ?>/dist/images/hero-proiecte.jpg"> -->
       </div>
     </div>
   </div>
@@ -132,11 +133,6 @@
         </div>
       </div>
       <div class="small-12 columns"></div>
-    </div>
-    <div class="hero-media">
-      <div class="image-wrap image-wrap-landscape">
-        <img src="<?php bloginfo('template_url'); ?>/dist/images/hero-implica-te.jpg">
-      </div>
     </div>
   </div>
 </section>

@@ -27,11 +27,6 @@
         &:after {
           right: 10px;
           left: 10px;
-
-          @include breakpoint(large) {
-            left: 16px;
-            right: 16px;
-          }
         }
       }
     }

@@ -1,16 +1,16 @@
 // Colors
-$color-primary: #00f;
+$color-primary: #3A54A4;
 $color-primary-faded: lighten(rgba($color-primary, .5), .3);
 
 $color-complete: $color-primary;
-$color-wip: #5fe29c;
-$color-donate: darken($color-wip, 20);
-$color-need: #e84e56;
+$color-wip: #27AE60;
+$color-donate: #2CB568;
+$color-need: #EA4C52;
 $color-option: #039bf5; //change
 
-$color-type: #3f3f3f;
+$color-type: #2c2c2c;
 
 $index-hero: 100;
 $index-media: 90;
 
-$border-height: 15px;
+$border-height: 2px;

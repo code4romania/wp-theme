@@ -11,8 +11,8 @@
 // endbower
 
 @include foundation-everything;
-// @include foundation-flex-classes;
-// @include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
 
 @import "common/global";
 @import "common/color";
@@ -22,6 +22,7 @@
 @import "components/overlay";
 @import "components/forms";
 @import "components/grid";
+@import "components/donate";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

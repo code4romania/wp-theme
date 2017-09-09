@@ -1,20 +1,22 @@
 <?php /* Template Name: Doneaza */?>
 
-<section class="block block-hero block-content block-donate wrap container">
+<section class="block block-hero block-donate wrap container">
   <div class="hero">
     <div class="hero-content content row">
-
-      <?php get_template_part('templates/page', 'header'); ?>
-
-      <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <?php the_field('doneaza_hero'); ?>
-      </div>
-
-      <div class="small-offset-1 small-10 columns actions">
-        <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" class="button large underline donate-cta" target="_blank">
-          <img src="<?php the_field('doneaza_call_to_action_icon'); ?>" alt="<?php the_field('doneaza_call_to_action_string'); ?>" class="button-ui" aria-hidden="true">
-          <?php the_field('doneaza_call_to_action_string'); ?>
-        </a>
+      <div class="small-12 medium-10 large-offset-1 large-8 columns">
+        <div class="donate-form">
+          <h1>Donează online</h1>
+          <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+          <ol class="donate-steps">
+            <li>
+              <span class="donate-no">1</span>
+              <p class="donate-copy">Cu <span class="js-donate-value">50</span> lei ne luam una alta, nu foarte mult.</p>
+            </li>
+            <li>
+              <span class="donate-no">2</span>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
@@ -26,12 +28,23 @@
     <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
 
       <div class="donate row">
+
+        <?php get_template_part('templates/page', 'header'); ?>
+
+        <div class="small-12 columns">
+          <?php the_field('doneaza_hero'); ?>
+        </div>
+
         <div class="small-12 columns dontate-intro">
           <?php the_field('doneaza_intro'); ?>
         </div>
 
         <div class="small-12 large-6 columns">
           <div class="donate-option">
+            <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" class="button large underline donate-cta" target="_blank">
+              <img src="<?php the_field('doneaza_call_to_action_icon'); ?>" alt="<?php the_field('doneaza_call_to_action_string'); ?>" class="button-ui" aria-hidden="true">
+              <?php the_field('doneaza_call_to_action_string'); ?>
+            </a>
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="dontate-cta">
               <input type="hidden" name="cmd" value="_s-xclick">
               <input type="hidden" name="hosted_button_id" value="U4QBTHU9J5HUS">

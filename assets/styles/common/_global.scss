@@ -188,49 +188,6 @@ p {
   }
 }
 
-.block-donate {
-  background: $color-donate;
-  padding: 0 0 40px;
-
-  p a {
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  a.donate-cta {
-    color: $white;
-    white-space: nowrap;
-    margin-left: -26px;
-
-    &:after {
-      background: $white;
-    }
-
-    &:hover,
-    &:focus {
-      color: $white;
-
-      &:after {
-        background: $white;
-      }
-    }
-  }
-
-  .actions {
-    text-align: left;
-
-    @include breakpoint(medium) {
-      text-align: center;
-    }
-
-    a.donate-cta {
-      @include breakpoint(medium) {
-        margin: 0;
-      }
-    }
-  }
-}
-
 .block-details {
   .actions {
     margin: 0;

@@ -83,9 +83,6 @@ var cssTasks = function(filename) {
       return gulpif(!enabled.failStyleTask, plumber());
     })
     .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.init());
-    })
-    .pipe(function() {
       return gulpif('*.less', less());
     })
     .pipe(function() {
@@ -114,11 +111,6 @@ var cssTasks = function(filename) {
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
-    })
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.write('.', {
-        sourceRoot: 'assets/styles/'
-      }));
     })();
 };
 

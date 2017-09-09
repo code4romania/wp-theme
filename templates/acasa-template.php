@@ -1,10 +1,10 @@
 <?php /* Template Name: Acasa */?>
 
-<section class="block block-hero block-hello wrap container">
+<section class="block block-hello container">
   <div class="hero">
     <div class="hero-content content row">
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <h1>
+        <h1 class="title">
           <?php the_field('mission_titlu_part_1'); ?><br/>
           <?php the_field('mission_titlu_part_2'); ?>
         </h1>
@@ -24,10 +24,12 @@
   </div>
 </section>
 
-<section class="block block-hero block-inverted wrap container">
+<section class="block block-inverted container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-12 columns"><?php the_field('what_we_work_title'); ?></h1>
+      <div class="small-12 columns">
+        <h1 class="title"><?php the_field('what_we_work_title'); ?></h1>
+      </div>
       <div class="small-offset-1 small-10 medium-offset-6 medium-6 columns hero-description">
         <?php the_field('what_we_work_content'); ?>
       </div>
@@ -94,12 +96,12 @@
   </div>
 </section>
 
-<section class="block block-hero block-activity wrap container">
+<section class="block block-activity container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php the_field('implica-te_titlu'); ?>
-      </h1>
+      <div class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
+        <h1 class="title"><?php the_field('implica-te_titlu'); ?></h1>
+      </div>
       <div class="small-offset-1 small-10 medium-7 large-4 columns">
         <?php the_field('implica-te_continut'); ?>
         <div class="row activities">

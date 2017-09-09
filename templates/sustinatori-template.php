@@ -1,6 +1,6 @@
 <?php /* Template Name: Sustinatori */ ?>
 
-<section class="block block-content wrap container">
+<section class="block container">
   <div class="hero">
     <div class="hero-content content row">
       <?php while (have_posts()) : the_post(); ?>

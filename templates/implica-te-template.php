@@ -1,6 +1,6 @@
 <?php /* Template Name: Implica-te */ ?>
 
-<section class="block block-hero block-content block-actions wrap container">
+<section class="block container">
   <div class="hero">
     <div class="hero-content content row">
       <?php get_template_part('templates/page', 'header'); ?>
@@ -13,7 +13,7 @@
   </div>
 </section>
 
-<section class="block wrap container">
+<section class="block container">
   <div class="content row" data-equalizer data-equalize-on="small" data-equalize-on-stack="false" data-equalize-by-row="true">
       <?php
         $implicari = get_field("implicari");

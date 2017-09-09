@@ -1,11 +1,11 @@
 <?php /* Template Name: Cum lucram */ ?>
 
-<section class="block block-hero block-content wrap container">
+<section class="block container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
-        <?php the_title(); ?>
-      </h1>
+      <div class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
+        <h1 class="title"><?php the_title(); ?></h1>
+      </div>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <ol class="steps">
           <?php

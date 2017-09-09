@@ -1,5 +1,8 @@
 .button {
-  color: $black;
+  color: $white;
+  font-weight: 700;
+  font-size: 16px;
+
 
   &.hollow {
     border-color: $black;

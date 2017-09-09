@@ -37,6 +37,7 @@ body {
 
 h1 {
   color: $color-primary;
+  line-height: 1.1;
 }
 
 h2 {
@@ -71,9 +72,8 @@ p {
     padding: 40px 0 90px;
   }
 
-  h1 {
+  .title {
     color: $white;
-    text-align: center;
   }
 
   .content {
@@ -84,13 +84,6 @@ p {
       @include breakpoint(medium) {
         text-align: left;
       }
-    }
-  }
-
-  .hero-content {
-    h1 {
-      margin-bottom: 30px;
-      margin-top: 0;
     }
   }
 
@@ -113,19 +106,6 @@ p {
 }
 
 .block-activity {
-  .hero-content {
-    h1 {
-      @include breakpoint(medium) {
-        margin-top: 0;
-      }
-
-      @include breakpoint(large) {
-        margin-top: 30px;
-        margin-bottom: 60px;
-      }
-    }
-  }
-
   .hero-media {
     @include breakpoint(medium) {
       left: 70%;

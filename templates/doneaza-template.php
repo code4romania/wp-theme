@@ -1,11 +1,11 @@
 <?php /* Template Name: Doneaza */?>
 
-<section class="block block-hero block-donate wrap container">
+<section class="block block-donate container">
   <div class="hero">
     <div class="hero-content content row">
       <div class="small-12 medium-10 large-offset-1 large-8 columns">
         <div class="donate-form">
-          <h1>Donează online</h1>
+          <h1 class="title">Donează online</h1>
           <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
           <ol class="donate-steps">
             <li>
@@ -51,7 +51,7 @@
                   <input type="text" name="first-name" placeholder="Adresa ta de e-mail">
                 </div>
                 <div class="small-12 medium-4 columns">
-                  <button class="button primary">Doneaza</button>
+                  <button class="button success">Donează</button>
                 </div>
               </div>
             </li>
@@ -62,7 +62,7 @@
   </div>
 </section>
 
-<section class="block block-hero block-content wrap container">
+<section class="block container">
   <div class="hero-content content row">
 
     <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">

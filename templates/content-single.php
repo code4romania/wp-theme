@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-<section class="block block-content block-single wrap container">
+<section class="block block-content block-single container">
   <article class="hero">
     <div class="hero-content content row">
       <header class="small-offset-1 small-10 medium-offset-2 medium-8 columns">

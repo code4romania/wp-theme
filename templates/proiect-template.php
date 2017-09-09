@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
 
-<section class="block block-hero block-content block-project wrap container">
+<section class="block block-project container">
   <div class="hero">
     <div class="hero-content content row">
       <?php
@@ -73,7 +73,7 @@
   </div>
 </section>
 
-<section class="block block-content block-progress wrap container">
+<section class="block block-progress container">
   <div class="content row">
     <div class="small-12 medium-offset-1 medium-10 columns">
       <div class="row">
@@ -165,7 +165,7 @@
   </div>
 </section>
 
-<section class="block block-content block-details wrap container">
+<section class="block block-details container">
   <div class="hero-content content row">
     <div class="small-offset-1 small-10 columns">
       <h1><?php the_field('echipa_titlu'); ?></h1>
@@ -205,7 +205,7 @@
 </section>
 
 <?php if(get_field('parteneri', $post->ID)) { ?>
-<section class="block block-content block-details wrap container">
+<section class="block block-details container">
   <div class="hero-content content row">
     <div class="small-offset-1 small-10 columns">
       <h1>Parteneri</h1>

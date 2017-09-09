@@ -1,10 +1,12 @@
 <?php /* Template Name: Proiecte */ ?>
 
 
-<section class="block block-hero block-content block-actions wrap container">
+<section class="block container">
   <div class="hero">
     <div class="hero-content content row">
-      <h1 class="small-offset-1 small-10 medium-offset-0 medium-12 columns"><?php echo the_title(); ?></h1>
+      <div class="small-offset-1 small-10 medium-offset-0 medium-12 columns">
+        <h1 class="title"><?php echo the_title(); ?></h1>
+      </div>
       <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
         <?php the_field('proiecte_hero'); ?>
       </div>
@@ -19,7 +21,7 @@
   </div>
 </section>
 
-<section class="block block-content wrap container">
+<section class="block container">
   <div class="content row">
 
     <?php

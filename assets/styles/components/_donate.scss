@@ -127,6 +127,12 @@
   }
 }
 
+.donate-fields {
+  .button {
+    width: 100%;
+  }
+}
+
 .block-donate {
   background: rgba(lighten($color-donate, 10), .8);
   padding: 0 0 40px;

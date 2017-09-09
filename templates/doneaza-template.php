@@ -42,6 +42,18 @@
             </li>
             <li>
               <span class="donate-no">2.</span>
+              <p class="donate-copy">Some smart copy about keeping it legal?</p>
+              <div class="donate-fields row">
+                <div class="small-12 columns">
+                  <input type="text" name="first-name" placeholder="Numele tau complet">
+                </div>
+                <div class="small-12 medium-8 columns">
+                  <input type="text" name="first-name" placeholder="Adresa ta de e-mail">
+                </div>
+                <div class="small-12 medium-4 columns">
+                  <button class="button primary">Doneaza</button>
+                </div>
+              </div>
             </li>
           </ol>
         </div>

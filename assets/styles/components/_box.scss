@@ -1,0 +1,17 @@
+.box {
+  border: 1px dotted $color-primary;
+  margin-bottom: 40px;
+  padding: 15px;
+
+  @include breakpoint(medium) {
+    padding: 20px;
+  }
+
+  &.is-donate {
+    border-color: $color-donate;
+
+    .title {
+      color: $color-donate;
+    }
+  }
+}

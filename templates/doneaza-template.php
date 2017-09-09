@@ -5,8 +5,8 @@
     <div class="hero-content content row">
       <div class="small-12 medium-11 large-8 columns">
         <div class="donate-form">
-          <h1 class="title">Donează online</h1>
-          <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+          <h1 class="title"><?php get_template_part('templates/page', 'header'); ?></h1>
+          <p><?php the_field('doneaza_hero'); ?></p>
           <ol class="donate-steps">
             <li>
               <span class="donate-no">1.</span>
@@ -54,7 +54,11 @@
                   <button class="button success">Donează</button>
                 </div>
               </div>
-              <p class="donate-help">Ceva gen: Vei fi redirectionat catre Mobipay pentru finalizarea tranzactiei indata ce dai click click.</p>
+            </li>
+            <li>
+              <span class="donate-no">3.</span>
+              <p class="donate-copy">Ceva gen: Vei fi redirectionat catre Mobipay pentru finalizarea tranzactiei indata ce dai click click.
+              </p>
             </li>
           </ol>
         </div>
@@ -63,44 +67,43 @@
   </div>
 </section>
 
-<section class="block container">
-  <div class="hero-content content row">
-
-    <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-
-      <div class="donate row">
-
-        <?php get_template_part('templates/page', 'header'); ?>
-
-        <div class="small-12 columns">
-          <?php the_field('doneaza_hero'); ?>
+<section class="block block-boxes container">
+  <div class="row">
+    <div class="small-12 medium-12 large-6 columns">
+      <div class="box is-donate">
+        <!-- TODO: add all additional options and layout styles -->
+        <h2 class="title">Donează altfel</h2>
+        <div class="donate-option">
+          <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" class="button large underline donate-cta" target="_blank">
+            <!-- <img src="<?php the_field('doneaza_call_to_action_icon'); ?>" alt="<?php the_field('doneaza_call_to_action_string'); ?>" class="button-ui" aria-hidden="true"> -->
+            <?php the_field('doneaza_call_to_action_string'); ?>
+          </a>
         </div>
-
-        <div class="small-12 columns dontate-intro">
-          <?php the_field('doneaza_intro'); ?>
-        </div>
-
-        <div class="small-12 large-6 columns">
-          <div class="donate-option">
-            <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" class="button large underline donate-cta" target="_blank">
-              <img src="<?php the_field('doneaza_call_to_action_icon'); ?>" alt="<?php the_field('doneaza_call_to_action_string'); ?>" class="button-ui" aria-hidden="true">
-              <?php the_field('doneaza_call_to_action_string'); ?>
-            </a>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="dontate-cta">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="U4QBTHU9J5HUS">
-              <input type="image" src="<?php the_field('doneaza_secondary_image'); ?>" name="submit" alt="Doneaza prin PayPal" class="img-button">
-              <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-            <div class="donate-info">
-              <?php the_field('doneaza_secondary_content'); ?>
-            </div>
+        <div class="donate-option">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="dontate-cta">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="U4QBTHU9J5HUS">
+            <input type="image" src="<?php the_field('doneaza_secondary_image'); ?>" name="submit" alt="Doneaza prin PayPal" class="img-button">
+            <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+          <div class="donate-info">
+            <?php the_field('doneaza_secondary_content'); ?>
           </div>
         </div>
-        <div class="small-12 large-6 columns banks">
-          <h2><?php the_field('doneaza_tertiary_title'); ?></h2>
-          <div class="donate-content">
+      </div>
+    </div>
+    <div class="small-12 medium-12 large-6 columns">
+      <div class="row">
+        <div class="small-12 medium-6 large-12 columns">
+          <div class="box is-donate">
+            <h2 class="title"><?php the_field('doneaza_tertiary_title'); ?></h2>
             <?php the_field('doneaza_tertiary_content'); ?>
+          </div>
+        </div>
+        <div class="small-12 medium-6 large-12 columns">
+          <div class="box is-donate">
+            <h2 class="title">Te-ai gandit la alte metode?</h2>
+            <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
           </div>
         </div>
       </div>

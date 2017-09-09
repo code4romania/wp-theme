@@ -168,12 +168,6 @@
 .block-donate {
   background: rgba(lighten($color-donate, 10), .8);
   padding: 0 0 40px;
-  margin-bottom: 0;
-
-  p a {
-    color: #fff;
-    text-decoration: underline;
-  }
 
   a.donate-cta {
     color: $white;
@@ -225,35 +219,12 @@
 }
 
 .donate-option {
-  margin: 0 0 60px;
-
-  @include breakpoint(large) {
-    margin-top: -17px;
-  }
-
   > img {
     height: 30px;
   }
 
   .img-button {
     height: 70px;
-    margin-left: -26px;
-  }
-}
-
-.donate-cta {
-  margin: 0 0 0 -26px;
-  position: relative;
-
-  .button-ui {
-    display: none;
-
-    @include breakpoint(medium) {
-      width: 32px;
-      position: absolute;
-      left: -17px;
-      display: inline-block;
-    }
   }
 }
 

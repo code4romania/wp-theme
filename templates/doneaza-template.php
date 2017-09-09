@@ -9,11 +9,39 @@
           <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
           <ol class="donate-steps">
             <li>
-              <span class="donate-no">1</span>
+              <span class="donate-no">1.</span>
               <p class="donate-copy">Cu <span class="js-donate-value">50</span> lei ne luam una alta, nu foarte mult.</p>
+              <div class="row">
+                <div class="small-6 medium-3 columns">
+                  <div class="input-donate">
+                    <input type="radio" name="donate-value" value="25" id="pokemonRed">
+                    <label for="pokemonRed">25 lei</label>
+                  </div>
+                </div>
+                <div class="small-6 medium-3 columns">
+                  <div class="input-donate">
+                    <input type="radio" name="donate-value" value="50" id="pokemonBlue">
+                    <label for="pokemonBlue">50 lei</label>
+                  </div>
+                </div>
+                <div class="small-6 medium-3 columns">
+                  <div class="input-donate">
+                    <input type="radio" name="donate-value" value="100" id="pokemonYellow">
+                    <label for="pokemonYellow">100 lei</label>
+                  </div>
+                </div>
+                <div class="small-6 medium-3 columns">
+                  <div class="input-donate is-custom">
+                    <!-- TODO: fix max & min length attributes, something fishy -->
+                    <!-- TODO: add behavior js for focusing between these values -->
+                    <input type="number" name="donate-value" placeholder="2" id="pokemonGreen" min="1" max="10000" maxlength="5">
+                    <label for="pokemonGreen">lei</label>
+                  </div>
+                </div>
+              </div>
             </li>
             <li>
-              <span class="donate-no">2</span>
+              <span class="donate-no">2.</span>
             </li>
           </ol>
         </div>

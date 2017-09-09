@@ -43,74 +43,70 @@
   }
 
   p {
-    font-weight: 400;
-    font-size: 16px;
-    margin-top: 15px;
-    margin-bottom: 16px;
+    // font-weight: 400;
+    // font-size: 16px;
+    // margin-top: 15px;
+    // margin-bottom: 16px;
 
-    &.thanks {
-      font-size: 18px;
+    // &.thanks {
+    //   // font-size: 18px;
 
-      @include breakpoint(medium) {
-        text-align: center;
-      }
-    }
+    //   @include breakpoint(medium) {
+    //     text-align: center;
+    //   }
+    // }
 
-    .block-activity &,
-    .block-content & {
-      color: $black;
-    }
+    // .block-activity &,
+    // .block-content & {
+    //   color: $black;
+    // }
 
-    .block-text & {
-      @include breakpoint(medium) {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
+    // .block-text & {
+    //   @include breakpoint(medium) {
+    //     margin-top: 20px;
+    //     margin-bottom: 20px;
+    //   }
 
-      @include breakpoint(large) {
-        margin-top: 40px;
-        margin-bottom: 40px;
-      }
-    }
+    //   @include breakpoint(large) {
+    //     margin-top: 40px;
+    //     margin-bottom: 40px;
+    //   }
+    // }
 
-    .block-project & {
-      // color: $white;
+    // .block-project & {
+    //   // color: $white;
 
-      a {
-        // color: $white;
-        text-decoration: underline;
+    //   a {
+    //     // color: $white;
+    //     text-decoration: underline;
 
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
+    //     &:hover {
+    //       text-decoration: none;
+    //     }
+    //   }
+    // }
 
-    .block-inverted &,
-    .block-inverted.block-activity &,
-    .block-inverted.block-content & {
-      color: $white;
-    }
+    // .block-inverted &,
+    // .block-inverted.block-activity &,
+    // .block-inverted.block-content & {
+    //   color: $white;
+    // }
 
-    .block-inverted & {
-      text-align: left;
-    }
+    // .block-inverted & {
+    //   // text-align: left;
+    // }
 
-    .block-identity & {
-      @include breakpoint(medium) {
-        margin-top: 15px;
-        margin-bottom: 16px;
-      }
+    // .block-identity & {
+    //   @include breakpoint(medium) {
+    //     margin-top: 15px;
+    //     margin-bottom: 16px;
+    //   }
 
-      @include breakpoint(large) {
-        margin-top: 15px;
-        margin-bottom: 16px;
-      }
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    //   @include breakpoint(large) {
+    //     margin-top: 15px;
+    //     margin-bottom: 16px;
+    //   }
+    // }
   }
 }
 

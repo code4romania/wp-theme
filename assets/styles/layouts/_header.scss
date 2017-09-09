@@ -66,8 +66,7 @@ li.menu-item {
     @include underline;
     color: $color-primary;
     letter-spacing: 1px;
-    padding: 8px 10px;
-
+    padding: 8px 10px 9px;
     width: 100%;
 
     &:hover {
@@ -89,16 +88,6 @@ li.menu-item {
         right: 10px;
         left: 10px;
       }
-
-      @include breakpoint(large) {
-        // bottom: 12px;
-        // right: 16px;
-        // left: 16px;
-      }
-    }
-
-    @include breakpoint(medium) {
-      padding: 8px 10px;
     }
   }
 

@@ -7,6 +7,10 @@
     padding: 40px 30px;
   }
 
+  @include breakpoint(large) {
+    padding: 40px 60px;
+  }
+
   .title {
     color: $color-donate;
   }
@@ -126,6 +130,12 @@
 }
 
 .donate-fields {
+  margin-bottom: 20px;
+
+  @include breakpoint(medium) {
+    margin: 0;
+  }
+
   .button {
     width: 100%;
     margin: 0;
@@ -148,6 +158,11 @@
       font-size: 20px;
     }
   }
+}
+
+.donate-help {
+  font-size: 14px;
+  margin: 0;
 }
 
 .block-donate {

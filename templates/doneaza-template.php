@@ -3,7 +3,7 @@
 <section class="block block-donate container">
   <div class="hero">
     <div class="hero-content content row">
-      <div class="small-12 medium-10 large-offset-1 large-8 columns">
+      <div class="small-12 medium-11 large-8 columns">
         <div class="donate-form">
           <h1 class="title">Donează online</h1>
           <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
@@ -54,6 +54,7 @@
                   <button class="button success">Donează</button>
                 </div>
               </div>
+              <p class="donate-help">Ceva gen: Vei fi redirectionat catre Mobipay pentru finalizarea tranzactiei indata ce dai click click.</p>
             </li>
           </ol>
         </div>

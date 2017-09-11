@@ -25,13 +25,13 @@
   li {
     margin: 0;
     position: relative;
-    padding: 16px 20px 0 40px;
+    padding: 12px 20px 0 40px;
   }
 }
 
 .donate-no {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 700;
   display: block;
   position: absolute;
   top: 0;
@@ -168,39 +168,6 @@
 .block-donate {
   background: rgba(lighten($color-donate, 10), .8);
   padding: 0 0 40px;
-
-  a.donate-cta {
-    color: $white;
-    white-space: nowrap;
-    margin-left: -26px;
-
-    &:after {
-      background: $white;
-    }
-
-    &:hover,
-    &:focus {
-      color: $white;
-
-      &:after {
-        background: $white;
-      }
-    }
-  }
-
-  .actions {
-    text-align: left;
-
-    @include breakpoint(medium) {
-      text-align: center;
-    }
-
-    a.donate-cta {
-      @include breakpoint(medium) {
-        margin: 0;
-      }
-    }
-  }
 }
 
 .donate {
@@ -213,9 +180,13 @@
 }
 
 .donate-copy {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 1.4;
+
+  &:last-child {
+    margin: 0;
+  }
 }
 
 .donate-option {

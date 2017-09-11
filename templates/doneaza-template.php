@@ -5,8 +5,11 @@
     <div class="hero-content content row">
       <div class="small-12 medium-11 large-8 columns">
         <div class="donate-form">
-          <h1 class="title"><?php get_template_part('templates/page', 'header'); ?></h1>
-          <p><?php the_field('doneaza_hero'); ?></p>
+
+          <h1 class="title"><?php the_title(); ?></h1>
+
+          <?php the_field('doneaza_hero'); ?>
+
           <ol class="donate-steps">
             <li>
               <span class="donate-no">1.</span>
@@ -39,6 +42,10 @@
                   </div>
                 </div>
               </div>
+              <div class="donate-recurrent">
+                <input type="checkbox" name="donate-recurrent" id="pokemonPink">
+                <label for="pokemonPink">Vreau sa va ajut in fiecare luna.</label>
+              </div>
             </li>
             <li>
               <span class="donate-no">2.</span>
@@ -61,6 +68,7 @@
               </p>
             </li>
           </ol>
+
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@
             <li>
               <span class="donate-no">1.</span>
               <p class="donate-copy">Cu <span class="js-donate-value">50</span> lei ne luam una alta, nu foarte mult.</p>
-              <div class="row">
+              <div class="row donate-values">
                 <div class="small-6 medium-3 columns">
                   <div class="input-donate">
                     <input type="radio" name="donate-value" value="25" id="pokemonRed">

@@ -2,11 +2,11 @@
   <div class="title-bar clearfix">
     <div class="content row">
       <div class="small-12 columns">
-        <a class="brancusi hide-for-large hide-for-xlarge" href="<?= esc_url(home_url('/')); ?>">
+        <a class="brancusi show-for-small hide-for-medium" href="<?= esc_url(home_url('/')); ?>">
           <img src="<?php bloginfo('template_url'); ?>/dist/images/brand-brancusi.png" alt="Brancusi">
         </a>
 
-        <a class="brand show-for-large show-for-xlarge" href="<?= esc_url(home_url('/')); ?>">
+        <a class="brand show-for-medium" href="<?= esc_url(home_url('/')); ?>">
           <img src="<?php bloginfo('template_url'); ?>/dist/images/brand-logotype.png" alt="<?php bloginfo('name'); ?>">
         </a>
 

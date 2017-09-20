@@ -25,7 +25,7 @@
   li {
     margin: 0;
     position: relative;
-    padding: 12px 20px 0 40px;
+    padding: 12px 20px 10px 40px;
   }
 }
 
@@ -210,6 +210,25 @@
 
 .dontate-intro {
   margin-bottom: 30px;
+}
+
+.donate-values {
+  .input-donate {
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.donate-recurrent {
+  @include breakpoint(medium) {
+    margin-top: 10px;
+  }
+
+  label {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
 
 .donate-action {

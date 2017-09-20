@@ -38,10 +38,11 @@
 
 .brand {
   display: inline-block;
-  height: 40px;
+  height: 36px;
   width: auto;
 
   @include breakpoint(large) {
+    height: 42px;
     margin: 4px 0 0;
   }
 

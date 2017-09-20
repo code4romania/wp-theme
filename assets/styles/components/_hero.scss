@@ -31,8 +31,7 @@
   }
 
   p {
-    .block-hello &,
-    .block-donate & {
+    .block-hello & {
       @include breakpoint(medium) {
         font-size: 18px;
       }

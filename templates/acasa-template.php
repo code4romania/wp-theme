@@ -3,7 +3,7 @@
 <section class="block block-hello container">
   <div class="hero">
     <div class="hero-content content row">
-      <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
+      <div class="small-offset-1 small-10 medium-offset-0 medium-7 columns">
         <h1 class="title">
           <?php the_field('mission_titlu_part_1'); ?><br/>
           <?php the_field('mission_titlu_part_2'); ?>

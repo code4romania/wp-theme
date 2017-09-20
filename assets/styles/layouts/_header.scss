@@ -171,7 +171,8 @@ html[lang="en-US"] {
 
 .title-bar {
   @include breakpoint(large) {
-    padding: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
 }
 

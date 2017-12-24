@@ -1,0 +1,195 @@
+.donate-hero {
+  background: $white;
+  padding: 20px;
+  margin: 0;
+  font-size: 18px;
+
+  @include breakpoint(medium) {
+    margin-top: 40px;
+    padding: 40px;
+  }
+
+  @include breakpoint(large) {
+    padding: 40px;
+  }
+
+  h1 {
+    color: $color-donate;
+  }
+
+  .media-object {
+    .media-object-section:last-child {
+      width: 100%;
+    }
+  }
+}
+
+.donate-copy {
+  margin-bottom: 40px;
+}
+
+.donate-count {
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  width: 20px;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    width: 40px;
+  }
+
+  @include breakpoint(large) {
+    font-size: 32px;
+  }
+}
+
+.donate-label {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+
+.donate-input-custom {
+  white-space: nowrap;
+
+  [type='text'] {
+    max-width: 80px;
+    display: inline-block;
+  }
+}
+
+.donate-label-after {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-donate;
+
+  @include breakpoint(large) {
+    font-size: 22px;
+  }
+}
+
+.donate-step {
+  margin: 0 0 20px;
+
+  @include breakpoint(large) {
+    margin: 0 0 40px;
+  }
+}
+
+.donate-options {
+  .columns {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.donate-option {
+  margin: 0 0 20px;
+
+  @include breakpoint(medium) {
+    margin: 0;
+  }
+
+  [type='radio'] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+
+    + label {
+      border: 1px solid $color-donate;
+      display: block;
+      margin: 0;
+      padding: 0;
+      background: $white;
+      color: $color-donate;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+
+      @include breakpoint(large) {
+        font-size: 22px;
+        line-height: 60px;
+      }
+    }
+
+    &:checked {
+      + label {
+        color: $white;
+        background: $color-donate;
+      }
+    }
+  }
+
+  [type='text'] {
+    border: 1px solid $color-donate;
+    box-shadow: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-donate;
+    margin: 0;
+    height: 40px;
+
+    @include breakpoint(large) {
+      font-size: 22px;
+      height: 60px;
+    }
+
+    &:focus,
+    &.has-value {
+      box-shadow: none;
+      background: $color-donate;
+      color: $white;
+    }
+  }
+}
+
+.donate-recurrent {
+  margin: -10px 0 0;
+
+  @include breakpoint(medium) {
+    margin: 10px 0 0;
+  }
+
+  [type='checkbox'] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+
+    + label {
+      font-size: 16px;
+      position: relative;
+      line-height: 20px;
+      padding-left: 30px;
+      margin: 0;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        font-family: FontAwesome;
+        font-size: 12px;
+        text-align: center;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: $white;
+        border: 1px solid $color-donate;
+      }
+    }
+
+    &:checked {
+      + label {
+        &::before {
+          content: '\f00c';
+          background: $color-donate;
+          color: $white;
+        }
+      }
+    }
+  }
+
+}

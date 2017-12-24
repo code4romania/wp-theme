@@ -3,8 +3,8 @@ $color-primary: #00f;
 $color-primary-faded: lighten(rgba($color-primary, .5), .3);
 
 $color-complete: $color-primary;
-$color-wip: #5fe29c;
-$color-donate: darken($color-wip, 20);
+$color-green: #5fe29c;
+$color-donate: darken($color-green, 20);
 $color-need: #e84e56;
 $color-option: #039bf5; //change
 

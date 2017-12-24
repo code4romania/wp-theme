@@ -17,11 +17,11 @@
 }
 
 .proiecte_in_desfasurare-class {
-  color: $color-wip;
+  color: $color-green;
 
   &.status {
     .block-project & {
-      background: $color-wip;
+      background: $color-green;
     }
   }
 }

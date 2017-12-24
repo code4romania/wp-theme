@@ -2,19 +2,73 @@
 
 <section class="block block-hero block-content block-donate wrap container">
   <div class="hero">
-    <div class="hero-content content row">
+    <div class="content row">
+      <div class="small-12 medium-offset-1 medium-10 large-8">
+        <div class="donate-hero">
+          <h1><?php echo the_title(); ?></h1>
+          <p class="donate-copy">Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+          <div class="donate-form">
+            <div class="donate-step">
+              <div class="media-object">
+                <div class="media-object-section">
+                  <span class="donate-count">1</span>
+                </div>
+                <div class="media-object-section">
+                  <div>
+                    <div class="donate-label js-label-donate" data-value="50">Cu 50 lei ne luam una alta, nu foarte mult.</div>
+                    <div class="donate-options row">
+                      <div class="small-6 medium-3 columns">
+                        <div class="donate-option">
+                          <input type="radio" name="donate-value" value="20" id="donate-value-20" >
+                          <label for="donate-value-20">20 lei</label>
+                        </div>
+                      </div>
+                      <div class="small-6 medium-3 columns">
+                        <div class="donate-option">
+                          <input type="radio" name="donate-value" value="50" id="donate-value-50" checked >
+                          <label for="donate-value-50">50 lei</label>
+                        </div>
+                      </div>
+                      <div class="small-6 medium-3 columns">
+                        <div class="donate-option">
+                          <input type="radio" name="donate-value" value="100" id="donate-value-100" >
+                          <label for="donate-value-100">100 lei</label>
+                        </div>
+                      </div>
+                      <div class="small-6 medium-3 columns">
+                        <div class="donate-option">
+                          <label class="donate-input-custom">
+                            <input type="text" class="js-donate-value-custom" name="donate-value" id="donate-value-custom" placeholder="...">
+                            <span class="donate-label-after">lei</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="small-12 columns">
+                        <div class="donate-recurrent">
+                          <input id="donate-monthly-recurrence" type="checkbox" checked >
+                          <label for="donate-monthly-recurrence">Vreau sa va ajut in fiecare luna.</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="donate-step">
+              <div class="media-object">
+                <div class="media-object-section">
+                  <span class="donate-count">2</span>
+                </div>
+                <div class="media-object-section">
+                  <div>
+                    <div class="donate-label js-label-donate" data-value="50"> By coming together, we can solve the challenges we face today. If you want to contribute with your resources.</div>
 
-      <?php get_template_part('templates/page', 'header'); ?>
-
-      <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
-        <?php the_field('doneaza_hero'); ?>
-      </div>
-
-      <div class="small-offset-1 small-10 columns actions">
-        <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" class="button large underline donate-cta" target="_blank">
-          <img src="<?php the_field('doneaza_call_to_action_icon'); ?>" alt="<?php the_field('doneaza_call_to_action_string'); ?>" class="button-ui" aria-hidden="true">
-          <?php the_field('doneaza_call_to_action_string'); ?>
-        </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -31,7 +85,7 @@
         </div>
 
         <div class="small-12 large-6 columns">
-          <div class="donate-option">
+          <div class="">
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="dontate-cta">
               <input type="hidden" name="cmd" value="_s-xclick">
               <input type="hidden" name="hosted_button_id" value="U4QBTHU9J5HUS">
@@ -48,6 +102,10 @@
           <div class="donate-content">
             <?php the_field('doneaza_tertiary_content'); ?>
           </div>
+          <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" class="button large underline donate-cta" target="_blank">
+            <img src="<?php the_field('doneaza_call_to_action_icon'); ?>" alt="<?php the_field('doneaza_call_to_action_string'); ?>" class="button-ui" aria-hidden="true">
+            <?php the_field('doneaza_call_to_action_string'); ?>
+          </a>
         </div>
       </div>
     </div>

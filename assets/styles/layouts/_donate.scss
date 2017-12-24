@@ -1,3 +1,11 @@
+.block-donate {
+  background: $color-donate;
+
+  @include breakpoint(medium) {
+    padding: 0 0 40px;
+  }
+}
+
 .donate-hero {
   background: $white;
   padding: 20px;
@@ -30,7 +38,6 @@
 
 .donate-count {
   font-size: 22px;
-  font-weight: 700;
   display: block;
   width: 20px;
   text-align: center;
@@ -38,14 +45,10 @@
   @include breakpoint(medium) {
     width: 40px;
   }
-
-  @include breakpoint(large) {
-    font-size: 32px;
-  }
 }
 
 .donate-label {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 0 20px 0;
 }
 
@@ -71,14 +74,23 @@
 }
 
 .donate-step {
-  margin: 0 0 20px;
+  margin: 0 0 30px;
+
+  &:last-child {
+    margin: 0;
+  }
 
   @include breakpoint(large) {
     margin: 0 0 40px;
   }
-}
 
-.donate-options {
+  .row {
+    @include breakpoint(medium) {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
   .columns {
     padding-left: 10px;
     padding-right: 10px;
@@ -106,12 +118,12 @@
       color: $color-donate;
       font-size: 18px;
       font-weight: 700;
-      line-height: 40px;
+      line-height: 38px;
       text-align: center;
 
       @include breakpoint(large) {
         font-size: 22px;
-        line-height: 60px;
+        line-height: 58px;
       }
     }
 
@@ -191,5 +203,62 @@
       }
     }
   }
+}
 
+.donate-person {
+  [type='text'],
+  [type='email'] {
+    border: 1px solid $color-donate;
+    box-shadow: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color: $color-donate;
+
+    @include breakpoint(large) {
+      height: 60px;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.donate-button {
+  background: $color-donate;
+  color: $white;
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+
+  &:hover {
+    background: darken($color-donate, 10);
+  }
+
+  @include breakpoint(large) {
+    font-size: 22px;
+    height: 60px;
+  }
+}
+
+.donate-secure {
+  position: relative;
+  padding: 0 0 0 30px;
+  margin: 20px 0 0;
+
+
+  @include breakpoint(medium) {
+    margin: 0;
+    max-width: 70%;
+  }
+
+  .fa {
+    color: $color-donate;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    font-size: 22px;
+  }
 }

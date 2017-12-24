@@ -37,6 +37,11 @@ body {
 
 h1 {
   color: $color-primary;
+  line-height: 0.9;
+
+  @include breakpoint(medium) {
+    margin: 0 0 15px;
+  }
 }
 
 h2 {
@@ -188,48 +193,48 @@ p {
   }
 }
 
-.block-donate {
-  background: $color-donate;
-  padding: 0 0 40px;
+// .block-donate {
+//   background: $color-donate;
+//   padding: 0 0 40px;
 
-  p a {
-    color: #fff;
-    text-decoration: underline;
-  }
+//   p a {
+//     color: #fff;
+//     text-decoration: underline;
+//   }
 
-  a.donate-cta {
-    color: $white;
-    white-space: nowrap;
-    margin-left: -26px;
+//   a.donate-cta {
+//     color: $white;
+//     white-space: nowrap;
+//     margin-left: -26px;
 
-    &:after {
-      background: $white;
-    }
+//     &:after {
+//       background: $white;
+//     }
 
-    &:hover,
-    &:focus {
-      color: $white;
+//     &:hover,
+//     &:focus {
+//       color: $white;
 
-      &:after {
-        background: $white;
-      }
-    }
-  }
+//       &:after {
+//         background: $white;
+//       }
+//     }
+//   }
 
-  .actions {
-    text-align: left;
+//   .actions {
+//     text-align: left;
 
-    @include breakpoint(medium) {
-      text-align: center;
-    }
+//     @include breakpoint(medium) {
+//       text-align: center;
+//     }
 
-    a.donate-cta {
-      @include breakpoint(medium) {
-        margin: 0;
-      }
-    }
-  }
-}
+//     a.donate-cta {
+//       @include breakpoint(medium) {
+//         margin: 0;
+//       }
+//     }
+//   }
+// }
 
 .block-details {
   .actions {

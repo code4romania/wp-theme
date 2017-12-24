@@ -3,7 +3,7 @@
 <section class="block block-hero block-content block-donate wrap container">
   <div class="hero">
     <div class="content row">
-      <div class="small-12 medium-offset-1 medium-10 large-8">
+      <div class="small-12 medium-offset-1 medium-10 large-offset-0 large-8">
         <div class="donate-hero">
           <h1><?php echo the_title(); ?></h1>
           <p class="donate-copy">Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
@@ -62,7 +62,24 @@
                 <div class="media-object-section">
                   <div>
                     <div class="donate-label js-label-donate" data-value="50"> By coming together, we can solve the challenges we face today. If you want to contribute with your resources.</div>
-
+                    <div class="row">
+                      <div class="small-12 medium-7 columns">
+                        <div class="donate-person">
+                          <input type="text" name="donate-name" placeholder="Numele tau complet" required>
+                        </div>
+                      </div>
+                      <div class="small-12 medium-7 columns">
+                        <div class="donate-person">
+                          <input type="email" name="donate-email" placeholder="Adresa ta de e-mail" required>
+                        </div>
+                      </div>
+                      <div class="small-12 medium-5 columns">
+                        <button class="button donate-button">Doneaza</button>
+                      </div>
+                    </div>
+                    <p class="donate-secure">
+                      <i class="fa fa-lock"></i>
+                      Ceva gen: Vei fi redirectionat catre Mobipay pentru finalizarea tranzactiei indata ce dai click click.</p>
                   </div>
                 </div>
               </div>
@@ -74,7 +91,7 @@
   </div>
 </section>
 
-<section class="block block-hero block-content wrap container">
+<!-- <section class="block block-hero block-content wrap container">
   <div class="hero-content content row">
 
     <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
@@ -110,4 +127,4 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->

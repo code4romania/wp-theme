@@ -74,7 +74,7 @@
                         </div>
                       </div>
                       <div class="small-12 medium-5 columns">
-                        <button class="button donate-button">Doneaza</button>
+                        <button class="button donate-button">Donează</button>
                       </div>
                     </div>
                     <p class="donate-secure">

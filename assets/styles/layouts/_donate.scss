@@ -18,7 +18,7 @@
   }
 
   @include breakpoint(large) {
-    padding: 40px;
+    padding: 40px 60px 40px 40px;
   }
 
   h1 {
@@ -215,6 +215,7 @@
     font-weight: 700;
     font-size: 18px;
     color: $color-donate;
+    margin: 0 0 20px;
 
     @include breakpoint(large) {
       height: 60px;
@@ -231,15 +232,23 @@
   color: $white;
   margin: 0;
   font-weight: 700;
+  font-size: 18px;
   width: 100%;
 
   &:hover {
     background: darken($color-donate, 10);
   }
 
+  @include breakpoint(medium) {
+    margin-top: -60px;
+    height: 100px;
+    font-size: 24px;
+  }
+
   @include breakpoint(large) {
-    font-size: 22px;
-    height: 60px;
+    height: 140px;
+    margin-top: -80px;
+    font-size: 36px;
   }
 }
 
@@ -248,10 +257,12 @@
   padding: 0 0 0 30px;
   margin: 20px 0 0;
 
-
   @include breakpoint(medium) {
     margin: 0;
-    max-width: 70%;
+  }
+
+  @include breakpoint(large) {
+    max-width: 380px;
   }
 
   .fa {

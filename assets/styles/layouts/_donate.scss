@@ -53,20 +53,17 @@
 }
 
 .donate-input-custom {
-  white-space: nowrap;
-
-  [type='text'] {
-    max-width: 80px;
-    display: inline-block;
-  }
+  position: relative;
 }
 
 .donate-label-after {
-  display: inline-block;
-  margin: 0 0 0 10px;
+  position: absolute;
+  right: .5rem;
+  top: 0;
   font-size: 18px;
   font-weight: 700;
-  color: $color-donate;
+  background: inherit;
+  color: inherit;
 
   @include breakpoint(large) {
     font-size: 22px;
@@ -98,16 +95,16 @@
 }
 
 .donate-option {
-  margin: 0 0 20px;
+  position: relative;
+  margin-bottom: 20px;
 
   @include breakpoint(medium) {
     margin: 0;
   }
 
-  [type='radio'] {
+  .donate-value {
     position: absolute;
-    top: -9999px;
-    left: -9999px;
+    visibility: hidden;
 
     + label {
       border: 1px solid $color-donate;
@@ -135,30 +132,43 @@
     }
   }
 
-  [type='text'] {
-    border: 1px solid $color-donate;
+  [type='number'] {
+    -moz-appearance: textfield;
+    background: inherit;
+    border: none;
     box-shadow: none;
     font-size: 18px;
     font-weight: 700;
-    color: $color-donate;
+    color: inherit;
     margin: 0;
-    height: 40px;
+    height: 38px;
+
+    &::placeholder {
+      border-bottom: 2px dotted $color-donate;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
 
     @include breakpoint(large) {
       font-size: 22px;
-      height: 60px;
+      height: 58px;
     }
 
-    &:focus,
+    /* &:focus,
     &.has-value {
       box-shadow: none;
       background: $color-donate;
       color: $white;
-    }
+    } */
   }
 }
 
 .donate-recurrent {
+  position: relative;
   margin: -10px 0 0;
 
   @include breakpoint(medium) {
@@ -167,8 +177,7 @@
 
   [type='checkbox'] {
     position: absolute;
-    top: -9999px;
-    left: -9999px;
+    visibility: hidden;
 
     + label {
       font-size: 16px;
@@ -259,10 +268,6 @@
 
   @include breakpoint(medium) {
     margin: 0;
-  }
-
-  @include breakpoint(large) {
-    max-width: 380px;
   }
 
   .fa {

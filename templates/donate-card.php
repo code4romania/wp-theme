@@ -2,34 +2,7 @@
   // TODO: Figure out text translations options
   // TODO: Newsletter subscribe integration
   // TODO: Add nonce
-
-  // TODO: fetch from options
-  $currency = [
-    'code' => 'RON',
-    'name' => 'lei',
-  ];
-
-  // TODO: fetch from options
-  $amounts = [
-    [
-      'value'   => 20,
-      'message' => sprintf(__('Lorem ipsum dolor sit amet, %%d %s consectetur adipisicing elit.'), $currency['name']),
-      'checked' => false,
-    ],
-    [
-      'value'   => 50,
-      'message' => sprintf(__('Perferendis labore, expedita minus %%d %s! Veritatis consequatur nesciunt eos facilis.'), $currency['name']),
-      'checked' => true,
-    ],
-    [
-      'value'   => 100,
-      'message' => sprintf(__('Inventore temporibus voluptate impedit quod commodi, officia quam %%d %s, et magnam cupiditate maxime.'), $currency['name']),
-      'checked' => false,
-    ],
-  ];
-
 ?>
-
 <div class="small-12 medium-offset-1 medium-10 large-offset-0 large-8">
   <div class="donate-hero">
     <h1><?php echo the_title(); ?></h1>
@@ -43,24 +16,25 @@
             <span class="donate-count">1</span>
           </div>
           <div class="media-object-section">
-            <div class="donate-label js-label-donate donate-label-amount-text"></div>
+            <div class="donate-label js-label-donate"><?php _e('Lorem ipsum dolor sit amet, consectetur adipisicing elit.'); ?></div>
             <div class="donate-options row">
               <?php
-                foreach ($amounts as $amount) {
+                $donations_config = apply_filters('donations_gateway_get_config');
+
+                foreach ($donations_config['amounts'] as $i => $amount) {
                   printf(
-                    '<div class="donate-option small-4 medium-3 columns" data-label="%3$s">'.
-                    '<input type="radio" name="donate[value]" value="%2$d" id="donate-value-%2$d" class="donate-value"%4$s>'.
+                    '<div class="donate-option small-4 medium-3 columns">'.
+                    '<input type="radio" name="donate[value]" value="%2$d" id="donate-value-%2$d" class="donate-value"%3$s>'.
                     '<label for="donate-value-%2$d">%2$d %1$s</label></div>',
-                    $currency['name'], $amount['value'], esc_attr( sprintf($amount['message'], $amount['value']) ),
-                    checked($amount['checked'], true, false)
+                    $donations_config['currency']['name'], $amount, checked($i, 1, false)
                   );
                 }
               ?>
               <div class="donate-option small-4 small-offset-4 medium-3 columns">
                 <input type="radio" name="donate[value]" value="" id="donate-value-custom" class="donate-value">
                 <label class="donate-input-custom">
-                  <input type="number" class="js-donate-value-custom" step="5" min="10" name="donate[value]" id="donate-value-custom" placeholder=" ">
-                  <span class="donate-label-after">lei</span>
+                  <input type="number" class="js-donate-value-custom" step="1" min="15" name="donate[value]" id="donate-value-custom" placeholder=" ">
+                  <span class="donate-label-after"><?php echo $donations_config['currency']['name']; ?></span>
                 </label>
               </div>
               <div class="donate-recurrent small-12 columns">
@@ -92,7 +66,7 @@
                   </div>
                 </div>
                 <div class="small-12 medium-5 columns">
-
+                  <input name="donate[currency]" type="hidden" value="<?php echo $donations_config['currency']['code']; ?>">
                   <input type="submit" class="button donate-button" value="Donează">
                 </div>
               </div>

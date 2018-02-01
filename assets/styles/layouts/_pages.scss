@@ -917,80 +917,9 @@
 
   h2 {
     color: $color-donate;
-    margin-bottom: 41px;
+    margin-bottom: 20px;
   }
 }
-
-// .donate-option {
-//   margin: 0 0 60px;
-
-//   @include breakpoint(large) {
-//     margin-top: -17px;
-//   }
-
-//   > img {
-//     height: 30px;
-//   }
-
-//   .img-button {
-//     height: 70px;
-//     margin-left: -26px;
-//   }
-// }
-
-// .donate-cta {
-//   margin: 0 0 0 -26px;
-//   position: relative;
-
-//   .button-ui {
-//     display: none;
-
-//     @include breakpoint(medium) {
-//       width: 32px;
-//       position: absolute;
-//       left: -17px;
-//       display: inline-block;
-//     }
-//   }
-// }
-
-// .donate-info {
-//   img {
-//     height: 30px;
-//     width: auto;
-//     margin-bottom: 20px;
-//     display: block;
-//   }
-// }
-
-// .dontate-intro {
-//   margin-bottom: 30px;
-// }
-
-// .donate-action {
-//   .block & {
-//     font-size: 26px;
-//     margin: 0;
-//   }
-
-//   span {
-//     display: inline-block;
-//   }
-
-//   .button {
-//     padding: 0 5px;
-//     margin: 0;
-//     line-height: 1;
-//     display: inline;
-//     top: -3px;
-
-//     &:after {
-//       bottom: -2px;
-//       left: 5px;
-//       right: 5px;
-//     }
-//   }
-// }
 
 .team-top {
   @include breakpoint(medium) {

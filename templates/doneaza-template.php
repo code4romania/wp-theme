@@ -91,40 +91,63 @@
   </div>
 </section>
 
-<!-- <section class="block block-hero block-content wrap container">
-  <div class="hero-content content row">
+<section class="block block-content">
+  <div class="row">
+    <div class="columns small-12 large-6">
+      <div class="boxer is-donate">
+        <h2>Doneaza altfel</h2>
+        <div class="boxer-content">
 
-    <div class="small-offset-1 small-10 medium-offset-2 medium-8 columns">
+          <div class="donate-handler">
+            <div class="donate-handlerTitle clearfix">
+              <div class="donate-handlerLabel pull-left">prin</div>
+              <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" target="_blank" class="donate-handlerAction pull-left">
+                <img src="<?php bloginfo('template_url'); ?>/dist/images/patreon.png" alt="Patreon" />
+              </a>
+            </div>
+            <div class="doante-handlerContent">
+              <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+            </div>
+          </div>
 
-      <div class="donate row">
-        <div class="small-12 columns dontate-intro">
-          <?php the_field('doneaza_intro'); ?>
+          <div class="donate-handler">
+            <div class="donate-handlerTitle clearfix">
+              <div class="donate-handlerLabel pull-left">prin</div>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="donate-handlerAction pull-left">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="U4QBTHU9J5HUS">
+                <input type="image" src="<?php bloginfo('template_url'); ?>/dist/images/paypal.png" name="submit" alt="Doneaza prin PayPal" class="img-button">
+                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </div>
+            <div class="doante-handlerContent">
+              <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+            </div>
+          </div>
+
+          <!-- <?php the_field('doneaza_secondary_content'); ?> -->
         </div>
-
-        <div class="small-12 large-6 columns">
-          <div class="">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="dontate-cta">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="U4QBTHU9J5HUS">
-              <input type="image" src="<?php the_field('doneaza_secondary_image'); ?>" name="submit" alt="Doneaza prin PayPal" class="img-button">
-              <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-            <div class="donate-info">
-              <?php the_field('doneaza_secondary_content'); ?>
+      </div>
+    </div>
+    <div class="columns small-12 large-6">
+      <div class="row">
+        <div class="columns small-12 medium-6 large-12">
+          <div class="boxer is-donate">
+            <h2><?php the_field('doneaza_tertiary_title'); ?></h2>
+            <div class="boxer-content">
+              <?php the_field('doneaza_tertiary_content'); ?>
             </div>
           </div>
         </div>
-        <div class="small-12 large-6 columns banks">
-          <h2><?php the_field('doneaza_tertiary_title'); ?></h2>
-          <div class="donate-content">
-            <?php the_field('doneaza_tertiary_content'); ?>
+        <div class="columns small-12 medium-6 large-12">
+          <div class="boxer is-donate">
+            <h2>Te-ai gandit la alte metode?</h2>
+            <div class="boxer-content">
+              aa
+            </div>
           </div>
-          <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" class="button large underline donate-cta" target="_blank">
-            <img src="<?php the_field('doneaza_call_to_action_icon'); ?>" alt="<?php the_field('doneaza_call_to_action_string'); ?>" class="button-ui" aria-hidden="true">
-            <?php the_field('doneaza_call_to_action_string'); ?>
-          </a>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>

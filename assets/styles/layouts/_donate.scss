@@ -54,6 +54,13 @@
 
 .donate-input-custom {
   position: relative;
+  white-space: nowrap;
+  text-align: center;
+
+  [type='text'] {
+    max-width: 80px;
+    display: inline-block;
+  }
 }
 
 .donate-label-after {

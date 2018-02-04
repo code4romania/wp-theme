@@ -6,7 +6,9 @@
       <div class="small-12 medium-offset-1 medium-10 large-offset-0 large-8">
         <div class="donate-hero">
           <h1><?php echo the_title(); ?></h1>
-          <p class="donate-copy">Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+          <p class="donate-copy">
+            <?php the_field('doneaza_intro'); ?>
+          </p>
           <div class="donate-form">
             <div class="donate-step">
               <div class="media-object">
@@ -15,7 +17,7 @@
                 </div>
                 <div class="media-object-section">
                   <div>
-                    <div class="donate-label js-label-donate" data-value="50">Cu 50 lei ne luam una alta, nu foarte mult.</div>
+                    <div class="donate-label js-label-donate" data-value="50"><?php the_field('doneaza_step_1'); ?></div>
                     <div class="donate-options row">
                       <div class="small-6 medium-3 columns">
                         <div class="donate-option">
@@ -46,7 +48,7 @@
                       <div class="small-12 columns">
                         <div class="donate-recurrent">
                           <input id="donate-monthly-recurrence" type="checkbox" checked >
-                          <label for="donate-monthly-recurrence">Vreau sa va ajut in fiecare luna.</label>
+                          <label for="donate-monthly-recurrence"><?php the_field('doneaza_recurrent'); ?></label>
                         </div>
                       </div>
                     </div>
@@ -61,25 +63,27 @@
                 </div>
                 <div class="media-object-section">
                   <div>
-                    <div class="donate-label js-label-donate" data-value="50"> By coming together, we can solve the challenges we face today. If you want to contribute with your resources.</div>
+                    <div class="donate-label js-label-donate"><?php the_field('doneaza_step_2'); ?></div>
                     <div class="row">
                       <div class="small-12 medium-7 columns">
                         <div class="donate-person">
-                          <input type="text" name="donate-name" placeholder="Numele tau complet" required>
+                          <!-- TODO: placeholders & button texts translatable -->
+                          <input type="text" name="donate-name" placeholder="<?php the_field('doneaza_label_nume'); ?>" required>
                         </div>
                       </div>
                       <div class="small-12 medium-7 columns">
                         <div class="donate-person">
-                          <input type="email" name="donate-email" placeholder="Adresa ta de e-mail" required>
+                          <input type="email" name="donate-email" placeholder="<?php the_field('doneaza_label_e-mail'); ?>" required>
                         </div>
                       </div>
                       <div class="small-12 medium-5 columns">
-                        <button class="button donate-button">Donează</button>
+                        <button class="button donate-button"><?php the_field('doneaza_label_cta'); ?></button>
                       </div>
                     </div>
                     <p class="donate-secure">
                       <i class="fa fa-lock"></i>
-                      Ceva gen: Vei fi redirectionat catre Mobipay pentru finalizarea tranzactiei indata ce dai click click.</p>
+                      <?php the_field('doneaza_security'); ?>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -95,20 +99,8 @@
   <div class="row">
     <div class="columns small-12 large-6">
       <div class="boxer is-donate">
-        <h2>Doneaza altfel</h2>
+        <h2><?php the_field('doneaza_options_title'); ?></h2>
         <div class="boxer-content">
-
-          <div class="donate-handler">
-            <div class="donate-handlerTitle clearfix">
-              <div class="donate-handlerLabel pull-left">prin</div>
-              <a href="https://www.patreon.com/bePatron?u=3907223&redirect_uri=http%3A%2F%2Fwww.code4.ro%2Fmultumim%2F" target="_blank" class="donate-handlerAction pull-left">
-                <img src="<?php bloginfo('template_url'); ?>/dist/images/patreon.png" alt="Patreon" />
-              </a>
-            </div>
-            <div class="doante-handlerContent">
-              <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
-            </div>
-          </div>
 
           <div class="donate-handler">
             <div class="donate-handlerTitle clearfix">
@@ -121,11 +113,33 @@
               </form>
             </div>
             <div class="doante-handlerContent">
-              <p>Aici poți vedea toate proiectele Code for Romania, inclusiv cele în lucru sau deja finalizate. Proiectele Code for Romania sunt fie proiecte proprii, fie proiecte dezvoltate pentru ONG-uri sau instituții publice.</p>
+              <p><?php the_field('doneaza_option_paypal_content'); ?></p>
             </div>
           </div>
 
-          <!-- <?php the_field('doneaza_secondary_content'); ?> -->
+          <?php
+            $donateOptions = get_field('doneaza_options');
+
+            for($index = 0; $index < count($donateOptions); $index++) {
+              $donateOption = $donateOptions[$index];
+
+              $optionImage = repeaterFieldValueOrDefault('doneaza_option_image', $donateOption);
+              $optionLink = repeaterFieldValueOrDefault('doneaza_option_link', $donateOption);
+              $optionContent = repeaterFieldValueOrDefault('doneaza_option_content', $donateOption);
+          ?>
+            <div class="donate-handler">
+              <div class="donate-handlerTitle clearfix">
+                <div class="donate-handlerLabel pull-left">prin</div>
+                <a href="<?php echo $optionLink;?>" target="_blank" class="donate-handlerAction pull-left">
+                  <img src="<?php echo $optionImage;?>" alt="" />
+                </a>
+              </div>
+              <div class="doante-handlerContent">
+                <?php echo $optionContent; ?>
+              </div>
+            </div>
+          <?php } ?>
+
         </div>
       </div>
     </div>
@@ -133,17 +147,17 @@
       <div class="row">
         <div class="columns small-12 medium-6 large-12">
           <div class="boxer is-donate">
-            <h2><?php the_field('doneaza_tertiary_title'); ?></h2>
+            <h2><?php the_field('doneaza_wire_title'); ?></h2>
             <div class="boxer-content">
-              <?php the_field('doneaza_tertiary_content'); ?>
+              <?php the_field('doneaza_wire_content'); ?>
             </div>
           </div>
         </div>
         <div class="columns small-12 medium-6 large-12">
           <div class="boxer is-donate">
-            <h2>Te-ai gandit la alte metode?</h2>
+            <h2><?php the_field('doneaza_other_title'); ?></h2>
             <div class="boxer-content">
-              aa
+              <?php the_field('doneaza_other_content'); ?>
             </div>
           </div>
         </div>

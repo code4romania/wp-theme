@@ -24,22 +24,22 @@
                 foreach ($donations_config['amounts'] as $i => $amount) {
                   printf(
                     '<div class="donate-option small-4 medium-3 columns">'.
-                    '<input type="radio" name="donate[value]" value="%2$d" id="donate-value-%2$d" class="donate-value"%3$s>'.
+                    '<input type="radio" name="donate[amount]" value="%2$d" id="donate-value-%2$d" class="donate-value"%3$s>'.
                     '<label for="donate-value-%2$d">%2$d %1$s</label></div>',
-                    $donations_config['currency']['name'], $amount, checked($i, 1, false)
+                    $donations_config['currencyName'], $amount, checked($i, 1, false)
                   );
                 }
               ?>
               <div class="donate-option small-4 small-offset-4 medium-3 columns">
-                <input type="radio" name="donate[value]" value="" id="donate-value-custom" class="donate-value">
+                <input type="radio" name="donate[amount]" value="custom" id="donate-value-custom" class="donate-value">
                 <label class="donate-input-custom">
-                  <input type="number" class="js-donate-value-custom" step="1" min="15" name="donate[value]" id="donate-value-custom" placeholder=" ">
+                  <input type="number" class="js-donate-value-custom" step="1" min="15" name="donate[amount-custom]" id="donate-value-custom" placeholder="&nbsp;">
                   <span class="donate-label-after"><?php echo $donations_config['currency']['name']; ?></span>
                 </label>
               </div>
-              <div class="donate-recurrent small-12 columns">
-                <input name="donate[recurrent]" value="0" type="hidden">
-                <input name="donate[recurrent]" value="1" type="checkbox" id="donate-monthly-recurrence" >
+              <div class="donate-recurrence small-12 columns">
+                <input name="donate[recurrence]" value="0" type="hidden">
+                <input name="donate[recurrence]" value="1" type="checkbox" id="donate-monthly-recurrence">
                 <label for="donate-monthly-recurrence"><?php the_field('doneaza_recurrent'); ?></label>
               </div>
             </div>
@@ -52,28 +52,27 @@
             <span class="donate-count">2</span>
           </div>
           <div class="media-object-section">
-            <div>
-              <div class="row">
-                <div class="small-12 medium-7 columns">
-                  <div class="donate-person">
-                  </div>
-              <div class="donate-label js-label-donate"><?php the_field('doneaza_step_2'); ?></div>
-                    <input type="text" name="donate[name]" placeholder="<?php the_field('doneaza_label_nume'); ?>" required>
-                </div>
-                <div class="small-12 medium-7 columns">
-                  <div class="donate-person">
-                  </div>
-                </div>
-                <div class="small-12 medium-5 columns">
-                  <input name="donate[currency]" type="hidden" value="<?php echo $donations_config['currency']['code']; ?>">
-                  <input type="submit" class="button donate-button" value="Donează">
-                    <input type="email" name="donate[email]" placeholder="<?php the_field('doneaza_label_e-mail'); ?>" required>
+            <div class="donate-label js-label-donate"><?php the_field('doneaza_step_2'); ?></div>
+            <div class="row">
+              <div class="small-12 medium-7 columns">
+                <div class="donate-person">
+                  <input type="text" name="donate[name]" placeholder="<?php the_field('doneaza_label_nume'); ?>" required>
                 </div>
               </div>
-              <p class="donate-secure">
-                <i class="fa fa-lock"></i>
+              <div class="small-12 medium-7 columns">
+                <div class="donate-person">
+                  <input type="email" name="donate[email]" placeholder="<?php the_field('doneaza_label_e-mail'); ?>" required>
+                </div>
+              </div>
+              <div class="small-12 medium-5 columns">
+                <?php wp_nonce_field('donate_action', 'donate[nonce]', false, true ); ?>
+                <input type="submit" class="button donate-button" value="<?php the_field('doneaza_label_cta'); ?>">
+              </div>
             </div>
+            <p class="donate-secure">
+              <i class="fa fa-lock"></i>
               <?php the_field('doneaza_security'); ?>
+            </p>
           </div>
         </div>
       </div>

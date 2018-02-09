@@ -1,7 +1,7 @@
 <?php
   // TODO: Figure out text translations options
   // TODO: Newsletter subscribe integration
-  // TODO: Add nonce
+  // TODO: Maybe move nonce action name to database
 ?>
 <div class="small-12 medium-offset-1 medium-10 large-offset-0 large-8">
   <div class="donate-hero">
@@ -9,7 +9,7 @@
     <p class="donate-copy">
       <?php the_field('doneaza_intro'); ?>
     </p>
-    <form action="" method="post" class="donate-form">
+    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" class="donate-form">
       <div class="donate-step">
         <div class="media-object">
           <div class="media-object-section">
@@ -38,6 +38,7 @@
                 </label>
               </div>
               <div class="donate-recurrence small-12 columns">
+                <input name="action" value="donations_gateway" type="hidden">
                 <input name="donate[recurrence]" value="0" type="hidden">
                 <input name="donate[recurrence]" value="1" type="checkbox" id="donate-monthly-recurrence">
                 <label for="donate-monthly-recurrence"><?php the_field('doneaza_recurrent'); ?></label>

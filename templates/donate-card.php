@@ -19,7 +19,7 @@
             <div class="donate-label js-label-donate"><?php the_field('doneaza_step_1'); ?></div>
             <div class="donate-options row">
               <?php
-                $donations_config = apply_filters('donations_gateway_get_config');
+                $donations_config = apply_filters('donations_gateway_get_config', '');
 
                 foreach ($donations_config['amounts'] as $i => $amount) {
                   printf(
@@ -34,7 +34,7 @@
                 <input type="radio" name="donate[amount]" value="custom" id="donate-value-custom" class="donate-value">
                 <label class="donate-input-custom">
                   <input type="number" class="js-donate-value-custom" step="1" min="15" name="donate[amount-custom]" id="donate-value-custom" placeholder="&nbsp;">
-                  <span class="donate-label-after"><?php echo $donations_config['currency']['name']; ?></span>
+                  <span class="donate-label-after"><?php echo $donations_config['currencyName']; ?></span>
                 </label>
               </div>
               <div class="donate-recurrence small-12 columns">

@@ -16,7 +16,7 @@
 
           <div class="donate-handler">
             <div class="donate-handlerTitle clearfix">
-              <div class="donate-handlerLabel pull-left">prin</div>
+              <div class="donate-handlerLabel pull-left"><?php the_field('doneaza_label_prin'); ?></div>
               <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="donate-handlerAction pull-left">
                 <input type="hidden" name="cmd" value="_s-xclick">
                 <input type="hidden" name="hosted_button_id" value="U4QBTHU9J5HUS">
@@ -41,7 +41,7 @@
           ?>
             <div class="donate-handler">
               <div class="donate-handlerTitle clearfix">
-                <div class="donate-handlerLabel pull-left">prin</div>
+                <div class="donate-handlerLabel pull-left"><?php the_field('doneaza_label_prin'); ?></div>
                 <a href="<?php echo $optionLink;?>" target="_blank" class="donate-handlerAction pull-left">
                   <img src="<?php echo $optionImage;?>" alt="" />
                 </a>

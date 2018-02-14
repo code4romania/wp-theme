@@ -7,7 +7,7 @@
   </div>
 </section>
 
-<section class="block block-content">
+<section class="block block-content donate">
   <div class="row">
     <div class="columns small-12 large-6">
       <div class="boxer is-donate">

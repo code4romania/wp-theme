@@ -59,7 +59,7 @@ li.menu-item {
   padding: 0;
 
   @include breakpoint(large) {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 
   > a {

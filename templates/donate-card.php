@@ -9,66 +9,52 @@
     <p class="donate-copy">
       <?php the_field('doneaza_intro'); ?>
     </p>
-    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" class="donate-form">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <div class="donate-step">
         <div class="media-object">
           <div class="media-object-section">
             <span class="donate-count">1</span>
           </div>
           <div class="media-object-section">
-            <div class="donate-label js-label-donate"><?php the_field('doneaza_step_1'); ?></div>
+            <div class="donate-label"><?php the_field('doneaza_step_1'); ?></div>
             <div class="donate-options row">
-              <?php
-                $donations_config = apply_filters('donations_gateway_get_config', '');
-
-                foreach ($donations_config['amounts'] as $i => $amount) {
-                  printf(
-                    '<div class="donate-option small-4 medium-3 columns">'.
-                    '<input type="radio" name="donate[amount]" value="%2$d" id="donate-value-%2$d" class="donate-value"%3$s>'.
-                    '<label for="donate-value-%2$d">%2$d %1$s</label></div>',
-                    $donations_config['currencyName'], $amount, checked($i, 1, false)
-                  );
-                }
-              ?>
-              <div class="donate-option small-4 small-offset-4 medium-3 columns">
-                <input type="radio" name="donate[amount]" value="custom" id="donate-value-custom" class="donate-value">
-                <label class="donate-input-custom">
-                  <input type="number" class="js-donate-value-custom" step="1" min="15" name="donate[amount-custom]" id="donate-value-custom" placeholder="&nbsp;">
-                  <span class="donate-label-after"><?php echo $donations_config['currencyName']; ?></span>
-                </label>
+              <div class="small-12 medium-7 columns">
+                <div class="donate-select">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="YED2GFGKUFXBJ">
+                  <input type="hidden" name="on0" value="">
+                  <select name="os0">
+                    <option value="5">€5.00 / lună</option>
+                    <option value="10">€10.00 / lună</option>
+                    <option value="20">€20.00 / lună</option>
+                    <option value="50">€50.00 / lună</option>
+                    <option value="100">€100.00 / lună</option>
+                  </select>
+                  <input type="hidden" name="currency_code" value="EUR">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </div>
               </div>
-              <div class="donate-recurrence small-12 columns">
-                <input name="action" value="donations_gateway" type="hidden">
-                <input name="donate[recurrence]" value="0" type="hidden">
-                <input name="donate[recurrence]" value="1" type="checkbox" id="donate-monthly-recurrence">
-                <label for="donate-monthly-recurrence"><?php the_field('doneaza_recurrent'); ?></label>
+              <div class="small-12 medium-5 columns">
+                <input type="submit" name="submit" class="button donate-button" value="<?php the_field('doneaza_recurent_label_cta'); ?>">
               </div>
             </div>
           </div>
         </div>
       </div>
+    </form>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <div class="donate-step">
         <div class="media-object">
           <div class="media-object-section">
             <span class="donate-count">2</span>
           </div>
           <div class="media-object-section">
-            <div class="donate-label js-label-donate"><?php the_field('doneaza_step_2'); ?></div>
-            <div class="row">
-              <div class="small-12 medium-7 columns">
-                <div class="donate-person">
-                  <input type="text" name="donate[name]" placeholder="<?php the_field('doneaza_label_nume'); ?>" required>
-                </div>
-              </div>
-              <div class="small-12 medium-7 columns">
-                <div class="donate-person">
-                  <input type="email" name="donate[email]" placeholder="<?php the_field('doneaza_label_e-mail'); ?>" required>
-                </div>
-              </div>
-              <div class="small-12 medium-5 columns">
-                <?php wp_nonce_field('donate_action', 'donate[nonce]', false, true ); ?>
-                <input type="submit" class="button donate-button" value="<?php the_field('doneaza_label_cta'); ?>">
-              </div>
+            <div class="donate-label"><?php the_field('doneaza_step_2'); ?></div>
+            <div class="donate-option">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="C39VZYTTZGF82">
+              <input type="submit" name="submit" class="button donate-button" value="<?php the_field('doneaza_single_label_cta'); ?>">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
             </div>
             <p class="donate-secure">
               <i class="fa fa-lock"></i>
